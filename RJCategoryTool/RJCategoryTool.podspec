@@ -8,8 +8,8 @@ Pod::Spec.new do |s|
   s.author       = { "Jack_Gu" => "gu_ruijie@163.com" }
   s.platform     = :ios, "9.0"
   s.source       = { :git => "https://github.com/Jack424/RJCategoryTool.git", :tag => s.version}
-  s.source_files = "NumberCalculate/NumberCalculate/**/*.{h,m}"
-  # s.resources    = "NumberCalculate/NumberCalculate/resource/*.png"
+  s.source_files = "RJCategoryTool/RJCategoryTool/**/*.{h,m}"
+  # s.resources    = "RJCategoryTool/RJCategoryTool/resource/*.png"
   s.requires_arc = true
 
 
