@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "RJCategoryTool"
-  s.version      = "0.0.4"
+  s.version      = "0.0.5"
   s.summary      = "A iOS Fast integration of custom classifications, macro definitions and tool classes"
   s.homepage     = "https://github.com/Jack424/RJCategoryTool.git"
   s.license      = "MIT"
@@ -9,11 +9,14 @@ Pod::Spec.new do |s|
   s.platform     = :ios, "9.0"
   s.source       = { :git => "https://github.com/Jack424/RJCategoryTool.git", :tag => s.version}
   s.source_files = "RJCategoryTool/RJCategoryTool/RJCategoryTool/**/*.{h,m}"
-  s.resources    = "RJCategoryTool/RJCategoryTool/resource/*"
+  s.resources    = "RJCategoryTool/RJCategoryTool/RJCategoryTool/Resource/*.{png,xib,nib,bundle,json}"
   s.requires_arc = true
 
   s.dependency 'Masonry'
 
+  # GRJDatePickerView.xib  city.json
+  # s.resources    = 'PhotoBrowser/resource/*.{png,xib,nib,bundle}'
+  # s.frameworks   = 'UIKit','Photos','PhotosUI'
   # s.vendored_libraries = 'HBThirdParty/HBThirdParty/FrameWork/libWeChatSDK.a'
   # s.vendored_frameworks = 'HBThirdParty/HBThirdParty/FrameWork/AlipaySDK.framework'
   # s.dependency 'UMengUShare/Social/ReducedWeChat', '~> 6.4.8.2'

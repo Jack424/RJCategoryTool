@@ -141,13 +141,13 @@
 			path = Tool;
 			sourceTree = "<group>";
 		};
-		184FEBA72217A82200B9CBE1 /* Resourse */ = {
+		184FEBA72217A82200B9CBE1 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
 				184FEBD42217E86E00B9CBE1 /* city.json */,
 				184FEBD52217E87000B9CBE1 /* GRJDatePickerView.xib */,
 			);
-			path = Resourse;
+			path = Resource;
 			sourceTree = "<group>";
 		};
 		18544D8B2215505400B254B1 = {
@@ -188,8 +188,8 @@
 		18544DAD2215506D00B254B1 /* RJCategoryTool */ = {
 			isa = PBXGroup;
 			children = (
+				184FEBA72217A82200B9CBE1 /* Resource */,
 				18544DAE2215506D00B254B1 /* RJCategoryTool.h */,
-				184FEBA72217A82200B9CBE1 /* Resourse */,
 				184FEBA62217A78900B9CBE1 /* Tool */,
 				18544DAF2215506D00B254B1 /* Category */,
 				18544DC42215506D00B254B1 /* Macros */,
