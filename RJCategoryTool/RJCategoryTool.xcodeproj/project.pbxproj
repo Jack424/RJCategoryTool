@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		184FEBC52217A90200B9CBE1 /* RJCountNameLineButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 184FEBAE2217A90000B9CBE1 /* RJCountNameLineButton.m */; };
+		184FEBC62217A90200B9CBE1 /* RJCornerBorderBgButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 184FEBAF2217A90000B9CBE1 /* RJCornerBorderBgButton.m */; };
+		184FEBC82217A90200B9CBE1 /* RJImageTextActionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 184FEBB12217A90000B9CBE1 /* RJImageTextActionView.m */; };
+		184FEBC92217A90200B9CBE1 /* GRJAdressPickerViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 184FEBB32217A90000B9CBE1 /* GRJAdressPickerViewModel.m */; };
+		184FEBCB2217A90200B9CBE1 /* RJInitViewTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 184FEBBB2217A90100B9CBE1 /* RJInitViewTool.m */; };
+		184FEBCC2217A90200B9CBE1 /* RJBaseMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 184FEBBC2217A90100B9CBE1 /* RJBaseMenuViewController.m */; };
+		184FEBCD2217A90200B9CBE1 /* RJSureButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 184FEBBE2217A90100B9CBE1 /* RJSureButton.m */; };
+		184FEBCE2217A90200B9CBE1 /* GRJAdressPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 184FEBBF2217A90100B9CBE1 /* GRJAdressPickerView.m */; };
+		184FEBCF2217A90200B9CBE1 /* GRJDatePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 184FEBC22217A90200B9CBE1 /* GRJDatePickerView.m */; };
+		184FEBD02217A90200B9CBE1 /* RJHorizontalImageNameLineButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 184FEBC32217A90200B9CBE1 /* RJHorizontalImageNameLineButton.m */; };
+		184FEBD12217A90200B9CBE1 /* RJScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 184FEBC42217A90200B9CBE1 /* RJScrollView.m */; };
 		18544D992215505400B254B1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18544D982215505400B254B1 /* AppDelegate.m */; };
 		18544D9C2215505400B254B1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18544D9B2215505400B254B1 /* ViewController.m */; };
 		18544D9F2215505400B254B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18544D9D2215505400B254B1 /* Main.storyboard */; };
@@ -23,9 +34,34 @@
 		18544DCE2215506D00B254B1 /* UIImage+GRJImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 18544DC12215506D00B254B1 /* UIImage+GRJImage.m */; };
 		18544DCF2215506D00B254B1 /* UIBarButtonItem+GRJBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 18544DC22215506D00B254B1 /* UIBarButtonItem+GRJBarButtonItem.m */; };
 		18544DD02215506D00B254B1 /* NSObject+RJCheck.m in Sources */ = {isa = PBXBuildFile; fileRef = 18544DC32215506D00B254B1 /* NSObject+RJCheck.m */; };
+		63134546874C166B0C9B9C81 /* libPods-RJCategoryTool.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E32702ACF951655504BD178 /* libPods-RJCategoryTool.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		184FEBAC2217A8FF00B9CBE1 /* RJInitViewTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RJInitViewTool.h; sourceTree = "<group>"; };
+		184FEBAD2217A90000B9CBE1 /* RJSureButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RJSureButton.h; sourceTree = "<group>"; };
+		184FEBAE2217A90000B9CBE1 /* RJCountNameLineButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RJCountNameLineButton.m; sourceTree = "<group>"; };
+		184FEBAF2217A90000B9CBE1 /* RJCornerBorderBgButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RJCornerBorderBgButton.m; sourceTree = "<group>"; };
+		184FEBB12217A90000B9CBE1 /* RJImageTextActionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RJImageTextActionView.m; sourceTree = "<group>"; };
+		184FEBB22217A90000B9CBE1 /* GRJAdressPickerViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRJAdressPickerViewModel.h; sourceTree = "<group>"; };
+		184FEBB32217A90000B9CBE1 /* GRJAdressPickerViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRJAdressPickerViewModel.m; sourceTree = "<group>"; };
+		184FEBB42217A90000B9CBE1 /* GRJDatePickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRJDatePickerView.h; sourceTree = "<group>"; };
+		184FEBB52217A90000B9CBE1 /* RJHorizontalImageNameLineButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RJHorizontalImageNameLineButton.h; sourceTree = "<group>"; };
+		184FEBB62217A90000B9CBE1 /* GRJAdressPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRJAdressPickerView.h; sourceTree = "<group>"; };
+		184FEBB72217A90100B9CBE1 /* RJCornerBorderBgButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RJCornerBorderBgButton.h; sourceTree = "<group>"; };
+		184FEBB92217A90100B9CBE1 /* RJBaseMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RJBaseMenuViewController.h; sourceTree = "<group>"; };
+		184FEBBA2217A90100B9CBE1 /* RJScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RJScrollView.h; sourceTree = "<group>"; };
+		184FEBBB2217A90100B9CBE1 /* RJInitViewTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RJInitViewTool.m; sourceTree = "<group>"; };
+		184FEBBC2217A90100B9CBE1 /* RJBaseMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RJBaseMenuViewController.m; sourceTree = "<group>"; };
+		184FEBBE2217A90100B9CBE1 /* RJSureButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RJSureButton.m; sourceTree = "<group>"; };
+		184FEBBF2217A90100B9CBE1 /* GRJAdressPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRJAdressPickerView.m; sourceTree = "<group>"; };
+		184FEBC02217A90100B9CBE1 /* RJImageTextActionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RJImageTextActionView.h; sourceTree = "<group>"; };
+		184FEBC12217A90200B9CBE1 /* RJCountNameLineButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RJCountNameLineButton.h; sourceTree = "<group>"; };
+		184FEBC22217A90200B9CBE1 /* GRJDatePickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRJDatePickerView.m; sourceTree = "<group>"; };
+		184FEBC32217A90200B9CBE1 /* RJHorizontalImageNameLineButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RJHorizontalImageNameLineButton.m; sourceTree = "<group>"; };
+		184FEBC42217A90200B9CBE1 /* RJScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RJScrollView.m; sourceTree = "<group>"; };
+		184FEBD42217E86E00B9CBE1 /* city.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = city.json; sourceTree = "<group>"; };
+		184FEBD52217E87000B9CBE1 /* GRJDatePickerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GRJDatePickerView.xib; sourceTree = "<group>"; };
 		18544D942215505400B254B1 /* RJCategoryTool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RJCategoryTool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18544D972215505400B254B1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		18544D982215505400B254B1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -59,6 +95,9 @@
 		18544DC32215506D00B254B1 /* NSObject+RJCheck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+RJCheck.m"; sourceTree = "<group>"; };
 		18544DC52215506D00B254B1 /* RJColorAndFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RJColorAndFont.h; sourceTree = "<group>"; };
 		18544DC62215506D00B254B1 /* RJMainMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RJMainMacros.h; sourceTree = "<group>"; };
+		1E1DFC456BBA19C8D75558A3 /* Pods-RJCategoryTool.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RJCategoryTool.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RJCategoryTool/Pods-RJCategoryTool.debug.xcconfig"; sourceTree = "<group>"; };
+		3E32702ACF951655504BD178 /* libPods-RJCategoryTool.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RJCategoryTool.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D7B62306A8F5880B82563DA /* Pods-RJCategoryTool.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RJCategoryTool.release.xcconfig"; path = "Pods/Target Support Files/Pods-RJCategoryTool/Pods-RJCategoryTool.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,17 +105,58 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63134546874C166B0C9B9C81 /* libPods-RJCategoryTool.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		184FEBA62217A78900B9CBE1 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				184FEBB62217A90000B9CBE1 /* GRJAdressPickerView.h */,
+				184FEBBF2217A90100B9CBE1 /* GRJAdressPickerView.m */,
+				184FEBB22217A90000B9CBE1 /* GRJAdressPickerViewModel.h */,
+				184FEBB32217A90000B9CBE1 /* GRJAdressPickerViewModel.m */,
+				184FEBB42217A90000B9CBE1 /* GRJDatePickerView.h */,
+				184FEBC22217A90200B9CBE1 /* GRJDatePickerView.m */,
+				184FEBB92217A90100B9CBE1 /* RJBaseMenuViewController.h */,
+				184FEBBC2217A90100B9CBE1 /* RJBaseMenuViewController.m */,
+				184FEBB72217A90100B9CBE1 /* RJCornerBorderBgButton.h */,
+				184FEBAF2217A90000B9CBE1 /* RJCornerBorderBgButton.m */,
+				184FEBC12217A90200B9CBE1 /* RJCountNameLineButton.h */,
+				184FEBAE2217A90000B9CBE1 /* RJCountNameLineButton.m */,
+				184FEBB52217A90000B9CBE1 /* RJHorizontalImageNameLineButton.h */,
+				184FEBC32217A90200B9CBE1 /* RJHorizontalImageNameLineButton.m */,
+				184FEBC02217A90100B9CBE1 /* RJImageTextActionView.h */,
+				184FEBB12217A90000B9CBE1 /* RJImageTextActionView.m */,
+				184FEBAC2217A8FF00B9CBE1 /* RJInitViewTool.h */,
+				184FEBBB2217A90100B9CBE1 /* RJInitViewTool.m */,
+				184FEBBA2217A90100B9CBE1 /* RJScrollView.h */,
+				184FEBC42217A90200B9CBE1 /* RJScrollView.m */,
+				184FEBAD2217A90000B9CBE1 /* RJSureButton.h */,
+				184FEBBE2217A90100B9CBE1 /* RJSureButton.m */,
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		184FEBA72217A82200B9CBE1 /* Resourse */ = {
+			isa = PBXGroup;
+			children = (
+				184FEBD42217E86E00B9CBE1 /* city.json */,
+				184FEBD52217E87000B9CBE1 /* GRJDatePickerView.xib */,
+			);
+			path = Resourse;
+			sourceTree = "<group>";
+		};
 		18544D8B2215505400B254B1 = {
 			isa = PBXGroup;
 			children = (
 				18544D962215505400B254B1 /* RJCategoryTool */,
 				18544D952215505400B254B1 /* Products */,
+				2DABB21C6CD62B9DFA50BEDC /* Pods */,
+				EF29463CE6B446E50AB06934 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -109,6 +189,8 @@
 			isa = PBXGroup;
 			children = (
 				18544DAE2215506D00B254B1 /* RJCategoryTool.h */,
+				184FEBA72217A82200B9CBE1 /* Resourse */,
+				184FEBA62217A78900B9CBE1 /* Tool */,
 				18544DAF2215506D00B254B1 /* Category */,
 				18544DC42215506D00B254B1 /* Macros */,
 			);
@@ -151,6 +233,23 @@
 			path = Macros;
 			sourceTree = "<group>";
 		};
+		2DABB21C6CD62B9DFA50BEDC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1E1DFC456BBA19C8D75558A3 /* Pods-RJCategoryTool.debug.xcconfig */,
+				6D7B62306A8F5880B82563DA /* Pods-RJCategoryTool.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		EF29463CE6B446E50AB06934 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3E32702ACF951655504BD178 /* libPods-RJCategoryTool.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -158,6 +257,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 18544DAA2215505500B254B1 /* Build configuration list for PBXNativeTarget "RJCategoryTool" */;
 			buildPhases = (
+				73E7AA3DFE0E3ABD20F9FA5D /* [CP] Check Pods Manifest.lock */,
 				18544D902215505400B254B1 /* Sources */,
 				18544D912215505400B254B1 /* Frameworks */,
 				18544D922215505400B254B1 /* Resources */,
@@ -216,23 +316,59 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		73E7AA3DFE0E3ABD20F9FA5D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RJCategoryTool-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		18544D902215505400B254B1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				184FEBCE2217A90200B9CBE1 /* GRJAdressPickerView.m in Sources */,
+				184FEBC52217A90200B9CBE1 /* RJCountNameLineButton.m in Sources */,
+				184FEBCD2217A90200B9CBE1 /* RJSureButton.m in Sources */,
 				18544D9C2215505400B254B1 /* ViewController.m in Sources */,
 				18544DCF2215506D00B254B1 /* UIBarButtonItem+GRJBarButtonItem.m in Sources */,
+				184FEBCF2217A90200B9CBE1 /* GRJDatePickerView.m in Sources */,
+				184FEBD12217A90200B9CBE1 /* RJScrollView.m in Sources */,
 				18544DC92215506D00B254B1 /* UIAlertController+GRJAlert.m in Sources */,
+				184FEBC82217A90200B9CBE1 /* RJImageTextActionView.m in Sources */,
 				18544DA72215505500B254B1 /* main.m in Sources */,
 				18544DCC2215506D00B254B1 /* UIColor+GRJColor.m in Sources */,
 				18544DCE2215506D00B254B1 /* UIImage+GRJImage.m in Sources */,
 				18544DD02215506D00B254B1 /* NSObject+RJCheck.m in Sources */,
 				18544DCA2215506D00B254B1 /* NSDate+GRJDate.m in Sources */,
 				18544DCB2215506D00B254B1 /* NSString+RJString.m in Sources */,
+				184FEBCC2217A90200B9CBE1 /* RJBaseMenuViewController.m in Sources */,
 				18544DC82215506D00B254B1 /* UIView+GRJFrame.m in Sources */,
 				18544DCD2215506D00B254B1 /* UIButton+Badge.m in Sources */,
 				18544D992215505400B254B1 /* AppDelegate.m in Sources */,
+				184FEBC62217A90200B9CBE1 /* RJCornerBorderBgButton.m in Sources */,
+				184FEBC92217A90200B9CBE1 /* GRJAdressPickerViewModel.m in Sources */,
+				184FEBCB2217A90200B9CBE1 /* RJInitViewTool.m in Sources */,
+				184FEBD02217A90200B9CBE1 /* RJHorizontalImageNameLineButton.m in Sources */,
 				18544DC72215506D00B254B1 /* UIButton+RJButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -373,6 +509,7 @@
 		};
 		18544DAB2215505500B254B1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1E1DFC456BBA19C8D75558A3 /* Pods-RJCategoryTool.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -389,6 +526,7 @@
 		};
 		18544DAC2215505500B254B1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6D7B62306A8F5880B82563DA /* Pods-RJCategoryTool.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
