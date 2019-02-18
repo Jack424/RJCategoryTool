@@ -22,4 +22,8 @@ target 'RJCategoryTool' do
   
   pod 'RTRootNavigationController'
   
+  pod 'ReactiveObjC'
+  
+  pod 'FMDB'
+  
 end

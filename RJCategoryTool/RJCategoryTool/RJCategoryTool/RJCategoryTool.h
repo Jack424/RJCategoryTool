@@ -46,5 +46,7 @@
 #import "Toast.h"
 #import "ZLPhotoBrowser.h"
 #import "RTRootNavigationController.h"
+#import "FMDB.h"
+#import "ReactiveObjC.h"
 
 #endif /* RJCategoryTool_h */
