@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "RJCategoryTool"
-  s.version      = "0.1.9"
+  s.version      = "0.2.0"
   s.summary      = "A iOS Fast integration of custom classifications, macro definitions and tool classes"
   s.homepage     = "https://github.com/Jack424/RJCategoryTool.git"
   s.license      = "MIT"
