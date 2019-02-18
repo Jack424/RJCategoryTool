@@ -4,4 +4,22 @@
 target 'RJCategoryTool' do
   pod 'Masonry'
 
+  pod 'AFNetworking', '~> 3.1.0'
+  
+  pod 'SDWebImage', '~> 3.7'
+  
+  pod 'MJExtension', '~> 3.0.13'
+  
+  pod 'MJRefresh', '~> 3.1.12'
+  
+  pod 'SDCycleScrollView','~> 1.64'
+  
+  pod 'MBProgressHUD', '~> 1.0.0'
+  
+  pod 'Toast'
+  
+  pod 'ZLPhotoBrowser'
+  
+  pod 'RTRootNavigationController'
+  
 end
