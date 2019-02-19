@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "RJCategoryTool"
-  s.version      = "0.2.6"
+  s.version      = "0.3.4"
   s.summary      = "A iOS Fast integration of custom classifications, macro definitions and tool classes"
   s.homepage     = "https://github.com/Jack424/RJCategoryTool.git"
   s.license      = "MIT"
@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
   s.platform     = :ios, "9.0"
   s.source       = { :git => "https://github.com/Jack424/RJCategoryTool.git", :tag => s.version}
   s.source_files = "RJCategoryTool/RJCategoryTool/RJCategoryTool/**/*.{h,m}"
-  s.resources    = "RJCategoryTool/RJCategoryTool/RJCategoryTool/Resource/*.{png,xib,nib,bundle,json}"
+  # s.resources    = "RJCategoryTool/RJCategoryTool/RJCategoryTool/Resource/*.{png,xib,nib,bundle,json}"
   s.requires_arc = true
 
   s.dependency 'Masonry'
