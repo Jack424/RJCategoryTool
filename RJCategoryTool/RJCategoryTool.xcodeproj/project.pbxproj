@@ -24,16 +24,19 @@
 		18544DA12215505500B254B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18544DA02215505500B254B1 /* Assets.xcassets */; };
 		18544DA42215505500B254B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18544DA22215505500B254B1 /* LaunchScreen.storyboard */; };
 		18544DA72215505500B254B1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18544DA62215505500B254B1 /* main.m */; };
-		18544DC72215506D00B254B1 /* UIButton+RJButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 18544DB02215506D00B254B1 /* UIButton+RJButton.m */; };
-		18544DC82215506D00B254B1 /* UIView+GRJFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 18544DB42215506D00B254B1 /* UIView+GRJFrame.m */; };
-		18544DC92215506D00B254B1 /* UIAlertController+GRJAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 18544DBB2215506D00B254B1 /* UIAlertController+GRJAlert.m */; };
-		18544DCA2215506D00B254B1 /* NSDate+GRJDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18544DBC2215506D00B254B1 /* NSDate+GRJDate.m */; };
-		18544DCB2215506D00B254B1 /* NSString+RJString.m in Sources */ = {isa = PBXBuildFile; fileRef = 18544DBD2215506D00B254B1 /* NSString+RJString.m */; };
-		18544DCC2215506D00B254B1 /* UIColor+GRJColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 18544DBF2215506D00B254B1 /* UIColor+GRJColor.m */; };
-		18544DCD2215506D00B254B1 /* UIButton+Badge.m in Sources */ = {isa = PBXBuildFile; fileRef = 18544DC02215506D00B254B1 /* UIButton+Badge.m */; };
-		18544DCE2215506D00B254B1 /* UIImage+GRJImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 18544DC12215506D00B254B1 /* UIImage+GRJImage.m */; };
-		18544DCF2215506D00B254B1 /* UIBarButtonItem+GRJBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 18544DC22215506D00B254B1 /* UIBarButtonItem+GRJBarButtonItem.m */; };
-		18544DD02215506D00B254B1 /* NSObject+RJCheck.m in Sources */ = {isa = PBXBuildFile; fileRef = 18544DC32215506D00B254B1 /* NSObject+RJCheck.m */; };
+		18953DDA221BD91D00D83ED1 /* UIImage+GRJImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 18953DCA221BD91B00D83ED1 /* UIImage+GRJImage.m */; };
+		18953DDB221BD91D00D83ED1 /* NSDate+GRJDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18953DCB221BD91B00D83ED1 /* NSDate+GRJDate.m */; };
+		18953DDC221BD91D00D83ED1 /* NSString+RJString.m in Sources */ = {isa = PBXBuildFile; fileRef = 18953DCD221BD91B00D83ED1 /* NSString+RJString.m */; };
+		18953DDD221BD91D00D83ED1 /* NSObject+RJCheck.m in Sources */ = {isa = PBXBuildFile; fileRef = 18953DD0221BD91B00D83ED1 /* NSObject+RJCheck.m */; };
+		18953DDE221BD91D00D83ED1 /* UIBarButtonItem+GRJBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 18953DD4221BD91C00D83ED1 /* UIBarButtonItem+GRJBarButtonItem.m */; };
+		18953DDF221BD91D00D83ED1 /* UIView+GRJFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 18953DD5221BD91C00D83ED1 /* UIView+GRJFrame.m */; };
+		18953DE0221BD91D00D83ED1 /* UIColor+GRJColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 18953DD6221BD91C00D83ED1 /* UIColor+GRJColor.m */; };
+		18953DE1221BD91D00D83ED1 /* UIButton+RJButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 18953DD7221BD91D00D83ED1 /* UIButton+RJButton.m */; };
+		18953DE2221BD91D00D83ED1 /* UIButton+Badge.m in Sources */ = {isa = PBXBuildFile; fileRef = 18953DD8221BD91D00D83ED1 /* UIButton+Badge.m */; };
+		18953DE3221BD91D00D83ED1 /* UIAlertController+GRJAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 18953DD9221BD91D00D83ED1 /* UIAlertController+GRJAlert.m */; };
+		18953DE8221BE69500D83ED1 /* GRJQRCodeTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 18953DE5221BE69500D83ED1 /* GRJQRCodeTool.m */; };
+		18953DE9221BE69500D83ED1 /* GRJPhotoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 18953DE6221BE69500D83ED1 /* GRJPhotoManager.m */; };
+		18953DEC221BECE800D83ED1 /* RJ3DESEncrypt.m in Sources */ = {isa = PBXBuildFile; fileRef = 18953DEB221BECE800D83ED1 /* RJ3DESEncrypt.m */; };
 		63134546874C166B0C9B9C81 /* libPods-RJCategoryTool.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E32702ACF951655504BD178 /* libPods-RJCategoryTool.a */; };
 /* End PBXBuildFile section */
 
@@ -73,28 +76,34 @@
 		18544DA52215505500B254B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18544DA62215505500B254B1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		18544DAE2215506D00B254B1 /* RJCategoryTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RJCategoryTool.h; sourceTree = "<group>"; };
-		18544DB02215506D00B254B1 /* UIButton+RJButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+RJButton.m"; sourceTree = "<group>"; };
-		18544DB12215506D00B254B1 /* NSString+RJString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+RJString.h"; sourceTree = "<group>"; };
-		18544DB22215506D00B254B1 /* NSDate+GRJDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+GRJDate.h"; sourceTree = "<group>"; };
-		18544DB32215506D00B254B1 /* UIAlertController+GRJAlert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+GRJAlert.h"; sourceTree = "<group>"; };
-		18544DB42215506D00B254B1 /* UIView+GRJFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+GRJFrame.m"; sourceTree = "<group>"; };
-		18544DB52215506D00B254B1 /* UIButton+Badge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Badge.h"; sourceTree = "<group>"; };
-		18544DB62215506D00B254B1 /* UIColor+GRJColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+GRJColor.h"; sourceTree = "<group>"; };
-		18544DB72215506D00B254B1 /* NSObject+RJCheck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+RJCheck.h"; sourceTree = "<group>"; };
-		18544DB82215506D00B254B1 /* UIBarButtonItem+GRJBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+GRJBarButtonItem.h"; sourceTree = "<group>"; };
-		18544DB92215506D00B254B1 /* UIImage+GRJImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+GRJImage.h"; sourceTree = "<group>"; };
-		18544DBA2215506D00B254B1 /* UIView+GRJFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+GRJFrame.h"; sourceTree = "<group>"; };
-		18544DBB2215506D00B254B1 /* UIAlertController+GRJAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+GRJAlert.m"; sourceTree = "<group>"; };
-		18544DBC2215506D00B254B1 /* NSDate+GRJDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+GRJDate.m"; sourceTree = "<group>"; };
-		18544DBD2215506D00B254B1 /* NSString+RJString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+RJString.m"; sourceTree = "<group>"; };
-		18544DBE2215506D00B254B1 /* UIButton+RJButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+RJButton.h"; sourceTree = "<group>"; };
-		18544DBF2215506D00B254B1 /* UIColor+GRJColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+GRJColor.m"; sourceTree = "<group>"; };
-		18544DC02215506D00B254B1 /* UIButton+Badge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Badge.m"; sourceTree = "<group>"; };
-		18544DC12215506D00B254B1 /* UIImage+GRJImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+GRJImage.m"; sourceTree = "<group>"; };
-		18544DC22215506D00B254B1 /* UIBarButtonItem+GRJBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+GRJBarButtonItem.m"; sourceTree = "<group>"; };
-		18544DC32215506D00B254B1 /* NSObject+RJCheck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+RJCheck.m"; sourceTree = "<group>"; };
 		18544DC52215506D00B254B1 /* RJColorAndFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RJColorAndFont.h; sourceTree = "<group>"; };
 		18544DC62215506D00B254B1 /* RJMainMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RJMainMacros.h; sourceTree = "<group>"; };
+		18953DC6221BD91A00D83ED1 /* UIButton+Badge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Badge.h"; sourceTree = "<group>"; };
+		18953DC7221BD91A00D83ED1 /* UIImage+GRJImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+GRJImage.h"; sourceTree = "<group>"; };
+		18953DC8221BD91A00D83ED1 /* NSDate+GRJDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+GRJDate.h"; sourceTree = "<group>"; };
+		18953DC9221BD91A00D83ED1 /* UIAlertController+GRJAlert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+GRJAlert.h"; sourceTree = "<group>"; };
+		18953DCA221BD91B00D83ED1 /* UIImage+GRJImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+GRJImage.m"; sourceTree = "<group>"; };
+		18953DCB221BD91B00D83ED1 /* NSDate+GRJDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+GRJDate.m"; sourceTree = "<group>"; };
+		18953DCC221BD91B00D83ED1 /* UIBarButtonItem+GRJBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+GRJBarButtonItem.h"; sourceTree = "<group>"; };
+		18953DCD221BD91B00D83ED1 /* NSString+RJString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+RJString.m"; sourceTree = "<group>"; };
+		18953DCE221BD91B00D83ED1 /* UIColor+GRJColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+GRJColor.h"; sourceTree = "<group>"; };
+		18953DCF221BD91B00D83ED1 /* NSString+RJString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+RJString.h"; sourceTree = "<group>"; };
+		18953DD0221BD91B00D83ED1 /* NSObject+RJCheck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+RJCheck.m"; sourceTree = "<group>"; };
+		18953DD1221BD91C00D83ED1 /* UIButton+RJButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+RJButton.h"; sourceTree = "<group>"; };
+		18953DD2221BD91C00D83ED1 /* UIView+GRJFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+GRJFrame.h"; sourceTree = "<group>"; };
+		18953DD3221BD91C00D83ED1 /* NSObject+RJCheck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+RJCheck.h"; sourceTree = "<group>"; };
+		18953DD4221BD91C00D83ED1 /* UIBarButtonItem+GRJBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+GRJBarButtonItem.m"; sourceTree = "<group>"; };
+		18953DD5221BD91C00D83ED1 /* UIView+GRJFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+GRJFrame.m"; sourceTree = "<group>"; };
+		18953DD6221BD91C00D83ED1 /* UIColor+GRJColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+GRJColor.m"; sourceTree = "<group>"; };
+		18953DD7221BD91D00D83ED1 /* UIButton+RJButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+RJButton.m"; sourceTree = "<group>"; };
+		18953DD8221BD91D00D83ED1 /* UIButton+Badge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Badge.m"; sourceTree = "<group>"; };
+		18953DD9221BD91D00D83ED1 /* UIAlertController+GRJAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+GRJAlert.m"; sourceTree = "<group>"; };
+		18953DE4221BE69500D83ED1 /* GRJQRCodeTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRJQRCodeTool.h; sourceTree = "<group>"; };
+		18953DE5221BE69500D83ED1 /* GRJQRCodeTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRJQRCodeTool.m; sourceTree = "<group>"; };
+		18953DE6221BE69500D83ED1 /* GRJPhotoManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRJPhotoManager.m; sourceTree = "<group>"; };
+		18953DE7221BE69500D83ED1 /* GRJPhotoManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRJPhotoManager.h; sourceTree = "<group>"; };
+		18953DEA221BECE800D83ED1 /* RJ3DESEncrypt.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RJ3DESEncrypt.h; sourceTree = "<group>"; };
+		18953DEB221BECE800D83ED1 /* RJ3DESEncrypt.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RJ3DESEncrypt.m; sourceTree = "<group>"; };
 		1E1DFC456BBA19C8D75558A3 /* Pods-RJCategoryTool.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RJCategoryTool.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RJCategoryTool/Pods-RJCategoryTool.debug.xcconfig"; sourceTree = "<group>"; };
 		3E32702ACF951655504BD178 /* libPods-RJCategoryTool.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RJCategoryTool.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D7B62306A8F5880B82563DA /* Pods-RJCategoryTool.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RJCategoryTool.release.xcconfig"; path = "Pods/Target Support Files/Pods-RJCategoryTool/Pods-RJCategoryTool.release.xcconfig"; sourceTree = "<group>"; };
@@ -115,6 +124,10 @@
 		184FEBA62217A78900B9CBE1 /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				18953DE7221BE69500D83ED1 /* GRJPhotoManager.h */,
+				18953DE6221BE69500D83ED1 /* GRJPhotoManager.m */,
+				18953DE4221BE69500D83ED1 /* GRJQRCodeTool.h */,
+				18953DE5221BE69500D83ED1 /* GRJQRCodeTool.m */,
 				184FEBB62217A90000B9CBE1 /* GRJAdressPickerView.h */,
 				184FEBBF2217A90100B9CBE1 /* GRJAdressPickerView.m */,
 				184FEBB22217A90000B9CBE1 /* GRJAdressPickerViewModel.h */,
@@ -137,6 +150,8 @@
 				184FEBC42217A90200B9CBE1 /* RJScrollView.m */,
 				184FEBAD2217A90000B9CBE1 /* RJSureButton.h */,
 				184FEBBE2217A90100B9CBE1 /* RJSureButton.m */,
+				18953DEA221BECE800D83ED1 /* RJ3DESEncrypt.h */,
+				18953DEB221BECE800D83ED1 /* RJ3DESEncrypt.m */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -200,26 +215,26 @@
 		18544DAF2215506D00B254B1 /* Category */ = {
 			isa = PBXGroup;
 			children = (
-				18544DB02215506D00B254B1 /* UIButton+RJButton.m */,
-				18544DB12215506D00B254B1 /* NSString+RJString.h */,
-				18544DB22215506D00B254B1 /* NSDate+GRJDate.h */,
-				18544DB32215506D00B254B1 /* UIAlertController+GRJAlert.h */,
-				18544DB42215506D00B254B1 /* UIView+GRJFrame.m */,
-				18544DB52215506D00B254B1 /* UIButton+Badge.h */,
-				18544DB62215506D00B254B1 /* UIColor+GRJColor.h */,
-				18544DB72215506D00B254B1 /* NSObject+RJCheck.h */,
-				18544DB82215506D00B254B1 /* UIBarButtonItem+GRJBarButtonItem.h */,
-				18544DB92215506D00B254B1 /* UIImage+GRJImage.h */,
-				18544DBA2215506D00B254B1 /* UIView+GRJFrame.h */,
-				18544DBB2215506D00B254B1 /* UIAlertController+GRJAlert.m */,
-				18544DBC2215506D00B254B1 /* NSDate+GRJDate.m */,
-				18544DBD2215506D00B254B1 /* NSString+RJString.m */,
-				18544DBE2215506D00B254B1 /* UIButton+RJButton.h */,
-				18544DBF2215506D00B254B1 /* UIColor+GRJColor.m */,
-				18544DC02215506D00B254B1 /* UIButton+Badge.m */,
-				18544DC12215506D00B254B1 /* UIImage+GRJImage.m */,
-				18544DC22215506D00B254B1 /* UIBarButtonItem+GRJBarButtonItem.m */,
-				18544DC32215506D00B254B1 /* NSObject+RJCheck.m */,
+				18953DC8221BD91A00D83ED1 /* NSDate+GRJDate.h */,
+				18953DCB221BD91B00D83ED1 /* NSDate+GRJDate.m */,
+				18953DD3221BD91C00D83ED1 /* NSObject+RJCheck.h */,
+				18953DD0221BD91B00D83ED1 /* NSObject+RJCheck.m */,
+				18953DCF221BD91B00D83ED1 /* NSString+RJString.h */,
+				18953DCD221BD91B00D83ED1 /* NSString+RJString.m */,
+				18953DC9221BD91A00D83ED1 /* UIAlertController+GRJAlert.h */,
+				18953DD9221BD91D00D83ED1 /* UIAlertController+GRJAlert.m */,
+				18953DCC221BD91B00D83ED1 /* UIBarButtonItem+GRJBarButtonItem.h */,
+				18953DD4221BD91C00D83ED1 /* UIBarButtonItem+GRJBarButtonItem.m */,
+				18953DC6221BD91A00D83ED1 /* UIButton+Badge.h */,
+				18953DD8221BD91D00D83ED1 /* UIButton+Badge.m */,
+				18953DD1221BD91C00D83ED1 /* UIButton+RJButton.h */,
+				18953DD7221BD91D00D83ED1 /* UIButton+RJButton.m */,
+				18953DCE221BD91B00D83ED1 /* UIColor+GRJColor.h */,
+				18953DD6221BD91C00D83ED1 /* UIColor+GRJColor.m */,
+				18953DC7221BD91A00D83ED1 /* UIImage+GRJImage.h */,
+				18953DCA221BD91B00D83ED1 /* UIImage+GRJImage.m */,
+				18953DD2221BD91C00D83ED1 /* UIView+GRJFrame.h */,
+				18953DD5221BD91C00D83ED1 /* UIView+GRJFrame.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -385,30 +400,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18953DDE221BD91D00D83ED1 /* UIBarButtonItem+GRJBarButtonItem.m in Sources */,
+				18953DDC221BD91D00D83ED1 /* NSString+RJString.m in Sources */,
+				18953DDF221BD91D00D83ED1 /* UIView+GRJFrame.m in Sources */,
 				184FEBCE2217A90200B9CBE1 /* GRJAdressPickerView.m in Sources */,
 				184FEBC52217A90200B9CBE1 /* RJCountNameLineButton.m in Sources */,
 				184FEBCD2217A90200B9CBE1 /* RJSureButton.m in Sources */,
 				18544D9C2215505400B254B1 /* ViewController.m in Sources */,
-				18544DCF2215506D00B254B1 /* UIBarButtonItem+GRJBarButtonItem.m in Sources */,
+				18953DE3221BD91D00D83ED1 /* UIAlertController+GRJAlert.m in Sources */,
+				18953DE1221BD91D00D83ED1 /* UIButton+RJButton.m in Sources */,
+				18953DDA221BD91D00D83ED1 /* UIImage+GRJImage.m in Sources */,
+				18953DDD221BD91D00D83ED1 /* NSObject+RJCheck.m in Sources */,
 				184FEBCF2217A90200B9CBE1 /* GRJDatePickerView.m in Sources */,
+				18953DE9221BE69500D83ED1 /* GRJPhotoManager.m in Sources */,
+				18953DDB221BD91D00D83ED1 /* NSDate+GRJDate.m in Sources */,
 				184FEBD12217A90200B9CBE1 /* RJScrollView.m in Sources */,
-				18544DC92215506D00B254B1 /* UIAlertController+GRJAlert.m in Sources */,
 				184FEBC82217A90200B9CBE1 /* RJImageTextActionView.m in Sources */,
 				18544DA72215505500B254B1 /* main.m in Sources */,
-				18544DCC2215506D00B254B1 /* UIColor+GRJColor.m in Sources */,
-				18544DCE2215506D00B254B1 /* UIImage+GRJImage.m in Sources */,
-				18544DD02215506D00B254B1 /* NSObject+RJCheck.m in Sources */,
-				18544DCA2215506D00B254B1 /* NSDate+GRJDate.m in Sources */,
-				18544DCB2215506D00B254B1 /* NSString+RJString.m in Sources */,
 				184FEBCC2217A90200B9CBE1 /* RJBaseMenuViewController.m in Sources */,
-				18544DC82215506D00B254B1 /* UIView+GRJFrame.m in Sources */,
-				18544DCD2215506D00B254B1 /* UIButton+Badge.m in Sources */,
+				18953DEC221BECE800D83ED1 /* RJ3DESEncrypt.m in Sources */,
+				18953DE0221BD91D00D83ED1 /* UIColor+GRJColor.m in Sources */,
+				18953DE8221BE69500D83ED1 /* GRJQRCodeTool.m in Sources */,
 				18544D992215505400B254B1 /* AppDelegate.m in Sources */,
 				184FEBC62217A90200B9CBE1 /* RJCornerBorderBgButton.m in Sources */,
 				184FEBC92217A90200B9CBE1 /* GRJAdressPickerViewModel.m in Sources */,
 				184FEBCB2217A90200B9CBE1 /* RJInitViewTool.m in Sources */,
+				18953DE2221BD91D00D83ED1 /* UIButton+Badge.m in Sources */,
 				184FEBD02217A90200B9CBE1 /* RJHorizontalImageNameLineButton.m in Sources */,
-				18544DC72215506D00B254B1 /* UIButton+RJButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

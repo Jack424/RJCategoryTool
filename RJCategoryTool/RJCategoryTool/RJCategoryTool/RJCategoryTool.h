@@ -34,6 +34,11 @@
 #import "RJScrollView.h"
 #import "RJSureButton.h"
 #import "RJHorizontalImageNameLineButton.h"
+#import "RJ3DESEncrypt.h"
+
+
+#import "GRJQRCodeTool.h"
+#import "GRJPhotoManager.h"
 
 
 #import <Masonry/Masonry.h>
@@ -48,5 +53,5 @@
 #import <SDCycleScrollView/SDCycleScrollView.h>
 #import <MBProgressHUD/MBProgressHUD.h>
 #import <Toast/Toast.h>
-
+#import <GTMBase64/GTMBase64.h>
 #endif /* RJCategoryTool_h */

@@ -120,8 +120,8 @@
 #define rj_kIsiPhoneX ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) : NO)
 
 //weakify && strongify
-#define weakify(var) __weak typeof(var) RJWeak_##var = var;
-#define strongify(var) \
+#define rj_weakify(var) __weak typeof(var) RJWeak_##var = var;
+#define rj_strongify(var) \
 _Pragma("clang diagnostic push") \
 _Pragma("clang diagnostic ignored \"-Wshadow\"") \
 __strong typeof(var) var = RJWeak_##var; \

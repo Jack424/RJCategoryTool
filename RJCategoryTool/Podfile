@@ -26,4 +26,6 @@ target 'RJCategoryTool' do
   
   pod 'FMDB'
   
+  pod 'GTMBase64'
+  
 end

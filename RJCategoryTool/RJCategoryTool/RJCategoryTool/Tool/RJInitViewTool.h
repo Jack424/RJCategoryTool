@@ -20,16 +20,16 @@
 +(UIButton *)rj_initSelectedButtonWithSuperView:(UIView *)superView normal:(NSString *)normalImageName selected:(NSString *)selectedImageName target:(id)target action:(SEL)action;
 +(UIButton *)rj_initImageButtonWithSuperView:(UIView *)superView normal:(NSString *)normalImageName highlightedImageName:(NSString *)highlightedImageName target:(id)target action:(SEL)action;
 
-
 /*
  * 获取View的父类控制器
  */
-+ (UIViewController*)viewControllerFromView:(UIView *)view ;
++ (UIViewController*)rj_getViewControllerFromView:(UIView *)view ;
 /*
  * 获取View的导航控制器
  */
-+ (UINavigationController*)navigationControllerFromView:(UIView *)view ;
++ (UINavigationController*)rj_getNavigationControllerFromView:(UIView *)view ;
 
-+ (UIViewController *)getCurrentVC;
+//获取当前屏幕显示的viewcontroller
++ (UIViewController *)rj_getCurrentVC;
 
 @end

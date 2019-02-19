@@ -13,15 +13,5 @@
 
 
 
-/*
- * 获取View的父类控制器
- */
-+ (UIViewController*)rj_getViewControllerFromView:(UIView *)view ;
-/*
- * 获取View的导航控制器
- */
-+ (UINavigationController*)rj_getNavigationControllerFromView:(UIView *)view ;
 
-//获取当前屏幕显示的viewcontroller
-+ (UIViewController *)rj_getCurrentVC;
 @end

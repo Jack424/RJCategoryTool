@@ -54,8 +54,9 @@
 }
 
 
+
 //获取控制器
-+ (UIViewController *)viewControllerFromView:(UIView *)view {
++ (UIViewController *)rj_getViewControllerFromView:(UIView *)view {
     for (UIView *next = [view superview]; next; next = next.superview) {
         UIResponder *nextResponder = [next nextResponder];
         if ([nextResponder isKindOfClass:[UIViewController class]]) {
@@ -68,7 +69,7 @@
 
 
 //获取导航控制器
-+ (UINavigationController *)navigationControllerFromView:(UIView *)view {
++ (UINavigationController *)rj_getNavigationControllerFromView:(UIView *)view {
     for (UIView *next = [view superview]; next; next = next.superview) {
         UIResponder *nextResponder = [next nextResponder];
         if ([nextResponder isKindOfClass:[UINavigationController class]]) {
@@ -79,7 +80,7 @@
 }
 
 //获取当前屏幕显示的viewcontroller
-+ (UIViewController *)getCurrentVC {
++ (UIViewController *)rj_getCurrentVC {
     
     UIWindow *window = [[UIApplication sharedApplication].windows firstObject];
     if (!window) {
@@ -107,4 +108,5 @@
     }
     return  (UIViewController *)nextResponder;
 }
+
 @end
