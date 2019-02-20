@@ -34,8 +34,6 @@
 		18953DE1221BD91D00D83ED1 /* UIButton+RJButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 18953DD7221BD91D00D83ED1 /* UIButton+RJButton.m */; };
 		18953DE2221BD91D00D83ED1 /* UIButton+Badge.m in Sources */ = {isa = PBXBuildFile; fileRef = 18953DD8221BD91D00D83ED1 /* UIButton+Badge.m */; };
 		18953DE3221BD91D00D83ED1 /* UIAlertController+GRJAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 18953DD9221BD91D00D83ED1 /* UIAlertController+GRJAlert.m */; };
-		18953DE8221BE69500D83ED1 /* GRJQRCodeTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 18953DE5221BE69500D83ED1 /* GRJQRCodeTool.m */; };
-		18953DE9221BE69500D83ED1 /* GRJPhotoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 18953DE6221BE69500D83ED1 /* GRJPhotoManager.m */; };
 		18953DEC221BECE800D83ED1 /* RJ3DESEncrypt.m in Sources */ = {isa = PBXBuildFile; fileRef = 18953DEB221BECE800D83ED1 /* RJ3DESEncrypt.m */; };
 		63134546874C166B0C9B9C81 /* libPods-RJCategoryTool.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E32702ACF951655504BD178 /* libPods-RJCategoryTool.a */; };
 /* End PBXBuildFile section */
@@ -98,10 +96,6 @@
 		18953DD7221BD91D00D83ED1 /* UIButton+RJButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+RJButton.m"; sourceTree = "<group>"; };
 		18953DD8221BD91D00D83ED1 /* UIButton+Badge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Badge.m"; sourceTree = "<group>"; };
 		18953DD9221BD91D00D83ED1 /* UIAlertController+GRJAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+GRJAlert.m"; sourceTree = "<group>"; };
-		18953DE4221BE69500D83ED1 /* GRJQRCodeTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRJQRCodeTool.h; sourceTree = "<group>"; };
-		18953DE5221BE69500D83ED1 /* GRJQRCodeTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRJQRCodeTool.m; sourceTree = "<group>"; };
-		18953DE6221BE69500D83ED1 /* GRJPhotoManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRJPhotoManager.m; sourceTree = "<group>"; };
-		18953DE7221BE69500D83ED1 /* GRJPhotoManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRJPhotoManager.h; sourceTree = "<group>"; };
 		18953DEA221BECE800D83ED1 /* RJ3DESEncrypt.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RJ3DESEncrypt.h; sourceTree = "<group>"; };
 		18953DEB221BECE800D83ED1 /* RJ3DESEncrypt.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RJ3DESEncrypt.m; sourceTree = "<group>"; };
 		1E1DFC456BBA19C8D75558A3 /* Pods-RJCategoryTool.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RJCategoryTool.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RJCategoryTool/Pods-RJCategoryTool.debug.xcconfig"; sourceTree = "<group>"; };
@@ -124,10 +118,6 @@
 		184FEBA62217A78900B9CBE1 /* Tool */ = {
 			isa = PBXGroup;
 			children = (
-				18953DE7221BE69500D83ED1 /* GRJPhotoManager.h */,
-				18953DE6221BE69500D83ED1 /* GRJPhotoManager.m */,
-				18953DE4221BE69500D83ED1 /* GRJQRCodeTool.h */,
-				18953DE5221BE69500D83ED1 /* GRJQRCodeTool.m */,
 				184FEBB62217A90000B9CBE1 /* GRJAdressPickerView.h */,
 				184FEBBF2217A90100B9CBE1 /* GRJAdressPickerView.m */,
 				184FEBB22217A90000B9CBE1 /* GRJAdressPickerViewModel.h */,
@@ -412,7 +402,6 @@
 				18953DDA221BD91D00D83ED1 /* UIImage+GRJImage.m in Sources */,
 				18953DDD221BD91D00D83ED1 /* NSObject+RJCheck.m in Sources */,
 				184FEBCF2217A90200B9CBE1 /* GRJDatePickerView.m in Sources */,
-				18953DE9221BE69500D83ED1 /* GRJPhotoManager.m in Sources */,
 				18953DDB221BD91D00D83ED1 /* NSDate+GRJDate.m in Sources */,
 				184FEBD12217A90200B9CBE1 /* RJScrollView.m in Sources */,
 				184FEBC82217A90200B9CBE1 /* RJImageTextActionView.m in Sources */,
@@ -420,7 +409,6 @@
 				184FEBCC2217A90200B9CBE1 /* RJBaseMenuViewController.m in Sources */,
 				18953DEC221BECE800D83ED1 /* RJ3DESEncrypt.m in Sources */,
 				18953DE0221BD91D00D83ED1 /* UIColor+GRJColor.m in Sources */,
-				18953DE8221BE69500D83ED1 /* GRJQRCodeTool.m in Sources */,
 				18544D992215505400B254B1 /* AppDelegate.m in Sources */,
 				184FEBC62217A90200B9CBE1 /* RJCornerBorderBgButton.m in Sources */,
 				184FEBC92217A90200B9CBE1 /* GRJAdressPickerViewModel.m in Sources */,

@@ -37,8 +37,8 @@
 #import "RJ3DESEncrypt.h"
 
 
-#import "GRJQRCodeTool.h"
-#import "GRJPhotoManager.h"
+//#import "GRJQRCodeTool.h"
+//#import "GRJPhotoManager.h"
 
 
 #import <Masonry/Masonry.h>
