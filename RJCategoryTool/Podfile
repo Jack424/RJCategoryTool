@@ -28,4 +28,9 @@ target 'RJCategoryTool' do
   
   pod 'GTMBase64'
   
+  
+  pod 'WechatOpenSDK'
+  
+  pod 'AlipaySDK-iOS'
+  
 end

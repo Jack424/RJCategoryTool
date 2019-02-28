@@ -1,0 +1,15 @@
+//
+//  RJCategoryTool.pch
+//  RJCategoryTool
+//
+//  Created by apple on 2019/2/27.
+//  Copyright © 2019年 Global Barter. All rights reserved.
+//
+
+#ifndef RJCategoryTool_pch
+#define RJCategoryTool_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#import "RJCategoryTool.h"
+#endif /* RJCategoryTool_pch */
