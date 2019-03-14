@@ -11,7 +11,7 @@
 @interface RJBaseMenuViewController : UIViewController
 @property (nonatomic, assign) NSInteger seletedButtpnTag;
 
-
+@property (strong ,nonatomic) UIColor *titleLineColor;//文字颜色 [super viewDidLoad];之前设置
 @property(nonatomic,assign)NSInteger jumpType;  //默认 0(可不传)   跳转其他菜单传 1  2  3  4  5
 
 @property(nonatomic,assign)BOOL isHasRedPoint;  //有需要带红点的传YES   默认为NO 三菜单选择类目中使用过

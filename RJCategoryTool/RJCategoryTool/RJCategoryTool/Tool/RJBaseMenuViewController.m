@@ -36,6 +36,10 @@ static NSString * const ID = @"cell";
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
+    if (!_titleLineColor) {
+        _titleLineColor = rj_kColor_ff4b00;
+    }
+    
     [self setupTopView];
     [self setupBottomView];
     
@@ -85,7 +89,7 @@ static NSString * const ID = @"cell";
         NSString *title = [self.childViewControllers[i] title];
         [titleButton setTitle:title forState:UIControlStateNormal];
         [titleButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-        [titleButton setTitleColor:rj_kColor_ff4b00 forState:UIControlStateSelected];
+        [titleButton setTitleColor:_titleLineColor forState:UIControlStateSelected];
         
         titleButton.titleLabel.font = [UIFont systemFontOfSize:15];
         [titleButton addTarget:self action:@selector(titleClick:) forControlEvents:UIControlEventTouchUpInside];
@@ -104,7 +108,7 @@ static NSString * const ID = @"cell";
         [self titleClick:titleButton];
         
         UIView *underLineView = [[UIView alloc] init];
-        underLineView.backgroundColor = rj_kColor_ff4b00;
+        underLineView.backgroundColor = _titleLineColor;
         // 注意：设置中心点，一点要先设置尺寸
         underLineView.grj_width = [title boundingRectWithSize:(CGSize){CGFLOAT_MAX, CGFLOAT_MAX}
                                                       options:NSStringDrawingUsesLineFragmentOrigin
