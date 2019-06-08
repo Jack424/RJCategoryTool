@@ -22,7 +22,7 @@
 
 
 // 根据颜色生成一张尺寸为1*1的相同颜色图片
-+ (UIImage *)imageWithColor:(UIColor *)color;
++ (UIImage *)rj_imageWithColor:(UIColor *)color;
 + (UIImage *)miniImageWithColor:(UIColor *)color;
 
 // 返回一张可以拉伸的图片
@@ -36,7 +36,7 @@
 /**
  *  根据图片名自动加载适配iOS6\7的图片
  */
-+ (UIImage *)imageWithName:(NSString *)name;
++(UIImage *)imageWithName:(NSString *)name;
 
 
 +(UIImage *)randomImage;
@@ -71,4 +71,46 @@
                        size:(CGSize)size;
 
 
+
+/// 缩放
+- (UIImage *)resize:(CGSize)size;
+
+/**
+ 根据颜色生成图片
+ 
+ @param color 颜色
+ @return 图片
+ */
++ (UIImage *)imageWithColor:(UIColor *)color;
+
+/**
+ 现压缩图片质量，如果不满足继续压缩大小
+ 
+ @param maxLength 指定大小
+ @return ImageData
+ */
+- (NSData *)compressWithMaxLength:(NSInteger)maxLength;
+
+/// 图片修改圆角
+- (UIImage *)drawCornerWithCornerRadius:(CGFloat)cornerRadius;
+
+
+/// 保存二维码
++ (UIImage *)saveShouKuanImageWithBackImage:(UIImage *)backImage
+                                QRCodeImage:(UIImage *)QRCodeImage
+                                       Name:(NSString *)name;
+
+/** 生成一张普通的二维码 */
++ (UIImage *)generateWithDefaultQRCodeData:(NSString *)data
+                            imageViewWidth:(CGFloat)imageViewWidth;
+
+/** 生成一张带有logo的二维码（logoScaleToSuperView：相对于父视图的缩放比取值范围0-1；0，不显示，1，代表与父视图大小相同）*/
++ (UIImage *)generateWithLogoQRCodeData:(NSString *)data
+                              logoImage:(UIImage *)logoImage
+                   logoScaleToSuperView:(CGFloat)logoScaleToSuperView;
+
+/** 生成一张彩色的二维码 */
++ (UIImage *)generateWithColorQRCodeData:(NSString *)data
+                         backgroundColor:(CIColor *)backgroundColor
+                               mainColor:(CIColor *)mainColor;
 @end

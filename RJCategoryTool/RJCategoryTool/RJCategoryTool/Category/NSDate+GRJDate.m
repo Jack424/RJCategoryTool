@@ -556,6 +556,9 @@ static const unsigned componentFlags = (NSCalendarUnitYear| NSCalendarUnitMonth 
     if (timeInterval.length<10) {
         return @"";
     }
+    if (timeInterval.length==12) {
+        timeInterval = [@"0" stringByAppendingString:timeInterval];
+    }
     NSMutableString  *mutabletimeInterval=[[NSMutableString alloc]initWithString:timeInterval];
     [mutabletimeInterval insertString:@"." atIndex:10];
     NSTimeInterval timeInter = mutabletimeInterval.doubleValue;
@@ -573,6 +576,9 @@ static const unsigned componentFlags = (NSCalendarUnitYear| NSCalendarUnitMonth 
     }
     if (dateString.length<10) {
         return @"";
+    }
+    if (dateString.length==12) {
+        dateString = [@"0" stringByAppendingString:dateString];
     }
     NSMutableString  *mutabletimeInterval=[[NSMutableString alloc]initWithString:dateString];
     [mutabletimeInterval insertString:@"." atIndex:10];
@@ -641,6 +647,9 @@ static const unsigned componentFlags = (NSCalendarUnitYear| NSCalendarUnitMonth 
     if (timeInterval.length<10) {
         return @"";
     }
+    if (timeInterval.length==12) {
+        timeInterval = [@"0" stringByAppendingString:timeInterval];
+    }
     NSMutableString  *mutabletimeInterval=[[NSMutableString alloc]initWithString:timeInterval];
     [mutabletimeInterval insertString:@"." atIndex:10];
     NSTimeInterval timeInter = mutabletimeInterval.doubleValue;
@@ -675,6 +684,9 @@ static const unsigned componentFlags = (NSCalendarUnitYear| NSCalendarUnitMonth 
 + (NSString *)dateStyleCommentProductManagerTimeIntervalToDateString:(NSString *)timeInterval{
     if (timeInterval.length<10) {
         return @"";
+    }
+    if (timeInterval.length==12) {
+        timeInterval = [@"0" stringByAppendingString:timeInterval];
     }
     NSMutableString  *mutabletimeInterval=[[NSMutableString alloc]initWithString:timeInterval];
     [mutabletimeInterval insertString:@"." atIndex:10];

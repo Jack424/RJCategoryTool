@@ -18,6 +18,10 @@
     if ([NSObject rj_objIsEmpty:string]) {
         return YES;
     }
+    if ([string isKindOfClass:[NSNumber class]]) {
+        NSNumber *number = (NSNumber *)string;
+        string = number.stringValue;
+    }
     if (string.length <= 0) {
         return YES;
     }
