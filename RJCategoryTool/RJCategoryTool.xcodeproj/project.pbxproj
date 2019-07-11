@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -34,6 +34,16 @@
 		18544DA12215505500B254B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18544DA02215505500B254B1 /* Assets.xcassets */; };
 		18544DA42215505500B254B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18544DA22215505500B254B1 /* LaunchScreen.storyboard */; };
 		18544DA72215505500B254B1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18544DA62215505500B254B1 /* main.m */; };
+		187D913C22D70D4E00DB8C72 /* RJTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 187D913B22D70D4E00DB8C72 /* RJTabBarViewController.m */; };
+		187D914122D7127200DB8C72 /* UIViewController+RTRootNav.m in Sources */ = {isa = PBXBuildFile; fileRef = 187D913F22D7127200DB8C72 /* UIViewController+RTRootNav.m */; };
+		187D914222D7127200DB8C72 /* RTRootNavigationController+RTRootSetting.m in Sources */ = {isa = PBXBuildFile; fileRef = 187D914022D7127200DB8C72 /* RTRootNavigationController+RTRootSetting.m */; };
+		187D914522D7143500DB8C72 /* RJBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 187D914422D7143500DB8C72 /* RJBaseModel.m */; };
+		187D914822D7145500DB8C72 /* RJBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 187D914722D7145500DB8C72 /* RJBaseViewController.m */; };
+		187D914B22D7157600DB8C72 /* RJBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 187D914A22D7157600DB8C72 /* RJBaseTableViewController.m */; };
+		187D914F22D715B300DB8C72 /* RJIndex1TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 187D914E22D715B300DB8C72 /* RJIndex1TableViewController.m */; };
+		187D915222D7222400DB8C72 /* RJBaseTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 187D915122D7222400DB8C72 /* RJBaseTableView.m */; };
+		187D915522D7290200DB8C72 /* RJEmptyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 187D915422D7290200DB8C72 /* RJEmptyView.m */; };
+		187D915A22D7314500DB8C72 /* RJRefreshHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 187D915922D7314500DB8C72 /* RJRefreshHeader.m */; };
 		18953DDA221BD91D00D83ED1 /* UIImage+GRJImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 18953DCA221BD91B00D83ED1 /* UIImage+GRJImage.m */; };
 		18953DDB221BD91D00D83ED1 /* NSDate+GRJDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18953DCB221BD91B00D83ED1 /* NSDate+GRJDate.m */; };
 		18953DDC221BD91D00D83ED1 /* NSString+RJString.m in Sources */ = {isa = PBXBuildFile; fileRef = 18953DCD221BD91B00D83ED1 /* NSString+RJString.m */; };
@@ -178,6 +188,26 @@
 		18544DAE2215506D00B254B1 /* RJCategoryTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RJCategoryTool.h; sourceTree = "<group>"; };
 		18544DC52215506D00B254B1 /* RJColorAndFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RJColorAndFont.h; sourceTree = "<group>"; };
 		18544DC62215506D00B254B1 /* RJMainMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RJMainMacros.h; sourceTree = "<group>"; };
+		187D913A22D70D4E00DB8C72 /* RJTabBarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RJTabBarViewController.h; sourceTree = "<group>"; };
+		187D913B22D70D4E00DB8C72 /* RJTabBarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RJTabBarViewController.m; sourceTree = "<group>"; };
+		187D913D22D7127200DB8C72 /* UIViewController+RTRootNav.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+RTRootNav.h"; sourceTree = "<group>"; };
+		187D913E22D7127200DB8C72 /* RTRootNavigationController+RTRootSetting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RTRootNavigationController+RTRootSetting.h"; sourceTree = "<group>"; };
+		187D913F22D7127200DB8C72 /* UIViewController+RTRootNav.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+RTRootNav.m"; sourceTree = "<group>"; };
+		187D914022D7127200DB8C72 /* RTRootNavigationController+RTRootSetting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RTRootNavigationController+RTRootSetting.m"; sourceTree = "<group>"; };
+		187D914322D7143500DB8C72 /* RJBaseModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RJBaseModel.h; sourceTree = "<group>"; };
+		187D914422D7143500DB8C72 /* RJBaseModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RJBaseModel.m; sourceTree = "<group>"; };
+		187D914622D7145500DB8C72 /* RJBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RJBaseViewController.h; sourceTree = "<group>"; };
+		187D914722D7145500DB8C72 /* RJBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RJBaseViewController.m; sourceTree = "<group>"; };
+		187D914922D7157600DB8C72 /* RJBaseTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RJBaseTableViewController.h; sourceTree = "<group>"; };
+		187D914A22D7157600DB8C72 /* RJBaseTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RJBaseTableViewController.m; sourceTree = "<group>"; };
+		187D914D22D715B300DB8C72 /* RJIndex1TableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RJIndex1TableViewController.h; sourceTree = "<group>"; };
+		187D914E22D715B300DB8C72 /* RJIndex1TableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RJIndex1TableViewController.m; sourceTree = "<group>"; };
+		187D915022D7222400DB8C72 /* RJBaseTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RJBaseTableView.h; sourceTree = "<group>"; };
+		187D915122D7222400DB8C72 /* RJBaseTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RJBaseTableView.m; sourceTree = "<group>"; };
+		187D915322D7290200DB8C72 /* RJEmptyView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RJEmptyView.h; sourceTree = "<group>"; };
+		187D915422D7290200DB8C72 /* RJEmptyView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RJEmptyView.m; sourceTree = "<group>"; };
+		187D915822D7314500DB8C72 /* RJRefreshHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RJRefreshHeader.h; sourceTree = "<group>"; };
+		187D915922D7314500DB8C72 /* RJRefreshHeader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RJRefreshHeader.m; sourceTree = "<group>"; };
 		18953DC6221BD91A00D83ED1 /* UIButton+Badge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Badge.h"; sourceTree = "<group>"; };
 		18953DC7221BD91A00D83ED1 /* UIImage+GRJImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+GRJImage.h"; sourceTree = "<group>"; };
 		18953DC8221BD91A00D83ED1 /* NSDate+GRJDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+GRJDate.h"; sourceTree = "<group>"; };
@@ -232,10 +262,10 @@
 		1811926E2226625500F4AC10 /* WeChat */ = {
 			isa = PBXGroup;
 			children = (
-				1811926F2226625500F4AC10 /* GDataXMLNode.h */,
-				181192702226625500F4AC10 /* CommonUtil.m */,
-				181192712226625500F4AC10 /* GDataXMLNode.m */,
 				181192722226625500F4AC10 /* CommonUtil.h */,
+				181192702226625500F4AC10 /* CommonUtil.m */,
+				1811926F2226625500F4AC10 /* GDataXMLNode.h */,
+				181192712226625500F4AC10 /* GDataXMLNode.m */,
 			);
 			path = WeChat;
 			sourceTree = "<group>";
@@ -243,14 +273,14 @@
 		181192752226626700F4AC10 /* alipay */ = {
 			isa = PBXGroup;
 			children = (
-				18119287222662C800F4AC10 /* openssl */,
-				181192762226626700F4AC10 /* libcrypto.a */,
-				181192772226626700F4AC10 /* APOrderInfo.m */,
-				181192782226626700F4AC10 /* APAuthInfo.m */,
-				181192792226626700F4AC10 /* Utils */,
-				1811927E2226626700F4AC10 /* APOrderInfo.h */,
-				1811927F2226626700F4AC10 /* libssl.a */,
 				181192802226626700F4AC10 /* APAuthInfo.h */,
+				181192782226626700F4AC10 /* APAuthInfo.m */,
+				1811927E2226626700F4AC10 /* APOrderInfo.h */,
+				181192772226626700F4AC10 /* APOrderInfo.m */,
+				181192762226626700F4AC10 /* libcrypto.a */,
+				1811927F2226626700F4AC10 /* libssl.a */,
+				18119287222662C800F4AC10 /* openssl */,
+				181192792226626700F4AC10 /* Utils */,
 			);
 			path = alipay;
 			sourceTree = "<group>";
@@ -269,81 +299,81 @@
 		18119287222662C800F4AC10 /* openssl */ = {
 			isa = PBXGroup;
 			children = (
-				18119288222662C800F4AC10 /* pem2.h */,
-				18119289222662C800F4AC10 /* pem.h */,
-				1811928A222662C800F4AC10 /* ssl3.h */,
-				1811928B222662C800F4AC10 /* ossl_typ.h */,
-				1811928C222662C800F4AC10 /* dtls1.h */,
-				1811928D222662C800F4AC10 /* err.h */,
-				1811928E222662C800F4AC10 /* bn.h */,
-				1811928F222662C800F4AC10 /* blowfish.h */,
-				18119290222662C800F4AC10 /* cms.h */,
-				18119291222662C800F4AC10 /* engine.h */,
-				18119292222662C800F4AC10 /* conf_api.h */,
-				18119293222662C800F4AC10 /* x509.h */,
-				18119294222662C800F4AC10 /* asn1_mac.h */,
-				18119295222662C800F4AC10 /* ui.h */,
-				18119296222662C800F4AC10 /* kssl.h */,
-				18119297222662C800F4AC10 /* sha.h */,
-				18119298222662C800F4AC10 /* symhacks.h */,
-				18119299222662C800F4AC10 /* asn1.h */,
-				1811929A222662C800F4AC10 /* opensslconf.h */,
-				1811929B222662C800F4AC10 /* bio.h */,
-				1811929C222662C800F4AC10 /* rc2.h */,
-				1811929D222662C800F4AC10 /* dh.h */,
-				1811929E222662C800F4AC10 /* ui_compat.h */,
-				1811929F222662C800F4AC10 /* x509v3.h */,
-				181192A0222662C800F4AC10 /* ssl23.h */,
-				181192A1222662C800F4AC10 /* conf.h */,
-				181192A2222662C800F4AC10 /* md5.h */,
-				181192A3222662C800F4AC10 /* x509_vfy.h */,
-				181192A4222662C800F4AC10 /* txt_db.h */,
-				181192A5222662C800F4AC10 /* safestack.h */,
-				181192A6222662C800F4AC10 /* ecdsa.h */,
-				181192A7222662C800F4AC10 /* objects.h */,
-				181192A8222662C800F4AC10 /* pkcs12.h */,
-				181192A9222662C800F4AC10 /* crypto.h */,
-				181192AA222662C800F4AC10 /* opensslv.h */,
-				181192AB222662C800F4AC10 /* pkcs7.h */,
-				181192AC222662C800F4AC10 /* obj_mac.h */,
-				181192AD222662C800F4AC10 /* buffer.h */,
-				181192AE222662C800F4AC10 /* ssl.h */,
-				181192AF222662C800F4AC10 /* srp.h */,
-				181192B0222662C800F4AC10 /* camellia.h */,
-				181192B1222662C800F4AC10 /* evp.h */,
-				181192B2222662C800F4AC10 /* e_os2.h */,
-				181192B3222662C800F4AC10 /* md4.h */,
-				181192B4222662C800F4AC10 /* hmac.h */,
 				181192B5222662C800F4AC10 /* aes.h */,
-				181192B6222662C800F4AC10 /* comp.h */,
+				18119294222662C800F4AC10 /* asn1_mac.h */,
+				18119299222662C800F4AC10 /* asn1.h */,
+				181192CE222662C800F4AC10 /* asn1t.h */,
+				1811929B222662C800F4AC10 /* bio.h */,
+				1811928F222662C800F4AC10 /* blowfish.h */,
+				1811928E222662C800F4AC10 /* bn.h */,
+				181192AD222662C800F4AC10 /* buffer.h */,
+				181192B0222662C800F4AC10 /* camellia.h */,
 				181192B7222662C800F4AC10 /* cast.h */,
-				181192B8222662C800F4AC10 /* rc4.h */,
-				181192B9222662C800F4AC10 /* stack.h */,
+				181192CF222662C800F4AC10 /* cmac.h */,
+				18119290222662C800F4AC10 /* cms.h */,
+				181192B6222662C800F4AC10 /* comp.h */,
+				18119292222662C800F4AC10 /* conf_api.h */,
+				181192A1222662C800F4AC10 /* conf.h */,
+				181192A9222662C800F4AC10 /* crypto.h */,
+				181192C7222662C800F4AC10 /* des_old.h */,
 				181192BA222662C800F4AC10 /* des.h */,
-				181192BB222662C800F4AC10 /* ocsp.h */,
+				1811929D222662C800F4AC10 /* dh.h */,
+				181192CC222662C800F4AC10 /* dsa.h */,
+				181192C1222662C800F4AC10 /* dso.h */,
+				1811928C222662C800F4AC10 /* dtls1.h */,
+				181192B2222662C800F4AC10 /* e_os2.h */,
+				181192D0222662C800F4AC10 /* ebcdic.h */,
 				181192BC222662C800F4AC10 /* ec.h */,
 				181192BD222662C800F4AC10 /* ecdh.h */,
-				181192BE222662C800F4AC10 /* rand.h */,
-				181192BF222662C800F4AC10 /* ts.h */,
-				181192C0222662C800F4AC10 /* pqueue.h */,
-				181192C1222662C800F4AC10 /* dso.h */,
-				181192C2222662C800F4AC10 /* seed.h */,
-				181192C3222662C800F4AC10 /* modes.h */,
-				181192C4222662C800F4AC10 /* ssl2.h */,
-				181192C5222662C800F4AC10 /* rsa.h */,
-				181192C6222662C800F4AC10 /* krb5_asn.h */,
-				181192C7222662C800F4AC10 /* des_old.h */,
-				181192C8222662C800F4AC10 /* ripemd.h */,
-				181192C9222662C800F4AC10 /* whrlpool.h */,
-				181192CA222662C800F4AC10 /* tls1.h */,
-				181192CB222662C800F4AC10 /* mdc2.h */,
-				181192CC222662C800F4AC10 /* dsa.h */,
-				181192CD222662C800F4AC10 /* srtp.h */,
-				181192CE222662C800F4AC10 /* asn1t.h */,
-				181192CF222662C800F4AC10 /* cmac.h */,
-				181192D0222662C800F4AC10 /* ebcdic.h */,
+				181192A6222662C800F4AC10 /* ecdsa.h */,
+				18119291222662C800F4AC10 /* engine.h */,
+				1811928D222662C800F4AC10 /* err.h */,
+				181192B1222662C800F4AC10 /* evp.h */,
+				181192B4222662C800F4AC10 /* hmac.h */,
 				181192D1222662C800F4AC10 /* idea.h */,
+				181192C6222662C800F4AC10 /* krb5_asn.h */,
+				18119296222662C800F4AC10 /* kssl.h */,
 				181192D2222662C800F4AC10 /* lhash.h */,
+				181192B3222662C800F4AC10 /* md4.h */,
+				181192A2222662C800F4AC10 /* md5.h */,
+				181192CB222662C800F4AC10 /* mdc2.h */,
+				181192C3222662C800F4AC10 /* modes.h */,
+				181192AC222662C800F4AC10 /* obj_mac.h */,
+				181192A7222662C800F4AC10 /* objects.h */,
+				181192BB222662C800F4AC10 /* ocsp.h */,
+				1811929A222662C800F4AC10 /* opensslconf.h */,
+				181192AA222662C800F4AC10 /* opensslv.h */,
+				1811928B222662C800F4AC10 /* ossl_typ.h */,
+				18119289222662C800F4AC10 /* pem.h */,
+				18119288222662C800F4AC10 /* pem2.h */,
+				181192AB222662C800F4AC10 /* pkcs7.h */,
+				181192A8222662C800F4AC10 /* pkcs12.h */,
+				181192C0222662C800F4AC10 /* pqueue.h */,
+				181192BE222662C800F4AC10 /* rand.h */,
+				1811929C222662C800F4AC10 /* rc2.h */,
+				181192B8222662C800F4AC10 /* rc4.h */,
+				181192C8222662C800F4AC10 /* ripemd.h */,
+				181192C5222662C800F4AC10 /* rsa.h */,
+				181192A5222662C800F4AC10 /* safestack.h */,
+				181192C2222662C800F4AC10 /* seed.h */,
+				18119297222662C800F4AC10 /* sha.h */,
+				181192AF222662C800F4AC10 /* srp.h */,
+				181192CD222662C800F4AC10 /* srtp.h */,
+				181192AE222662C800F4AC10 /* ssl.h */,
+				181192C4222662C800F4AC10 /* ssl2.h */,
+				1811928A222662C800F4AC10 /* ssl3.h */,
+				181192A0222662C800F4AC10 /* ssl23.h */,
+				181192B9222662C800F4AC10 /* stack.h */,
+				18119298222662C800F4AC10 /* symhacks.h */,
+				181192CA222662C800F4AC10 /* tls1.h */,
+				181192BF222662C800F4AC10 /* ts.h */,
+				181192A4222662C800F4AC10 /* txt_db.h */,
+				1811929E222662C800F4AC10 /* ui_compat.h */,
+				18119295222662C800F4AC10 /* ui.h */,
+				181192C9222662C800F4AC10 /* whrlpool.h */,
+				181192A3222662C800F4AC10 /* x509_vfy.h */,
+				18119293222662C800F4AC10 /* x509.h */,
+				1811929F222662C800F4AC10 /* x509v3.h */,
 			);
 			path = openssl;
 			sourceTree = "<group>";
@@ -410,18 +440,14 @@
 		18544D962215505400B254B1 /* RJCategoryTool */ = {
 			isa = PBXGroup;
 			children = (
-				1811926D2226623200F4AC10 /* ThirdPay */,
 				18544DAD2215506D00B254B1 /* RJCategoryTool */,
-				18544D972215505400B254B1 /* AppDelegate.h */,
-				18544D982215505400B254B1 /* AppDelegate.m */,
-				18544D9A2215505400B254B1 /* ViewController.h */,
-				18544D9B2215505400B254B1 /* ViewController.m */,
-				181192D522266ECC00F4AC10 /* RJCategoryTool.pch */,
-				18544D9D2215505400B254B1 /* Main.storyboard */,
+				187D913422D6D90B00DB8C72 /* RJCoding */,
+				1811926D2226623200F4AC10 /* ThirdPay */,
 				18544DA02215505500B254B1 /* Assets.xcassets */,
-				18544DA22215505500B254B1 /* LaunchScreen.storyboard */,
+				181192D522266ECC00F4AC10 /* RJCategoryTool.pch */,
 				18544DA52215505500B254B1 /* Info.plist */,
 				18544DA62215505500B254B1 /* main.m */,
+				18544DA22215505500B254B1 /* LaunchScreen.storyboard */,
 			);
 			path = RJCategoryTool;
 			sourceTree = "<group>";
@@ -472,6 +498,102 @@
 				18544DC62215506D00B254B1 /* RJMainMacros.h */,
 			);
 			path = Macros;
+			sourceTree = "<group>";
+		};
+		187D913422D6D90B00DB8C72 /* RJCoding */ = {
+			isa = PBXGroup;
+			children = (
+				187D914C22D7158400DB8C72 /* RJIndex1 */,
+				187D913522D6D91D00DB8C72 /* Main */,
+			);
+			path = RJCoding;
+			sourceTree = "<group>";
+		};
+		187D913522D6D91D00DB8C72 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				187D915622D7306A00DB8C72 /* Tools */,
+				187D913922D70CDF00DB8C72 /* BaseVC */,
+				187D913822D70CD600DB8C72 /* Nav */,
+				187D913722D70CC200DB8C72 /* TabBar */,
+				187D913622D70CAE00DB8C72 /* AppDelegate */,
+				18544D9A2215505400B254B1 /* ViewController.h */,
+				18544D9B2215505400B254B1 /* ViewController.m */,
+				18544D9D2215505400B254B1 /* Main.storyboard */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		187D913622D70CAE00DB8C72 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				18544D972215505400B254B1 /* AppDelegate.h */,
+				18544D982215505400B254B1 /* AppDelegate.m */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		187D913722D70CC200DB8C72 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				187D913A22D70D4E00DB8C72 /* RJTabBarViewController.h */,
+				187D913B22D70D4E00DB8C72 /* RJTabBarViewController.m */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		187D913822D70CD600DB8C72 /* Nav */ = {
+			isa = PBXGroup;
+			children = (
+				187D913E22D7127200DB8C72 /* RTRootNavigationController+RTRootSetting.h */,
+				187D914022D7127200DB8C72 /* RTRootNavigationController+RTRootSetting.m */,
+				187D913D22D7127200DB8C72 /* UIViewController+RTRootNav.h */,
+				187D913F22D7127200DB8C72 /* UIViewController+RTRootNav.m */,
+			);
+			path = Nav;
+			sourceTree = "<group>";
+		};
+		187D913922D70CDF00DB8C72 /* BaseVC */ = {
+			isa = PBXGroup;
+			children = (
+				187D914322D7143500DB8C72 /* RJBaseModel.h */,
+				187D914422D7143500DB8C72 /* RJBaseModel.m */,
+				187D914622D7145500DB8C72 /* RJBaseViewController.h */,
+				187D914722D7145500DB8C72 /* RJBaseViewController.m */,
+				187D914922D7157600DB8C72 /* RJBaseTableViewController.h */,
+				187D914A22D7157600DB8C72 /* RJBaseTableViewController.m */,
+				187D915022D7222400DB8C72 /* RJBaseTableView.h */,
+				187D915122D7222400DB8C72 /* RJBaseTableView.m */,
+				187D915322D7290200DB8C72 /* RJEmptyView.h */,
+				187D915422D7290200DB8C72 /* RJEmptyView.m */,
+			);
+			path = BaseVC;
+			sourceTree = "<group>";
+		};
+		187D914C22D7158400DB8C72 /* RJIndex1 */ = {
+			isa = PBXGroup;
+			children = (
+				187D914D22D715B300DB8C72 /* RJIndex1TableViewController.h */,
+				187D914E22D715B300DB8C72 /* RJIndex1TableViewController.m */,
+			);
+			path = RJIndex1;
+			sourceTree = "<group>";
+		};
+		187D915622D7306A00DB8C72 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				187D915722D7307700DB8C72 /* RJRefresh */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		187D915722D7307700DB8C72 /* RJRefresh */ = {
+			isa = PBXGroup;
+			children = (
+				187D915822D7314500DB8C72 /* RJRefreshHeader.h */,
+				187D915922D7314500DB8C72 /* RJRefreshHeader.m */,
+			);
+			path = RJRefresh;
 			sourceTree = "<group>";
 		};
 		2DABB21C6CD62B9DFA50BEDC /* Pods */ = {
@@ -589,38 +711,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-RJCategoryTool/Pods-RJCategoryTool-resources.sh",
-				"${PODS_ROOT}/AlipaySDK-iOS/AlipaySDK.bundle",
-				"${PODS_ROOT}/GPUImage/framework/Resources/lookup.png",
-				"${PODS_ROOT}/GPUImage/framework/Resources/lookup_amatorka.png",
-				"${PODS_ROOT}/GPUImage/framework/Resources/lookup_miss_etikate.png",
-				"${PODS_ROOT}/GPUImage/framework/Resources/lookup_soft_elegance_1.png",
-				"${PODS_ROOT}/GPUImage/framework/Resources/lookup_soft_elegance_2.png",
-				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
-				"${PODS_ROOT}/ZLPhotoBrowser/PhotoBrowser/resource/ZLPhotoActionSheet.xib",
-				"${PODS_ROOT}/ZLPhotoBrowser/PhotoBrowser/resource/ZLPhotoBrowserCell.xib",
-				"${PODS_ROOT}/ZLPhotoBrowser/PhotoBrowser/resource/ZLPhotoBrowser.bundle",
+				"${PODS_ROOT}/Target Support Files/Pods-RJCategoryTool/Pods-RJCategoryTool-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AlipaySDK.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/lookup.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/lookup_amatorka.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/lookup_miss_etikate.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/lookup_soft_elegance_1.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/lookup_soft_elegance_2.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ZLPhotoActionSheet.nib",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ZLPhotoBrowserCell.nib",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ZLPhotoBrowser.bundle",
+				"${PODS_ROOT}/Target Support Files/Pods-RJCategoryTool/Pods-RJCategoryTool-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RJCategoryTool/Pods-RJCategoryTool-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RJCategoryTool/Pods-RJCategoryTool-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -636,11 +735,17 @@
 				184FEBCE2217A90200B9CBE1 /* GRJAdressPickerView.m in Sources */,
 				181192732226625500F4AC10 /* CommonUtil.m in Sources */,
 				181192742226625500F4AC10 /* GDataXMLNode.m in Sources */,
+				187D915522D7290200DB8C72 /* RJEmptyView.m in Sources */,
 				184FEBC52217A90200B9CBE1 /* RJCountNameLineButton.m in Sources */,
+				187D915222D7222400DB8C72 /* RJBaseTableView.m in Sources */,
 				184FEBCD2217A90200B9CBE1 /* RJSureButton.m in Sources */,
+				187D914222D7127200DB8C72 /* RTRootNavigationController+RTRootSetting.m in Sources */,
 				18544D9C2215505400B254B1 /* ViewController.m in Sources */,
 				18953DE3221BD91D00D83ED1 /* UIAlertController+GRJAlert.m in Sources */,
+				187D914122D7127200DB8C72 /* UIViewController+RTRootNav.m in Sources */,
+				187D914B22D7157600DB8C72 /* RJBaseTableViewController.m in Sources */,
 				18953DE1221BD91D00D83ED1 /* UIButton+RJButton.m in Sources */,
+				187D914F22D715B300DB8C72 /* RJIndex1TableViewController.m in Sources */,
 				18953DDA221BD91D00D83ED1 /* UIImage+GRJImage.m in Sources */,
 				18953DDD221BD91D00D83ED1 /* NSObject+RJCheck.m in Sources */,
 				181192822226626700F4AC10 /* APOrderInfo.m in Sources */,
@@ -651,11 +756,15 @@
 				18544DA72215505500B254B1 /* main.m in Sources */,
 				181192832226626700F4AC10 /* APAuthInfo.m in Sources */,
 				184FEBCC2217A90200B9CBE1 /* RJBaseMenuViewController.m in Sources */,
+				187D914822D7145500DB8C72 /* RJBaseViewController.m in Sources */,
 				18953DEC221BECE800D83ED1 /* RJ3DESEncrypt.m in Sources */,
 				18953DE0221BD91D00D83ED1 /* UIColor+GRJColor.m in Sources */,
 				18544D992215505400B254B1 /* AppDelegate.m in Sources */,
 				184FEBC62217A90200B9CBE1 /* RJCornerBorderBgButton.m in Sources */,
 				184FEBC92217A90200B9CBE1 /* GRJAdressPickerViewModel.m in Sources */,
+				187D915A22D7314500DB8C72 /* RJRefreshHeader.m in Sources */,
+				187D913C22D70D4E00DB8C72 /* RJTabBarViewController.m in Sources */,
+				187D914522D7143500DB8C72 /* RJBaseModel.m in Sources */,
 				181192842226626700F4AC10 /* openssl_wrapper.m in Sources */,
 				184FEBCB2217A90200B9CBE1 /* RJInitViewTool.m in Sources */,
 				18953DE2221BD91D00D83ED1 /* UIButton+Badge.m in Sources */,
@@ -830,6 +939,7 @@
 					"${SDK_ROOT}/usr/include/libxml2",
 				);
 				INFOPLIST_FILE = RJCategoryTool/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -876,6 +986,7 @@
 					"${SDK_ROOT}/usr/include/libxml2",
 				);
 				INFOPLIST_FILE = RJCategoryTool/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

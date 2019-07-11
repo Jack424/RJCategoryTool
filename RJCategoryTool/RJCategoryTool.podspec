@@ -38,6 +38,10 @@ Pod::Spec.new do |s|
 
   s.dependency 'GTMBase64'
 
+  s.dependency 'LYEmptyView'
+
+  s.dependency 'UITableView+FDTemplateLayoutCell'
+
   # GRJDatePickerView.xib  city.json
   # s.resources    = 'PhotoBrowser/resource/*.{png,xib,nib,bundle}'
   # s.frameworks   = 'UIKit','Photos','PhotosUI'

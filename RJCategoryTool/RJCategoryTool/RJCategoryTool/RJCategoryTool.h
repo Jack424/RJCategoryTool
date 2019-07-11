@@ -54,6 +54,8 @@
 #import <MBProgressHUD/MBProgressHUD.h>
 #import <Toast/Toast.h>
 #import <GTMBase64/GTMBase64.h>
+#import <LYEmptyView/LYEmptyView.h>
+#import <UITableView+FDTemplateLayoutCell/UITableView+FDTemplateLayoutCell.h>
 #endif /* RJCategoryTool_h */
 
 
