@@ -29,8 +29,6 @@
 		184FEBD02217A90200B9CBE1 /* RJHorizontalImageNameLineButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 184FEBC32217A90200B9CBE1 /* RJHorizontalImageNameLineButton.m */; };
 		184FEBD12217A90200B9CBE1 /* RJScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 184FEBC42217A90200B9CBE1 /* RJScrollView.m */; };
 		18544D992215505400B254B1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18544D982215505400B254B1 /* AppDelegate.m */; };
-		18544D9C2215505400B254B1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18544D9B2215505400B254B1 /* ViewController.m */; };
-		18544D9F2215505400B254B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18544D9D2215505400B254B1 /* Main.storyboard */; };
 		18544DA12215505500B254B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18544DA02215505500B254B1 /* Assets.xcassets */; };
 		18544DA42215505500B254B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18544DA22215505500B254B1 /* LaunchScreen.storyboard */; };
 		18544DA72215505500B254B1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18544DA62215505500B254B1 /* main.m */; };
@@ -44,6 +42,16 @@
 		187D915222D7222400DB8C72 /* RJBaseTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 187D915122D7222400DB8C72 /* RJBaseTableView.m */; };
 		187D915522D7290200DB8C72 /* RJEmptyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 187D915422D7290200DB8C72 /* RJEmptyView.m */; };
 		187D915A22D7314500DB8C72 /* RJRefreshHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 187D915922D7314500DB8C72 /* RJRefreshHeader.m */; };
+		187D915E22D816FF00DB8C72 /* HttpRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 187D915C22D816FE00DB8C72 /* HttpRequest.m */; };
+		187D916222D818C900DB8C72 /* HUDManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 187D916022D818C800DB8C72 /* HUDManager.m */; };
+		187D916522D8308100DB8C72 /* RJBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 187D916422D8308100DB8C72 /* RJBaseView.m */; };
+		187D916822D8318000DB8C72 /* RJModuleEntranceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 187D916722D8318000DB8C72 /* RJModuleEntranceCell.m */; };
+		187D916B22D831C500DB8C72 /* RJBaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 187D916A22D831C500DB8C72 /* RJBaseTableViewCell.m */; };
+		187D916E22D8514700DB8C72 /* RJModuleEntranceCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 187D916D22D8514700DB8C72 /* RJModuleEntranceCollectionViewCell.m */; };
+		187D917122D8518E00DB8C72 /* RJModuleEntranceCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 187D917022D8518E00DB8C72 /* RJModuleEntranceCollectionViewLayout.m */; };
+		187D917722D8633500DB8C72 /* RJPayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 187D917622D8633400DB8C72 /* RJPayViewController.m */; };
+		187D917A22D8897400DB8C72 /* RJWechatAppPay.m in Sources */ = {isa = PBXBuildFile; fileRef = 187D917922D8897300DB8C72 /* RJWechatAppPay.m */; };
+		187D917D22D889C500DB8C72 /* RJAlipayAppPay.m in Sources */ = {isa = PBXBuildFile; fileRef = 187D917C22D889C500DB8C72 /* RJAlipayAppPay.m */; };
 		18953DDA221BD91D00D83ED1 /* UIImage+GRJImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 18953DCA221BD91B00D83ED1 /* UIImage+GRJImage.m */; };
 		18953DDB221BD91D00D83ED1 /* NSDate+GRJDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18953DCB221BD91B00D83ED1 /* NSDate+GRJDate.m */; };
 		18953DDC221BD91D00D83ED1 /* NSString+RJString.m in Sources */ = {isa = PBXBuildFile; fileRef = 18953DCD221BD91B00D83ED1 /* NSString+RJString.m */; };
@@ -55,6 +63,9 @@
 		18953DE2221BD91D00D83ED1 /* UIButton+Badge.m in Sources */ = {isa = PBXBuildFile; fileRef = 18953DD8221BD91D00D83ED1 /* UIButton+Badge.m */; };
 		18953DE3221BD91D00D83ED1 /* UIAlertController+GRJAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 18953DD9221BD91D00D83ED1 /* UIAlertController+GRJAlert.m */; };
 		18953DEC221BECE800D83ED1 /* RJ3DESEncrypt.m in Sources */ = {isa = PBXBuildFile; fileRef = 18953DEB221BECE800D83ED1 /* RJ3DESEncrypt.m */; };
+		18E83FE722D894000002F75F /* RJRootVCTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E83FDE22D893FF0002F75F /* RJRootVCTool.m */; };
+		18E83FE822D894000002F75F /* RJNewFeatureCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E83FE122D893FF0002F75F /* RJNewFeatureCollectionViewCell.m */; };
+		18E83FEB22D894000002F75F /* RJNewFeatureCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E83FE522D893FF0002F75F /* RJNewFeatureCollectionViewController.m */; };
 		63134546874C166B0C9B9C81 /* libPods-RJCategoryTool.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E32702ACF951655504BD178 /* libPods-RJCategoryTool.a */; };
 /* End PBXBuildFile section */
 
@@ -178,9 +189,6 @@
 		18544D942215505400B254B1 /* RJCategoryTool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RJCategoryTool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18544D972215505400B254B1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		18544D982215505400B254B1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		18544D9A2215505400B254B1 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		18544D9B2215505400B254B1 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		18544D9E2215505400B254B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		18544DA02215505500B254B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		18544DA32215505500B254B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		18544DA52215505500B254B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -208,6 +216,27 @@
 		187D915422D7290200DB8C72 /* RJEmptyView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RJEmptyView.m; sourceTree = "<group>"; };
 		187D915822D7314500DB8C72 /* RJRefreshHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RJRefreshHeader.h; sourceTree = "<group>"; };
 		187D915922D7314500DB8C72 /* RJRefreshHeader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RJRefreshHeader.m; sourceTree = "<group>"; };
+		187D915C22D816FE00DB8C72 /* HttpRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpRequest.m; sourceTree = "<group>"; };
+		187D915D22D816FF00DB8C72 /* HttpRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpRequest.h; sourceTree = "<group>"; };
+		187D915F22D8178700DB8C72 /* HttpRequestURL.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HttpRequestURL.h; sourceTree = "<group>"; };
+		187D916022D818C800DB8C72 /* HUDManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HUDManager.m; sourceTree = "<group>"; };
+		187D916122D818C800DB8C72 /* HUDManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HUDManager.h; sourceTree = "<group>"; };
+		187D916322D8308100DB8C72 /* RJBaseView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RJBaseView.h; sourceTree = "<group>"; };
+		187D916422D8308100DB8C72 /* RJBaseView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RJBaseView.m; sourceTree = "<group>"; };
+		187D916622D8318000DB8C72 /* RJModuleEntranceCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RJModuleEntranceCell.h; sourceTree = "<group>"; };
+		187D916722D8318000DB8C72 /* RJModuleEntranceCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RJModuleEntranceCell.m; sourceTree = "<group>"; };
+		187D916922D831C500DB8C72 /* RJBaseTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RJBaseTableViewCell.h; sourceTree = "<group>"; };
+		187D916A22D831C500DB8C72 /* RJBaseTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RJBaseTableViewCell.m; sourceTree = "<group>"; };
+		187D916C22D8514600DB8C72 /* RJModuleEntranceCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RJModuleEntranceCollectionViewCell.h; sourceTree = "<group>"; };
+		187D916D22D8514700DB8C72 /* RJModuleEntranceCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RJModuleEntranceCollectionViewCell.m; sourceTree = "<group>"; };
+		187D916F22D8518E00DB8C72 /* RJModuleEntranceCollectionViewLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RJModuleEntranceCollectionViewLayout.h; sourceTree = "<group>"; };
+		187D917022D8518E00DB8C72 /* RJModuleEntranceCollectionViewLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RJModuleEntranceCollectionViewLayout.m; sourceTree = "<group>"; };
+		187D917522D8633400DB8C72 /* RJPayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RJPayViewController.h; sourceTree = "<group>"; };
+		187D917622D8633400DB8C72 /* RJPayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RJPayViewController.m; sourceTree = "<group>"; };
+		187D917822D8897300DB8C72 /* RJWechatAppPay.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RJWechatAppPay.h; sourceTree = "<group>"; };
+		187D917922D8897300DB8C72 /* RJWechatAppPay.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RJWechatAppPay.m; sourceTree = "<group>"; };
+		187D917B22D889C500DB8C72 /* RJAlipayAppPay.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RJAlipayAppPay.h; sourceTree = "<group>"; };
+		187D917C22D889C500DB8C72 /* RJAlipayAppPay.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RJAlipayAppPay.m; sourceTree = "<group>"; };
 		18953DC6221BD91A00D83ED1 /* UIButton+Badge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Badge.h"; sourceTree = "<group>"; };
 		18953DC7221BD91A00D83ED1 /* UIImage+GRJImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+GRJImage.h"; sourceTree = "<group>"; };
 		18953DC8221BD91A00D83ED1 /* NSDate+GRJDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+GRJDate.h"; sourceTree = "<group>"; };
@@ -230,6 +259,12 @@
 		18953DD9221BD91D00D83ED1 /* UIAlertController+GRJAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+GRJAlert.m"; sourceTree = "<group>"; };
 		18953DEA221BECE800D83ED1 /* RJ3DESEncrypt.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RJ3DESEncrypt.h; sourceTree = "<group>"; };
 		18953DEB221BECE800D83ED1 /* RJ3DESEncrypt.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RJ3DESEncrypt.m; sourceTree = "<group>"; };
+		18E83FDE22D893FF0002F75F /* RJRootVCTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RJRootVCTool.m; sourceTree = "<group>"; };
+		18E83FDF22D893FF0002F75F /* RJNewFeatureCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RJNewFeatureCollectionViewCell.h; sourceTree = "<group>"; };
+		18E83FE022D893FF0002F75F /* RJNewFeatureCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RJNewFeatureCollectionViewController.h; sourceTree = "<group>"; };
+		18E83FE122D893FF0002F75F /* RJNewFeatureCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RJNewFeatureCollectionViewCell.m; sourceTree = "<group>"; };
+		18E83FE222D893FF0002F75F /* RJRootVCTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RJRootVCTool.h; sourceTree = "<group>"; };
+		18E83FE522D893FF0002F75F /* RJNewFeatureCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RJNewFeatureCollectionViewController.m; sourceTree = "<group>"; };
 		1E1DFC456BBA19C8D75558A3 /* Pods-RJCategoryTool.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RJCategoryTool.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RJCategoryTool/Pods-RJCategoryTool.debug.xcconfig"; sourceTree = "<group>"; };
 		3E32702ACF951655504BD178 /* libPods-RJCategoryTool.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RJCategoryTool.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D7B62306A8F5880B82563DA /* Pods-RJCategoryTool.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RJCategoryTool.release.xcconfig"; path = "Pods/Target Support Files/Pods-RJCategoryTool/Pods-RJCategoryTool.release.xcconfig"; sourceTree = "<group>"; };
@@ -512,14 +547,13 @@
 		187D913522D6D91D00DB8C72 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				18E83FDD22D893FF0002F75F /* RJNewFeature */,
+				187D915B22D816A900DB8C72 /* HttpRequest */,
 				187D915622D7306A00DB8C72 /* Tools */,
 				187D913922D70CDF00DB8C72 /* BaseVC */,
 				187D913822D70CD600DB8C72 /* Nav */,
 				187D913722D70CC200DB8C72 /* TabBar */,
 				187D913622D70CAE00DB8C72 /* AppDelegate */,
-				18544D9A2215505400B254B1 /* ViewController.h */,
-				18544D9B2215505400B254B1 /* ViewController.m */,
-				18544D9D2215505400B254B1 /* Main.storyboard */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -558,12 +592,16 @@
 			children = (
 				187D914322D7143500DB8C72 /* RJBaseModel.h */,
 				187D914422D7143500DB8C72 /* RJBaseModel.m */,
+				187D916322D8308100DB8C72 /* RJBaseView.h */,
+				187D916422D8308100DB8C72 /* RJBaseView.m */,
 				187D914622D7145500DB8C72 /* RJBaseViewController.h */,
 				187D914722D7145500DB8C72 /* RJBaseViewController.m */,
 				187D914922D7157600DB8C72 /* RJBaseTableViewController.h */,
 				187D914A22D7157600DB8C72 /* RJBaseTableViewController.m */,
 				187D915022D7222400DB8C72 /* RJBaseTableView.h */,
 				187D915122D7222400DB8C72 /* RJBaseTableView.m */,
+				187D916922D831C500DB8C72 /* RJBaseTableViewCell.h */,
+				187D916A22D831C500DB8C72 /* RJBaseTableViewCell.m */,
 				187D915322D7290200DB8C72 /* RJEmptyView.h */,
 				187D915422D7290200DB8C72 /* RJEmptyView.m */,
 			);
@@ -573,8 +611,15 @@
 		187D914C22D7158400DB8C72 /* RJIndex1 */ = {
 			isa = PBXGroup;
 			children = (
+				187D917422D8620800DB8C72 /* WechatAndAliPay */,
 				187D914D22D715B300DB8C72 /* RJIndex1TableViewController.h */,
 				187D914E22D715B300DB8C72 /* RJIndex1TableViewController.m */,
+				187D916622D8318000DB8C72 /* RJModuleEntranceCell.h */,
+				187D916722D8318000DB8C72 /* RJModuleEntranceCell.m */,
+				187D916C22D8514600DB8C72 /* RJModuleEntranceCollectionViewCell.h */,
+				187D916D22D8514700DB8C72 /* RJModuleEntranceCollectionViewCell.m */,
+				187D916F22D8518E00DB8C72 /* RJModuleEntranceCollectionViewLayout.h */,
+				187D917022D8518E00DB8C72 /* RJModuleEntranceCollectionViewLayout.m */,
 			);
 			path = RJIndex1;
 			sourceTree = "<group>";
@@ -594,6 +639,44 @@
 				187D915922D7314500DB8C72 /* RJRefreshHeader.m */,
 			);
 			path = RJRefresh;
+			sourceTree = "<group>";
+		};
+		187D915B22D816A900DB8C72 /* HttpRequest */ = {
+			isa = PBXGroup;
+			children = (
+				187D915F22D8178700DB8C72 /* HttpRequestURL.h */,
+				187D915D22D816FF00DB8C72 /* HttpRequest.h */,
+				187D915C22D816FE00DB8C72 /* HttpRequest.m */,
+				187D916122D818C800DB8C72 /* HUDManager.h */,
+				187D916022D818C800DB8C72 /* HUDManager.m */,
+			);
+			path = HttpRequest;
+			sourceTree = "<group>";
+		};
+		187D917422D8620800DB8C72 /* WechatAndAliPay */ = {
+			isa = PBXGroup;
+			children = (
+				187D917522D8633400DB8C72 /* RJPayViewController.h */,
+				187D917622D8633400DB8C72 /* RJPayViewController.m */,
+				187D917822D8897300DB8C72 /* RJWechatAppPay.h */,
+				187D917922D8897300DB8C72 /* RJWechatAppPay.m */,
+				187D917B22D889C500DB8C72 /* RJAlipayAppPay.h */,
+				187D917C22D889C500DB8C72 /* RJAlipayAppPay.m */,
+			);
+			path = WechatAndAliPay;
+			sourceTree = "<group>";
+		};
+		18E83FDD22D893FF0002F75F /* RJNewFeature */ = {
+			isa = PBXGroup;
+			children = (
+				18E83FDF22D893FF0002F75F /* RJNewFeatureCollectionViewCell.h */,
+				18E83FE122D893FF0002F75F /* RJNewFeatureCollectionViewCell.m */,
+				18E83FE022D893FF0002F75F /* RJNewFeatureCollectionViewController.h */,
+				18E83FE522D893FF0002F75F /* RJNewFeatureCollectionViewController.m */,
+				18E83FE222D893FF0002F75F /* RJRootVCTool.h */,
+				18E83FDE22D893FF0002F75F /* RJRootVCTool.m */,
+			);
+			path = RJNewFeature;
 			sourceTree = "<group>";
 		};
 		2DABB21C6CD62B9DFA50BEDC /* Pods */ = {
@@ -676,7 +759,6 @@
 				18544DA42215505500B254B1 /* LaunchScreen.storyboard in Resources */,
 				18544DA12215505500B254B1 /* Assets.xcassets in Resources */,
 				181191012224DF2C00F4AC10 /* RJResource.plist in Resources */,
-				18544D9F2215505400B254B1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -729,18 +811,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				187D917A22D8897400DB8C72 /* RJWechatAppPay.m in Sources */,
 				18953DDE221BD91D00D83ED1 /* UIBarButtonItem+GRJBarButtonItem.m in Sources */,
 				18953DDC221BD91D00D83ED1 /* NSString+RJString.m in Sources */,
 				18953DDF221BD91D00D83ED1 /* UIView+GRJFrame.m in Sources */,
 				184FEBCE2217A90200B9CBE1 /* GRJAdressPickerView.m in Sources */,
 				181192732226625500F4AC10 /* CommonUtil.m in Sources */,
+				18E83FEB22D894000002F75F /* RJNewFeatureCollectionViewController.m in Sources */,
+				187D916822D8318000DB8C72 /* RJModuleEntranceCell.m in Sources */,
 				181192742226625500F4AC10 /* GDataXMLNode.m in Sources */,
 				187D915522D7290200DB8C72 /* RJEmptyView.m in Sources */,
+				187D917122D8518E00DB8C72 /* RJModuleEntranceCollectionViewLayout.m in Sources */,
 				184FEBC52217A90200B9CBE1 /* RJCountNameLineButton.m in Sources */,
 				187D915222D7222400DB8C72 /* RJBaseTableView.m in Sources */,
+				187D916522D8308100DB8C72 /* RJBaseView.m in Sources */,
 				184FEBCD2217A90200B9CBE1 /* RJSureButton.m in Sources */,
 				187D914222D7127200DB8C72 /* RTRootNavigationController+RTRootSetting.m in Sources */,
-				18544D9C2215505400B254B1 /* ViewController.m in Sources */,
+				187D916222D818C900DB8C72 /* HUDManager.m in Sources */,
+				187D917722D8633500DB8C72 /* RJPayViewController.m in Sources */,
 				18953DE3221BD91D00D83ED1 /* UIAlertController+GRJAlert.m in Sources */,
 				187D914122D7127200DB8C72 /* UIViewController+RTRootNav.m in Sources */,
 				187D914B22D7157600DB8C72 /* RJBaseTableViewController.m in Sources */,
@@ -750,17 +838,23 @@
 				18953DDD221BD91D00D83ED1 /* NSObject+RJCheck.m in Sources */,
 				181192822226626700F4AC10 /* APOrderInfo.m in Sources */,
 				184FEBCF2217A90200B9CBE1 /* GRJDatePickerView.m in Sources */,
+				187D916E22D8514700DB8C72 /* RJModuleEntranceCollectionViewCell.m in Sources */,
 				18953DDB221BD91D00D83ED1 /* NSDate+GRJDate.m in Sources */,
 				184FEBD12217A90200B9CBE1 /* RJScrollView.m in Sources */,
 				184FEBC82217A90200B9CBE1 /* RJImageTextActionView.m in Sources */,
 				18544DA72215505500B254B1 /* main.m in Sources */,
+				187D915E22D816FF00DB8C72 /* HttpRequest.m in Sources */,
+				18E83FE822D894000002F75F /* RJNewFeatureCollectionViewCell.m in Sources */,
 				181192832226626700F4AC10 /* APAuthInfo.m in Sources */,
 				184FEBCC2217A90200B9CBE1 /* RJBaseMenuViewController.m in Sources */,
 				187D914822D7145500DB8C72 /* RJBaseViewController.m in Sources */,
 				18953DEC221BECE800D83ED1 /* RJ3DESEncrypt.m in Sources */,
 				18953DE0221BD91D00D83ED1 /* UIColor+GRJColor.m in Sources */,
+				187D916B22D831C500DB8C72 /* RJBaseTableViewCell.m in Sources */,
+				18E83FE722D894000002F75F /* RJRootVCTool.m in Sources */,
 				18544D992215505400B254B1 /* AppDelegate.m in Sources */,
 				184FEBC62217A90200B9CBE1 /* RJCornerBorderBgButton.m in Sources */,
+				187D917D22D889C500DB8C72 /* RJAlipayAppPay.m in Sources */,
 				184FEBC92217A90200B9CBE1 /* GRJAdressPickerViewModel.m in Sources */,
 				187D915A22D7314500DB8C72 /* RJRefreshHeader.m in Sources */,
 				187D913C22D70D4E00DB8C72 /* RJTabBarViewController.m in Sources */,
@@ -776,14 +870,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		18544D9D2215505400B254B1 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				18544D9E2215505400B254B1 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		18544DA22215505500B254B1 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

@@ -18,5 +18,12 @@
 #import "RJBaseTableViewController.h"
 #import "RJBaseModel.h"
 #import "RJBaseViewController.h"
+#import "RJBaseView.h"
+#import "RJBaseTableViewCell.h"
+
+
+#import "HttpRequestURL.h"
+#import "HUDManager.h"
+#import "HttpRequest.h"
 
 #endif /* RJCategoryTool_pch */

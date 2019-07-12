@@ -52,6 +52,14 @@
     [superView addSubview:button];
     return button;
 }
++(UIButton *)rj_initImageButtonWithSuperView:(UIView *)superView normal:(NSString *)normalImageName selectedImageName:(NSString *)selectedImageName target:(id)target action:(SEL)action{
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    [button setImage:[UIImage imageNamed:normalImageName] forState:UIControlStateNormal];
+    [button setImage:[UIImage imageNamed:selectedImageName] forState:UIControlStateSelected];
+    [button addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
+    [superView addSubview:button];
+    return button;
+}
 
 
 

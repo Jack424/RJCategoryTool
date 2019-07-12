@@ -19,7 +19,7 @@
 
 +(UIButton *)rj_initSelectedButtonWithSuperView:(UIView *)superView normal:(NSString *)normalImageName selected:(NSString *)selectedImageName target:(id)target action:(SEL)action;
 +(UIButton *)rj_initImageButtonWithSuperView:(UIView *)superView normal:(NSString *)normalImageName highlightedImageName:(NSString *)highlightedImageName target:(id)target action:(SEL)action;
-
++(UIButton *)rj_initImageButtonWithSuperView:(UIView *)superView normal:(NSString *)normalImageName selectedImageName:(NSString *)selectedImageName target:(id)target action:(SEL)action;
 /*
  * 获取View的父类控制器
  */

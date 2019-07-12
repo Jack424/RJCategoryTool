@@ -7,19 +7,18 @@
 //
 
 #import "AppDelegate.h"
-#import "RJTabBarViewController.h"
-
+#import "RJRootVCTool.h"
 @interface AppDelegate ()
 
 @end
 
 @implementation AppDelegate
 
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
-    self.window.rootViewController = [[RJTabBarViewController alloc]init];
+    [RJRootVCTool rj_rootVCToolHomeVc:@"RJTabBarViewController"];
+    self.window.rootViewController = [RJRootVCTool chooseRootVC];
     [self.window makeKeyAndVisible];
     
     return YES;
