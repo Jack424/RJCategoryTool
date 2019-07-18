@@ -36,6 +36,8 @@
         }];
         
         UILabel *label = [RJInitViewTool rj_initLabelWithSuperView:self text:@"微信支付" font:rj_kFont_24 textColor:rj_kColor_333333];
+        label.font = [UIFont fontWithName:rj_kFontName size:rj_kValue_24];
+        
         [self addSubview:label];
         [label mas_makeConstraints:^(MASConstraintMaker *make) {
             make.centerX.equalTo(self);

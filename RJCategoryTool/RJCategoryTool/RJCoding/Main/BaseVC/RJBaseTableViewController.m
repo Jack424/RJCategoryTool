@@ -16,18 +16,14 @@
 
 @implementation RJBaseTableViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    
-    //[self.rj_tableView ly_startLoading];
-}
 - (void)rj_setUpSubviews {
     [super rj_setUpSubviews];
     [self.view addSubview:self.rj_tableView];
     [self.rj_tableView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(self.view);
     }];
+    [self rj_loadNewData];
+    [self.rj_tableView ly_startLoading];
 }
 
 #pragma mark - UITableViewDataSource && UITableViewDelegate
@@ -40,14 +36,16 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:[self cellIdentifierWithIndexPath:indexPath] forIndexPath:indexPath];
-    [self configureCell:cell
-            atIndexPath:indexPath];
+//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:[self cellIdentifierWithIndexPath:indexPath] forIndexPath:indexPath];
+//    [self configureCell:cell atIndexPath:indexPath];
+    
+    UITableViewCell *cell =  [[UITableViewCell alloc]init];
+    cell.textLabel.text = @"MyName";
     return cell;
 }
 - (void)configureCell:(UITableViewCell *)cell
           atIndexPath:(NSIndexPath *)indexPath {
-    cell.fd_enforceFrameLayout = NO;
+    //cell.fd_enforceFrameLayout = NO;
 }
 
 - (NSString *)cellIdentifierWithIndexPath:(NSIndexPath *)indexPath {
@@ -55,13 +53,13 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return [tableView fd_heightForCellWithIdentifier:[self cellIdentifierWithIndexPath:indexPath]
-                                    cacheByIndexPath:indexPath
-                                       configuration:^(UITableViewCell *cell) {
-                                           [self configureCell:cell
-                                                   atIndexPath:indexPath];
-                                       }];
-    //return 50;
+    //return [tableView fd_heightForCellWithIdentifier:[self cellIdentifierWithIndexPath:indexPath]
+//                                    cacheByIndexPath:indexPath
+//                                       configuration:^(UITableViewCell *cell) {
+//                                           [self configureCell:cell
+//                                                   atIndexPath:indexPath];
+//                                       }];
+    return 50;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
@@ -93,7 +91,7 @@
 }
 -(RJBaseTableView *)rj_tableView{
     if (!_rj_tableView) {
-        _rj_tableView = [[RJBaseTableView alloc]initWithFrame:CGRectZero style:[self tableViewStyle]];
+        _rj_tableView = [[RJBaseTableView alloc]initWithFrame:CGRectZero style:[self rj_tableViewStyle]];
         _rj_tableView.backgroundColor = [UIColor clearColor];
         _rj_tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         _rj_tableView.estimatedRowHeight = 0;
@@ -101,13 +99,13 @@
         _rj_tableView.estimatedSectionHeaderHeight = 0;
         //weakify(self)
         rj_weakify(self)
-        _rj_tableView.ly_emptyView = [RJEmptyView emptyViewWithType:[self emptyViewType]
+        _rj_tableView.ly_emptyView = [RJEmptyView emptyViewWithType:[self rj_emptyViewType]
                                                         tapBlock:^{
                                                             //strongify(self)
-                                                            [RJWeak_self emptyViewRetry];
+                                                            [RJWeak_self rj_emptyViewRetry];
                                                         }];
         _rj_tableView.keyboardDismissMode = UIScrollViewKeyboardDismissModeOnDrag;
-        _rj_tableView.ly_emptyView.autoShowEmptyView = YES;
+        _rj_tableView.ly_emptyView.autoShowEmptyView = NO;
         _rj_tableView.delegate = self;
         _rj_tableView.dataSource = self;
         if(@available(iOS 11.0,*)) {
@@ -116,25 +114,32 @@
         else {
             self.automaticallyAdjustsScrollViewInsets = NO;
         }
-        _rj_tableView.mj_header = self.refreshHeader;
-        _rj_tableView.mj_footer = self.refreshFooter;
+        
+        if (self.rj_isShowRefreshHeader) {
+            _rj_tableView.mj_header = self.refreshHeader;
+        }
+        if (self.rj_isShowRefreshFooter) {
+            _rj_tableView.mj_footer = self.refreshFooter;
+        }
     }
     return _rj_tableView;
 }
-- (UITableViewStyle)tableViewStyle {
+- (UITableViewStyle)rj_tableViewStyle {
     return UITableViewStyleGrouped;
 }
-- (RJEmptyViewType)emptyViewType {
+- (RJEmptyViewType)rj_emptyViewType {
     return RJEmptyViewType_NoData;
 }
-- (void)emptyViewRetry {
-    
+- (void)rj_emptyViewRetry {
+    [self rj_loadNewData];
+    NSLog(@"____%s",__func__);
+    NSLog(@"____%s",__func__);
 }
 #pragma mark - Subclass Override
 - (RJRefreshHeader *)refreshHeader {
     if (!_refreshHeader) {
         _refreshHeader = [RJRefreshHeader headerWithRefreshingTarget:self
-                                                    refreshingAction:@selector(loadNewData)];
+                                                    refreshingAction:@selector(rj_loadNewData)];
     }
     return _refreshHeader;
 }
@@ -142,17 +147,40 @@
 - (RJRefreshFooter *)refreshFooter {
     if (!_refreshFooter) {
         _refreshFooter = [RJRefreshFooter footerWithRefreshingTarget:self
-                                                    refreshingAction:@selector(loadMoreData)];
+                                                    refreshingAction:@selector(rj_loadMoreData)];
     }
     return _refreshFooter;
 }
-- (void)loadNewData {
+- (void)rj_loadNewData {
 //    _currentPage = 1;
 //    [self getList];
+    [HUDManager showHUDAddedToView:self.view];
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self.rj_tableView.mj_header endRefreshing];
+        //[self.rj_dataArray removeAllObjects];
+        [self rj_reloadData];
+    });
 }
 
-- (void)loadMoreData {
+- (void)rj_loadMoreData {
 //    _currentPage ++;
 //    [self getList];
+    
+    [HUDManager showHUDAddedToView:self.view];
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        
+        [self.rj_tableView.mj_footer endRefreshing];
+        [self.rj_dataArray addObjectsFromArray:@[@"1",@"1",@"1",@"1",@"1",@"1",@"1",@"1",@"1",@"1"]];
+        [self rj_reloadData];
+    });
+}
+
+- (void)rj_reloadData{
+    [HUDManager hideHUDForView:self.view];
+    
+    [self.rj_tableView reloadData];
+    [self.rj_tableView ly_endLoading];
 }
 @end

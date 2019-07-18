@@ -10,15 +10,15 @@
 
 @implementation RJBaseTableViewCell
 
-- (void)awakeFromNib {
-    [super awakeFromNib];
-    // Initialization code
+-(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
+    if ([super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
+        [self rj_setTableViewCell];
+    }
+    return self;
 }
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
+-(void)rj_setTableViewCell{
+    
 }
 
 @end

@@ -11,6 +11,9 @@
 #import "RJModuleEntranceCollectionViewLayout.h"
 
 #import "RJPayViewController.h"
+#import "RJEmptyListViewController.h"
+#import "RJVideoEditViewController.h"
+#import "RJLabelFontAndNameViewController.h"
 
 @interface RJModuleEntranceCell() <UICollectionViewDelegate, UICollectionViewDataSource>
 
@@ -23,9 +26,9 @@
     if (!_dataArray) {
         _dataArray = @[
                        @{@"image":@"rj_flower_icon",@"title":@"支付"},
-                       @{@"image":@"rj_flower_icon",@"title":@"模块"},
-                       @{@"image":@"rj_flower_icon",@"title":@"模块"},
-                       @{@"image":@"rj_flower_icon",@"title":@"模块"},
+                       @{@"image":@"rj_flower_icon",@"title":@"缺省页"},
+                       @{@"image":@"rj_flower_icon",@"title":@"视频"},
+                       @{@"image":@"rj_flower_icon",@"title":@"字体"},
                        @{@"image":@"rj_flower_icon",@"title":@"模块"},
                        @{@"image":@"rj_flower_icon",@"title":@"模块"},
                        @{@"image":@"rj_flower_icon",@"title":@"模块"},
@@ -44,15 +47,11 @@
     }
     return _dataArray;
 }
--(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
-    if ([super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
-        
-        [self addSubview:self.collectionView];
-        [self.collectionView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.edges.equalTo(self);
-        }];
-    }
-    return self;
+-(void)rj_setTableViewCell{
+    [self addSubview:self.collectionView];
+    [self.collectionView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(self);
+    }];
 }
 #pragma mark -- UICollectionViewDelegate
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
@@ -70,6 +69,18 @@
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     if ([self.dataArray[indexPath.row][@"title"] isEqualToString:@"支付"]) {
         RJPayViewController *subvc = [[RJPayViewController alloc]init];
+        [[RJInitViewTool rj_getNavigationControllerFromView:self] pushViewController:subvc animated:YES];
+    }
+    if ([self.dataArray[indexPath.row][@"title"] isEqualToString:@"缺省页"]) {
+        RJEmptyListViewController *subvc = [[RJEmptyListViewController alloc]init];
+        [[RJInitViewTool rj_getNavigationControllerFromView:self] pushViewController:subvc animated:YES];
+    }
+    if ([self.dataArray[indexPath.row][@"title"] isEqualToString:@"视频"]) {
+        RJVideoEditViewController *subvc = [[RJVideoEditViewController alloc]init];
+        [[RJInitViewTool rj_getNavigationControllerFromView:self] pushViewController:subvc animated:YES];
+    }//
+    if ([self.dataArray[indexPath.row][@"title"] isEqualToString:@"字体"]) {
+        RJLabelFontAndNameViewController *subvc = [[RJLabelFontAndNameViewController alloc]init];
         [[RJInitViewTool rj_getNavigationControllerFromView:self] pushViewController:subvc animated:YES];
     }
 }

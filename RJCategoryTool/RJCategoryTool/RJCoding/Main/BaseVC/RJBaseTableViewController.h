@@ -18,6 +18,38 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// tableView
 @property (nonatomic, strong) RJBaseTableView *rj_tableView;
+
+/**
+ RJEmptyViewType
+
+ @return  默认 RJEmptyViewType_NoData
+ RJEmptyViewType_NoData = 0, //暂无内容
+ RJEmptyViewType_NoMessage,  //无消息
+ RJEmptyViewType_NetworkingError,   //网络问题
+ */
+- (RJEmptyViewType)rj_emptyViewType;
+
+/**
+ emptyViewRetry 点击缺省页响应
+ */
+- (void)rj_emptyViewRetry;
+
+/**
+ rj_tableViewStyle
+
+ @return 默认  UITableViewStyleGrouped
+ */
+- (UITableViewStyle)rj_tableViewStyle;
+
+
+/// 刷新表
+- (void)rj_reloadData;
+
+- (void)rj_loadNewData;
+- (void)rj_loadMoreData;
+
+@property (assign ,nonatomic) BOOL rj_isShowRefreshHeader;
+@property (assign ,nonatomic) BOOL rj_isShowRefreshFooter;
 @end
 
 NS_ASSUME_NONNULL_END

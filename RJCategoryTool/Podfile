@@ -37,4 +37,5 @@ target 'RJCategoryTool' do
   
   pod 'UITableView+FDTemplateLayoutCell'
   
+  #pod 'GPUImage'
 end

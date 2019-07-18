@@ -11,7 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface RJBaseTableViewCell : UITableViewCell
-
+-(void)rj_setTableViewCell;
 @end
 
 NS_ASSUME_NONNULL_END

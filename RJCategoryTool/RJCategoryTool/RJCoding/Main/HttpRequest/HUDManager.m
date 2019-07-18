@@ -7,7 +7,7 @@
 //
 
 #import "HUDManager.h"
-
+#import "RJHUDMangerLoadingView.h"
 
 #define kScreen_height  [[UIScreen mainScreen] bounds].size.height
 #define kScreen_width   [[UIScreen mainScreen] bounds].size.width
@@ -42,24 +42,25 @@ static BOOL isAvalibleTouch = YES;
 
 +(void)showHUDAddedToView:(UIView *)view{
     
-    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:view animated:YES];
-    hud.label.text = @"加载中";
-    hud.backgroundView.style =MBProgressHUDBackgroundStyleSolidColor;
-    hud.backgroundView.color = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.1];
-    [hud showAnimated:YES];
+//    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:view animated:YES];
+//    hud.label.text = @"加载中";
+//    hud.backgroundView.style =MBProgressHUDBackgroundStyleSolidColor;
+//    hud.backgroundView.color = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.1];
+//    [hud showAnimated:YES];
+//
+//    [MBProgressHUD showHUDAddedTo:view animated:YES];
     
-    [MBProgressHUD showHUDAddedTo:view animated:YES];
-    
-//    LoadingView *loadView = [[LoadingView alloc] initWithFrame:view.bounds];
-//    loadView.tag = 10000000;
-//    [view addSubview:loadView];
+    RJHUDMangerLoadingView *loadView = [[RJHUDMangerLoadingView alloc] initWithFrame:view.bounds];
+    loadView.tag = 10000000;
+    //loadView.cover = YES;
+    [view addSubview:loadView];
 }
 
 +(void)hideHUDForView:(UIView *)view{
     [MBProgressHUD hideHUDForView:view animated:YES];
     
-//    LoadingView *loadView = [view viewWithTag:10000000];
-//    [loadView removeFromSuperview];
+    RJHUDMangerLoadingView *loadView = [view viewWithTag:10000000];
+    [loadView removeFromSuperview];
 }
 
 /**********************************************************/

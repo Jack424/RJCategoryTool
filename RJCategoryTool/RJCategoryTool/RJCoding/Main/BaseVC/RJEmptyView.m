@@ -28,9 +28,9 @@
             title = @"暂无内容";
         }
             break;
-        case RJEmptyViewType_NoMessage: {
-            imageName = @"NoMessage";
-            title = @"暂时还没有消息";
+        case RJEmptyViewType_NoDataReload: {
+            imageName = @"NoContent";
+            title = @"暂无内容";
         }
             break;
         case RJEmptyViewType_NetworkingError: {
@@ -48,21 +48,30 @@
     }
     RJEmptyView *emptyView;
     if (type == RJEmptyViewType_NetworkingError) {
-        emptyView = [RJEmptyView  emptyActionViewWithImageStr:imageName titleStr:title detailStr:nil btnTitleStr:@"去逛逛" btnClickBlock:^{
-                                                    NSLog(@"点了缺省页的按钮,你想做什么");
-                                                    NSLog(@"点了缺省页的按钮,你想做什么");
-                                                    NSLog(@"点了缺省页的按钮,你想做什么");
-                                                    
-                                                    NSLog(@"点了缺省页的按钮,你想做什么");
-                                                    NSLog(@"点了缺省页的按钮,你想做什么");
-                                                    NSLog(@"点了缺省页的按钮,你想做什么");
-                                                }];
+        emptyView = [RJEmptyView  emptyActionViewWithImageStr:imageName titleStr:title detailStr:nil btnTitleStr:@"重新加载" btnClickBlock:^{
+            NSLog(@"点了缺省页的按钮,你想做什么");
+            if (tapBlock) {
+                tapBlock();
+            }
+        }];
         emptyView.actionBtnFont = [UIFont systemFontOfSize:15.f];
         emptyView.actionBtnTitleColor = [UIColor whiteColor];
         emptyView.actionBtnHeight = 40.f;
         emptyView.actionBtnCornerRadius = 20.f;
         emptyView.actionBtnBackGroundColor = rj_kColor_ff4b00;
-    } else {
+    }else if (type == RJEmptyViewType_NoDataReload) {
+        emptyView = [RJEmptyView  emptyActionViewWithImageStr:imageName titleStr:title detailStr:nil btnTitleStr:@"重新加载" btnClickBlock:^{
+            NSLog(@"点了缺省页的按钮,重新加载");
+            if (tapBlock) {
+                tapBlock();
+            }
+        }];
+        emptyView.actionBtnFont = [UIFont systemFontOfSize:15.f];
+        emptyView.actionBtnTitleColor = [UIColor whiteColor];
+        emptyView.actionBtnHeight = 40.f;
+        emptyView.actionBtnCornerRadius = 20.f;
+        emptyView.actionBtnBackGroundColor = rj_kColor_ff4b00;
+    }else {
         emptyView = [RJEmptyView emptyViewWithImageStr:imageName
                                               titleStr:title
                                              detailStr:nil];

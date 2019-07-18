@@ -10,9 +10,9 @@
 
 typedef NS_ENUM(NSUInteger, RJEmptyViewType) {
     RJEmptyViewType_NoData = 0, //暂无内容
-    RJEmptyViewType_NoMessage,  //无消息
-    
     RJEmptyViewType_NetworkingError,   //网络问题
+    RJEmptyViewType_NoDataReload,  //暂无内容  按钮重新加载
+    
 };
 
 NS_ASSUME_NONNULL_BEGIN
