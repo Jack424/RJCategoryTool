@@ -9,5 +9,7 @@
 #import "RJBaseModel.h"
 
 @implementation RJBaseModel
-
++(NSDictionary *)mj_replacedKeyFromPropertyName{
+    return @{@"_id":@"id"};
+}
 @end

@@ -29,7 +29,6 @@
 		184FEBD02217A90200B9CBE1 /* RJHorizontalImageNameLineButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 184FEBC32217A90200B9CBE1 /* RJHorizontalImageNameLineButton.m */; };
 		184FEBD12217A90200B9CBE1 /* RJScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 184FEBC42217A90200B9CBE1 /* RJScrollView.m */; };
 		18544D992215505400B254B1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18544D982215505400B254B1 /* AppDelegate.m */; };
-		18544DA12215505500B254B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18544DA02215505500B254B1 /* Assets.xcassets */; };
 		18544DA42215505500B254B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18544DA22215505500B254B1 /* LaunchScreen.storyboard */; };
 		18544DA72215505500B254B1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18544DA62215505500B254B1 /* main.m */; };
 		185B14CD22DC1C69008EE9DC /* RJBaseListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 185B14CC22DC1C69008EE9DC /* RJBaseListTableViewController.m */; };
@@ -74,6 +73,17 @@
 		18AD862A22DEC777008A8D37 /* RJLabelFontAndNameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18AD862922DEC777008A8D37 /* RJLabelFontAndNameViewController.m */; };
 		18AD862D22DF1C2D008A8D37 /* RJHUDMangerLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18AD862C22DF1C2D008A8D37 /* RJHUDMangerLoadingView.m */; };
 		18AD863022E00E4C008A8D37 /* RJFontStylePostScriptDownload.m in Sources */ = {isa = PBXBuildFile; fileRef = 18AD862F22E00E4B008A8D37 /* RJFontStylePostScriptDownload.m */; };
+		18AD865622E022F1008A8D37 /* RJBaseScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18AD865522E022F1008A8D37 /* RJBaseScrollView.m */; };
+		18AD865822E02335008A8D37 /* EmptyAndHUD.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18AD865722E02335008A8D37 /* EmptyAndHUD.xcassets */; };
+		18AD865A22E023A8008A8D37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18AD865922E023A8008A8D37 /* Assets.xcassets */; };
+		18AD865C22E0240D008A8D37 /* NavAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18AD865B22E0240D008A8D37 /* NavAssets.xcassets */; };
+		18AD865E22E02453008A8D37 /* TabBarAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18AD865D22E02453008A8D37 /* TabBarAssets.xcassets */; };
+		18AD866422E03820008A8D37 /* UITextField+GRJTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 18AD866222E0381F008A8D37 /* UITextField+GRJTextField.m */; };
+		18AD866522E03820008A8D37 /* UITextField+CHTHealper.m in Sources */ = {isa = PBXBuildFile; fileRef = 18AD866322E03820008A8D37 /* UITextField+CHTHealper.m */; };
+		18AD866822E03867008A8D37 /* RJTextLVTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 18AD866722E03867008A8D37 /* RJTextLVTool.m */; };
+		18AD866C22E03B69008A8D37 /* RJStarEvaluationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18AD866A22E03B69008A8D37 /* RJStarEvaluationView.m */; };
+		18AD866F22E03C3F008A8D37 /* RJBaseModalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18AD866E22E03C3F008A8D37 /* RJBaseModalViewController.m */; };
+		18AD867122E03D45008A8D37 /* StarEvaluation.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18AD867022E03D44008A8D37 /* StarEvaluation.xcassets */; };
 		18E83FE722D894000002F75F /* RJRootVCTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E83FDE22D893FF0002F75F /* RJRootVCTool.m */; };
 		18E83FE822D894000002F75F /* RJNewFeatureCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E83FE122D893FF0002F75F /* RJNewFeatureCollectionViewCell.m */; };
 		18E83FEB22D894000002F75F /* RJNewFeatureCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E83FE522D893FF0002F75F /* RJNewFeatureCollectionViewController.m */; };
@@ -200,7 +210,6 @@
 		18544D942215505400B254B1 /* RJCategoryTool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RJCategoryTool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18544D972215505400B254B1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		18544D982215505400B254B1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		18544DA02215505500B254B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		18544DA32215505500B254B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		18544DA52215505500B254B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18544DA62215505500B254B1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -292,6 +301,23 @@
 		18AD862C22DF1C2D008A8D37 /* RJHUDMangerLoadingView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RJHUDMangerLoadingView.m; sourceTree = "<group>"; };
 		18AD862E22E00E4B008A8D37 /* RJFontStylePostScriptDownload.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RJFontStylePostScriptDownload.h; sourceTree = "<group>"; };
 		18AD862F22E00E4B008A8D37 /* RJFontStylePostScriptDownload.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RJFontStylePostScriptDownload.m; sourceTree = "<group>"; };
+		18AD865422E022F1008A8D37 /* RJBaseScrollView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RJBaseScrollView.h; sourceTree = "<group>"; };
+		18AD865522E022F1008A8D37 /* RJBaseScrollView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RJBaseScrollView.m; sourceTree = "<group>"; };
+		18AD865722E02335008A8D37 /* EmptyAndHUD.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = EmptyAndHUD.xcassets; sourceTree = "<group>"; };
+		18AD865922E023A8008A8D37 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		18AD865B22E0240D008A8D37 /* NavAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = NavAssets.xcassets; sourceTree = "<group>"; };
+		18AD865D22E02453008A8D37 /* TabBarAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = TabBarAssets.xcassets; sourceTree = "<group>"; };
+		18AD866022E0381F008A8D37 /* UITextField+CHTHealper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+CHTHealper.h"; sourceTree = "<group>"; };
+		18AD866122E0381F008A8D37 /* UITextField+GRJTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+GRJTextField.h"; sourceTree = "<group>"; };
+		18AD866222E0381F008A8D37 /* UITextField+GRJTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+GRJTextField.m"; sourceTree = "<group>"; };
+		18AD866322E03820008A8D37 /* UITextField+CHTHealper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+CHTHealper.m"; sourceTree = "<group>"; };
+		18AD866622E03867008A8D37 /* RJTextLVTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RJTextLVTool.h; sourceTree = "<group>"; };
+		18AD866722E03867008A8D37 /* RJTextLVTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RJTextLVTool.m; sourceTree = "<group>"; };
+		18AD866A22E03B69008A8D37 /* RJStarEvaluationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RJStarEvaluationView.m; sourceTree = "<group>"; };
+		18AD866B22E03B69008A8D37 /* RJStarEvaluationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RJStarEvaluationView.h; sourceTree = "<group>"; };
+		18AD866D22E03C3F008A8D37 /* RJBaseModalViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RJBaseModalViewController.h; sourceTree = "<group>"; };
+		18AD866E22E03C3F008A8D37 /* RJBaseModalViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RJBaseModalViewController.m; sourceTree = "<group>"; };
+		18AD867022E03D44008A8D37 /* StarEvaluation.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = StarEvaluation.xcassets; sourceTree = "<group>"; };
 		18E83FDE22D893FF0002F75F /* RJRootVCTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RJRootVCTool.m; sourceTree = "<group>"; };
 		18E83FDF22D893FF0002F75F /* RJNewFeatureCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RJNewFeatureCollectionViewCell.h; sourceTree = "<group>"; };
 		18E83FE022D893FF0002F75F /* RJNewFeatureCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RJNewFeatureCollectionViewController.h; sourceTree = "<group>"; };
@@ -511,8 +537,8 @@
 				18544DAD2215506D00B254B1 /* RJCategoryTool */,
 				187D913422D6D90B00DB8C72 /* RJCoding */,
 				1811926D2226623200F4AC10 /* ThirdPay */,
-				18544DA02215505500B254B1 /* Assets.xcassets */,
 				181192D522266ECC00F4AC10 /* RJCategoryTool.pch */,
+				18AD865922E023A8008A8D37 /* Assets.xcassets */,
 				18544DA52215505500B254B1 /* Info.plist */,
 				18544DA62215505500B254B1 /* main.m */,
 				18544DA22215505500B254B1 /* LaunchScreen.storyboard */,
@@ -611,6 +637,9 @@
 		187D913522D6D91D00DB8C72 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				18AD866922E039DB008A8D37 /* StarEvaluation */,
+				18AD865F22E037F7008A8D37 /* TextFieldAndText */,
+				18AD865322E0211D008A8D37 /* EmptyAndHUD */,
 				18E83FDD22D893FF0002F75F /* RJNewFeature */,
 				187D915B22D816A900DB8C72 /* HttpRequest */,
 				187D915622D7306A00DB8C72 /* Tools */,
@@ -636,6 +665,7 @@
 			children = (
 				187D913A22D70D4E00DB8C72 /* RJTabBarViewController.h */,
 				187D913B22D70D4E00DB8C72 /* RJTabBarViewController.m */,
+				18AD865D22E02453008A8D37 /* TabBarAssets.xcassets */,
 			);
 			path = TabBar;
 			sourceTree = "<group>";
@@ -647,6 +677,7 @@
 				187D914022D7127200DB8C72 /* RTRootNavigationController+RTRootSetting.m */,
 				187D913D22D7127200DB8C72 /* UIViewController+RTRootNav.h */,
 				187D913F22D7127200DB8C72 /* UIViewController+RTRootNav.m */,
+				18AD865B22E0240D008A8D37 /* NavAssets.xcassets */,
 			);
 			path = Nav;
 			sourceTree = "<group>";
@@ -668,8 +699,10 @@
 				187D915122D7222400DB8C72 /* RJBaseTableView.m */,
 				187D916922D831C500DB8C72 /* RJBaseTableViewCell.h */,
 				187D916A22D831C500DB8C72 /* RJBaseTableViewCell.m */,
-				187D915322D7290200DB8C72 /* RJEmptyView.h */,
-				187D915422D7290200DB8C72 /* RJEmptyView.m */,
+				18AD865422E022F1008A8D37 /* RJBaseScrollView.h */,
+				18AD865522E022F1008A8D37 /* RJBaseScrollView.m */,
+				18AD866D22E03C3F008A8D37 /* RJBaseModalViewController.h */,
+				18AD866E22E03C3F008A8D37 /* RJBaseModalViewController.m */,
 			);
 			path = BaseVC;
 			sourceTree = "<group>";
@@ -721,10 +754,6 @@
 				187D915F22D8178700DB8C72 /* HttpRequestURL.h */,
 				187D915D22D816FF00DB8C72 /* HttpRequest.h */,
 				187D915C22D816FE00DB8C72 /* HttpRequest.m */,
-				187D916122D818C800DB8C72 /* HUDManager.h */,
-				187D916022D818C800DB8C72 /* HUDManager.m */,
-				18AD862B22DF1C2D008A8D37 /* RJHUDMangerLoadingView.h */,
-				18AD862C22DF1C2D008A8D37 /* RJHUDMangerLoadingView.m */,
 			);
 			path = HttpRequest;
 			sourceTree = "<group>";
@@ -751,6 +780,43 @@
 				18AD862F22E00E4B008A8D37 /* RJFontStylePostScriptDownload.m */,
 			);
 			path = LabelFont;
+			sourceTree = "<group>";
+		};
+		18AD865322E0211D008A8D37 /* EmptyAndHUD */ = {
+			isa = PBXGroup;
+			children = (
+				187D916122D818C800DB8C72 /* HUDManager.h */,
+				187D916022D818C800DB8C72 /* HUDManager.m */,
+				18AD862B22DF1C2D008A8D37 /* RJHUDMangerLoadingView.h */,
+				18AD862C22DF1C2D008A8D37 /* RJHUDMangerLoadingView.m */,
+				187D915322D7290200DB8C72 /* RJEmptyView.h */,
+				187D915422D7290200DB8C72 /* RJEmptyView.m */,
+				18AD865722E02335008A8D37 /* EmptyAndHUD.xcassets */,
+			);
+			path = EmptyAndHUD;
+			sourceTree = "<group>";
+		};
+		18AD865F22E037F7008A8D37 /* TextFieldAndText */ = {
+			isa = PBXGroup;
+			children = (
+				18AD866022E0381F008A8D37 /* UITextField+CHTHealper.h */,
+				18AD866322E03820008A8D37 /* UITextField+CHTHealper.m */,
+				18AD866122E0381F008A8D37 /* UITextField+GRJTextField.h */,
+				18AD866222E0381F008A8D37 /* UITextField+GRJTextField.m */,
+				18AD866622E03867008A8D37 /* RJTextLVTool.h */,
+				18AD866722E03867008A8D37 /* RJTextLVTool.m */,
+			);
+			path = TextFieldAndText;
+			sourceTree = "<group>";
+		};
+		18AD866922E039DB008A8D37 /* StarEvaluation */ = {
+			isa = PBXGroup;
+			children = (
+				18AD866B22E03B69008A8D37 /* RJStarEvaluationView.h */,
+				18AD866A22E03B69008A8D37 /* RJStarEvaluationView.m */,
+				18AD867022E03D44008A8D37 /* StarEvaluation.xcassets */,
+			);
+			path = StarEvaluation;
 			sourceTree = "<group>";
 		};
 		18E83FDD22D893FF0002F75F /* RJNewFeature */ = {
@@ -843,9 +909,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18AD865E22E02453008A8D37 /* TabBarAssets.xcassets in Resources */,
 				18544DA42215505500B254B1 /* LaunchScreen.storyboard in Resources */,
-				18544DA12215505500B254B1 /* Assets.xcassets in Resources */,
+				18AD867122E03D45008A8D37 /* StarEvaluation.xcassets in Resources */,
+				18AD865C22E0240D008A8D37 /* NavAssets.xcassets in Resources */,
 				181191012224DF2C00F4AC10 /* RJResource.plist in Resources */,
+				18AD865A22E023A8008A8D37 /* Assets.xcassets in Resources */,
+				18AD865822E02335008A8D37 /* EmptyAndHUD.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -898,6 +968,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18AD866C22E03B69008A8D37 /* RJStarEvaluationView.m in Sources */,
 				185B14D322DC244A008EE9DC /* RJEmptyTestViewController.m in Sources */,
 				187D917A22D8897400DB8C72 /* RJWechatAppPay.m in Sources */,
 				18953DDE221BD91D00D83ED1 /* UIBarButtonItem+GRJBarButtonItem.m in Sources */,
@@ -905,6 +976,7 @@
 				18953DDC221BD91D00D83ED1 /* NSString+RJString.m in Sources */,
 				18953DDF221BD91D00D83ED1 /* UIView+GRJFrame.m in Sources */,
 				184FEBCE2217A90200B9CBE1 /* GRJAdressPickerView.m in Sources */,
+				18AD866522E03820008A8D37 /* UITextField+CHTHealper.m in Sources */,
 				181192732226625500F4AC10 /* CommonUtil.m in Sources */,
 				18E83FEB22D894000002F75F /* RJNewFeatureCollectionViewController.m in Sources */,
 				187D916822D8318000DB8C72 /* RJModuleEntranceCell.m in Sources */,
@@ -915,6 +987,7 @@
 				187D915222D7222400DB8C72 /* RJBaseTableView.m in Sources */,
 				187D916522D8308100DB8C72 /* RJBaseView.m in Sources */,
 				184FEBCD2217A90200B9CBE1 /* RJSureButton.m in Sources */,
+				18AD866F22E03C3F008A8D37 /* RJBaseModalViewController.m in Sources */,
 				18AD863022E00E4C008A8D37 /* RJFontStylePostScriptDownload.m in Sources */,
 				187D914222D7127200DB8C72 /* RTRootNavigationController+RTRootSetting.m in Sources */,
 				187D916222D818C900DB8C72 /* HUDManager.m in Sources */,
@@ -944,11 +1017,14 @@
 				187D916B22D831C500DB8C72 /* RJBaseTableViewCell.m in Sources */,
 				185B14CD22DC1C69008EE9DC /* RJBaseListTableViewController.m in Sources */,
 				18E83FE722D894000002F75F /* RJRootVCTool.m in Sources */,
+				18AD865622E022F1008A8D37 /* RJBaseScrollView.m in Sources */,
+				18AD866422E03820008A8D37 /* UITextField+GRJTextField.m in Sources */,
 				18544D992215505400B254B1 /* AppDelegate.m in Sources */,
 				185B14D622DC2827008EE9DC /* RJBroadcastView.m in Sources */,
 				184FEBC62217A90200B9CBE1 /* RJCornerBorderBgButton.m in Sources */,
 				187D917D22D889C500DB8C72 /* RJAlipayAppPay.m in Sources */,
 				18AD862622DEC1A8008A8D37 /* RJDisplayTableViewCell.m in Sources */,
+				18AD866822E03867008A8D37 /* RJTextLVTool.m in Sources */,
 				184FEBC92217A90200B9CBE1 /* GRJAdressPickerViewModel.m in Sources */,
 				187D915A22D7314500DB8C72 /* RJRefreshHeader.m in Sources */,
 				187D913C22D70D4E00DB8C72 /* RJTabBarViewController.m in Sources */,

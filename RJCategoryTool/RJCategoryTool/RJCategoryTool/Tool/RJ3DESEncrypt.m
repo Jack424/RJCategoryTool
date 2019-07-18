@@ -10,59 +10,34 @@
 #import <CommonCrypto/CommonCryptor.h>
 #import <GTMBase64/GTMBase64.h>
 #import "NSString+RJString.h"
-
-#define hb_gIv             @"01234567"
-#define hb_lkey            [[RJ3DESEncrypt getNowTimeWithDay] stringByAppendingString:@"01234567891111"]
-#define hb_phoneKey @"huanbei123456789huanbei0"
-#define hb_identifyingKey @"huanbei123456789#$&^#$@%"
-#define kHBUserSecretKey @"HBUserSecretKey"
+//http://tool.chacuo.net/crypt3des
 @implementation RJ3DESEncrypt
 
-+ (void)setUserSecretKey:(NSString *)userSecretKey {
-    if ([NSString rj_stringIsEmpty:userSecretKey]) {
-        [[NSUserDefaults standardUserDefaults] removeObjectForKey:kHBUserSecretKey];
-        return;
-    }
-    [[NSUserDefaults standardUserDefaults] setObject:userSecretKey
-                                              forKey:kHBUserSecretKey];
-    /*系统会保存到该应用下的/Library/Preferences/gongcheng.plist文件中。需要注意的是如果程序意外退出，NSUserDefaultsstandardUserDefaults数据不会被系统写入到该文件，所以，要使用［[NSUserDefaultsstandardUserDefaults] synchronize］命令直接同步到文件里，来避免数据的丢失。*/
-    [[NSUserDefaults standardUserDefaults] synchronize];
-}
-+ (NSString *)userSecretKey {
-    return [[NSUserDefaults standardUserDefaults] objectForKey:kHBUserSecretKey];
-}
 
 /**
- * 二维码加密方法 (生产二维码)
+ 加密
+
+ @param string 要加密的字符串
+ @param key key值
+ @param iv 偏移量
+ @return 加密后的结果
  */
-+ (NSString *)encrypt:(NSString*)plainText {
-    NSString *userSecretKey = [RJ3DESEncrypt userSecretKey];
-    return [RJ3DESEncrypt rj_3des_encrypt:plainText key:userSecretKey];
++ (NSString*)rj_encryptWithString:(NSString*)string key:(NSString *)key iv:(NSString *)iv{
+    return [RJ3DESEncrypt encryptWithText:string op:kCCEncrypt key:key iv:iv];
 }
-// 二维码转账解密方法
-+ (NSString *)decrypt:(NSString*)encryptText {
-    NSString *userSecretKey = [RJ3DESEncrypt userSecretKey];
-    return [RJ3DESEncrypt rj_3des_decrypt:encryptText key:userSecretKey];
+/**
+ 解密
+ 
+ @param string 要解密的字符串
+ @param key key值
+ @param iv 偏移量
+ @return 解密后的结果
+ */
++ (NSString*)rj_decryptWithString:(NSString*)string key:(NSString *)key iv:(NSString *)iv{
+    return [RJ3DESEncrypt encryptWithText:string op:kCCDecrypt  key:key iv:iv];
 }
 
-/**
- * 加密 : 通用的 hb_lkey 邀请函的 hb_phoneKey 手机号码 验证码 hb_identifyingKey
- */
-+ (NSString*)rj_3des_encrypt:(NSString*)plainText key:(NSString *)key{
-    if ([NSString rj_stringIsEmpty:plainText]) {
-        return nil;
-    }
-    return [RJ3DESEncrypt encryptWithText:plainText op:kCCEncrypt key:key iv:hb_gIv];
-}
-/**
- * 解密 : 通用的 hb_lkey 邀请函的 hb_phoneKey 手机号码 验证码 hb_identifyingKey
- */
-+ (NSString*)rj_3des_decrypt:(NSString*)encryptText key:(NSString *)key {
-    if ([NSString rj_stringIsEmpty:encryptText]) {
-        return nil;
-    }
-    return [RJ3DESEncrypt encryptWithText:encryptText op:kCCDecrypt key:key iv:hb_gIv];
-}
+
 +(NSString*)encryptWithText:(NSString *)text op:(CCOperation)op key:(NSString *)key iv:(NSString *)iv{
     NSData *data;
     if (op==kCCEncrypt) {//加密
@@ -110,15 +85,4 @@
     }
 }
 
-/******************** Warning ********************/
-//获取现在时间，登录专用，固定时区为上海
-+ (NSString *)getNowTimeWithDay {
-    NSDate *date = [NSDate date];
-    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    [formatter setTimeZone:[NSTimeZone timeZoneWithName:@"Asia/Shanghai"]];
-    [formatter setDateFormat:@"yyyy-MM-dd"];
-    NSString *timeStr = [formatter stringFromDate:date];
-    return timeStr;
-}
-/******************** Warning ********************/
 @end

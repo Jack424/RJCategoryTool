@@ -13,31 +13,23 @@ NS_ASSUME_NONNULL_BEGIN
 @interface RJ3DESEncrypt : NSObject
 
 /**
- * 加密 : 示例 : 通用的 hb_lkey 邀请函的 hb_phoneKey 手机号码 验证码 hb_identifyingKey
+ 加密
+ 
+ @param string 要加密的字符串
+ @param key key值
+ @param iv 偏移量
+ @return 加密后的结果
  */
-+ (NSString*)rj_3des_encrypt:(NSString*)plainText key:(NSString *)key;
++ (NSString*)rj_encryptWithString:(NSString*)string key:(NSString *)key iv:(NSString *)iv;
 /**
- * 解密 : 示例 : 通用的 hb_lkey 邀请函的 hb_phoneKey 手机号码 验证码 hb_identifyingKey
+ 解密
+ 
+ @param string 要解密的字符串
+ @param key key值
+ @param iv 偏移量
+ @return 解密后的结果
  */
-+ (NSString*)rj_3des_decrypt:(NSString*)encryptText key:(NSString *)key ;
-
-
-/// 设置登录用户的userSecretKey
-+ (void)setUserSecretKey:(NSString *)userSecretKey;
-
-/// 获取登录用户的userSecretKey
-+ (NSString *)userSecretKey;
-
-/**
- * 二维码加密方法 (生产二维码)
- */
-+ (NSString*)encrypt:(NSString*)plainText;
-
-/**
- * 二维码转账解密方法
- */
-+ (NSString*)decrypt:(NSString*)encryptText;
-
++ (NSString*)rj_decryptWithString:(NSString*)string key:(NSString *)key iv:(NSString *)iv;
 @end
 
 NS_ASSUME_NONNULL_END
