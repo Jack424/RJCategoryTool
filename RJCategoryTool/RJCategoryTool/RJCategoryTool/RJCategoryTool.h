@@ -46,7 +46,7 @@
 #import <SDWebImage/UIImageView+WebCache.h>
 #import <ZLPhotoBrowser/ZLPhotoBrowser.h>
 #import <RTRootNavigationController/RTRootNavigationController.h>
-#import <FMDB/FMDB.h>
+#import <fmdb/FMDB.h>
 #import <ReactiveObjC/ReactiveObjC.h>
 #import <MJExtension/MJExtension.h>
 #import <MJRefresh/MJRefresh.h>
