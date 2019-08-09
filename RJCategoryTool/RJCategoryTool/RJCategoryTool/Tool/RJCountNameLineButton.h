@@ -13,7 +13,7 @@ typedef NS_ENUM(NSInteger,RJCountNameLineButtonStyle) {
 };
 @interface RJCountNameLineButton : UIButton
 - (instancetype)initWithFrame:(CGRect)frame style:(RJCountNameLineButtonStyle)style showLine:(BOOL)isShowLine;
-- (instancetype)initWithFrame:(CGRect)frame style:(RJCountNameLineButtonStyle)style showLine:(BOOL)isShowLine clickBlock:(void(^)(void))clickBlock;
+- (instancetype)initWithFrame:(CGRect)frame style:(RJCountNameLineButtonStyle)style showLine:(BOOL)isShowLine clickBlock:(void(^)(RJCountNameLineButton *sender))clickBlock;
 
 @property(nonatomic,strong)UIView *lineView;
 

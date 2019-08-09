@@ -453,7 +453,28 @@
     [attributedString1 addAttribute:NSParagraphStyleAttributeName value:paragraphStyle1 range:NSMakeRange(0, string.length)];
     return attributedString1;
 }
-
+//label 添加图片 RMB_26_orange
++ (NSMutableAttributedString *)stringWithImageWidthOrHeight:(CGFloat)width
+                                                  headSpace:(int)space
+                                                   withImag:(UIImage *)image
+                                                 withString:(NSString *)string {
+    NSMutableAttributedString *attri = [[NSMutableAttributedString alloc] init];
+    NSTextAttachment *attch = [[NSTextAttachment alloc] init];
+    attch.image = image;
+    attch.bounds = CGRectMake(0, 0, width, width);
+    
+    NSAttributedString *string1 = [NSAttributedString attributedStringWithAttachment:attch];
+    NSAttributedString *string2 = [[NSAttributedString alloc]initWithString:string];
+    if (space>0) {
+        for (int i = 0; i<space; i++) {
+            [attri appendAttributedString:[[NSAttributedString alloc]initWithString:@" "]];
+        }
+    }
+    
+    [attri appendAttributedString:string1];
+    [attri appendAttributedString:string2];
+    return attri;
+}
 //label 添加图片 RMB_26_orange
 + (NSMutableAttributedString *)stringWithImageWidthOrHeight:(CGFloat)width
                                                    withImag:(UIImage *)image

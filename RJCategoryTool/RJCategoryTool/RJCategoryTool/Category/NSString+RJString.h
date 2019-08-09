@@ -317,6 +317,11 @@
 + (NSMutableAttributedString *)stringWithImageWidthOrHeight:(CGFloat)width
                                                    withImag:(UIImage *)image
                                                  withString:(NSString *)string;
+//label 添加图片 RMB_26_orange
++ (NSMutableAttributedString *)stringWithImageWidthOrHeight:(CGFloat)width
+                                                  headSpace:(int)space
+                                                   withImag:(UIImage *)image
+                                                 withString:(NSString *)string;
 
 /**
  处理文字中的数字改变颜色

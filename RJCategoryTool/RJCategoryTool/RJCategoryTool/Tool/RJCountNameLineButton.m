@@ -12,7 +12,7 @@
 #import "RJColorAndFont.h"
 @interface RJCountNameLineButton()
 
-@property(nonatomic,strong) void(^backBlock)(void);
+@property(nonatomic,strong) void(^backBlock)(RJCountNameLineButton *sender);
 
 @property(nonatomic,assign)RJCountNameLineButtonStyle style;
 @property(nonatomic,assign)BOOL isShowLine;
@@ -30,16 +30,16 @@
     return self;
 }
 
-- (instancetype)initWithFrame:(CGRect)frame style:(RJCountNameLineButtonStyle)style showLine:(BOOL)isShowLine clickBlock:(void(^)(void))clickBlock{
+- (instancetype)initWithFrame:(CGRect)frame style:(RJCountNameLineButtonStyle)style showLine:(BOOL)isShowLine clickBlock:(void(^)(RJCountNameLineButton *sender))clickBlock{
     self = [super initWithFrame:frame];
     if (self) {
         _style = style;
         _isShowLine = isShowLine;
         [self addSubviews];
         [self addTarget:self action:@selector(my_click:) forControlEvents:UIControlEventTouchUpInside];
-        self.backBlock = ^{
+        self.backBlock = ^(RJCountNameLineButton *sender) {
             if (clickBlock) {
-                clickBlock();
+                clickBlock(sender);
             }
         };
     }
@@ -60,13 +60,13 @@
         }
             break;
     }
-    self.bottomLable = [RJInitViewTool rj_initLabelWithSuperView:self text:@"----" font:[UIFont systemFontOfSize:11] textColor:rj_kColor_666666];
+    self.bottomLable = [RJInitViewTool rj_initLabelWithSuperView:self text:@"----" font:[UIFont systemFontOfSize:13] textColor:rj_kColor_666666];
     self.lineView = [RJInitViewTool rj_initLineViewWithSuperView:self backgroundColor:rj_kColor_eeeeee];
     self.lineView.hidden = !_isShowLine;
 }
--(void)my_click:(UIButton *)sender{
+-(void)my_click:(RJCountNameLineButton *)sender{
     if (self.backBlock) {
-        self.backBlock();
+        self.backBlock(sender);
     }
 }
 - (void)layoutSubviews{
@@ -88,9 +88,9 @@
         default:
         {
             [self.topImageView mas_makeConstraints:^(MASConstraintMaker *make) {
-                make.bottom.equalTo(self.mas_centerY).offset(5);
+                make.bottom.equalTo(self.mas_centerY).offset(8);
                 make.centerX.equalTo(self);
-                make.size.mas_equalTo(CGSizeMake(30, 30));
+                make.size.mas_equalTo(CGSizeMake(40, 40));
             }];
             [self.bottomLable mas_makeConstraints:^(MASConstraintMaker *make) {
                 make.top.equalTo(self.mas_centerY).offset(15);
