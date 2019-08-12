@@ -154,7 +154,7 @@
     _allowRecordVideo = allowRecordVideo;
     if (allowRecordVideo) {
         UILongPressGestureRecognizer *longG = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longPressAction:)];
-        longG.minimumPressDuration = .3;
+        longG.minimumPressDuration = 0.3;
         longG.delegate = self;
         [self.bottomView addGestureRecognizer:longG];
     }
@@ -339,7 +339,7 @@
 
 //--------------------------------------------------------//
 //--------------------------------------------------------//
-@interface ZLCustomCamera () <CameraToolViewDelegate, AVCaptureFileOutputRecordingDelegate>
+@interface ZLCustomCamera () <CameraToolViewDelegate, AVCaptureFileOutputRecordingDelegate, UIGestureRecognizerDelegate>
 {
     //拖拽手势开始的录制
     BOOL _dragStart;
@@ -391,6 +391,20 @@
 //    NSLog(@"---- %s", __FUNCTION__);
 }
 
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        self.allowTakePhoto = YES;
+        self.allowRecordVideo = YES;
+        self.maxRecordDuration = 15;
+        self.sessionPreset = ZLCaptureSessionPreset1280x720;
+        self.videoType = ZLExportVideoTypeMp4;
+        self.circleProgressColor = kRGB(80, 169, 56);
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -421,11 +435,34 @@
     [[AVAudioSession sharedInstance] setActive:YES error:nil];
 }
 
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    [UIApplication sharedApplication].statusBarHidden = YES;
+    [self.session startRunning];
+    [self setFocusCursorWithPoint:self.view.center];
+    if (!self.allowTakePhoto && !self.allowRecordVideo) {
+        ShowAlert(@"allowTakePhoto与allowRecordVideo不能同时为NO", self);
+    }
+}
+
 - (void)viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
+    
+    [UIApplication sharedApplication].statusBarHidden = NO;
     [self.motionManager stopDeviceMotionUpdates];
     self.motionManager = nil;
+}
+
+- (void)viewDidDisappear:(BOOL)animated
+{
+    [super viewDidDisappear:animated];
+    
+    if (self.session) {
+        [self.session stopRunning];
+    }
 }
 
 #pragma mark - 监控设备方向
@@ -470,26 +507,6 @@
     }
 }
 
-- (void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
-    [UIApplication sharedApplication].statusBarHidden = YES;
-    [self.session startRunning];
-    [self setFocusCursorWithPoint:self.view.center];
-    if (!self.allowTakePhoto && !self.allowRecordVideo) {
-        ShowAlert(@"allowTakePhoto与allowRecordVideo不能同时为NO", self);
-    }
-}
-
-- (void)viewDidDisappear:(BOOL)animated
-{
-    [super viewDidDisappear:animated];
-    [UIApplication sharedApplication].statusBarHidden = NO;
-    if (self.session) {
-        [self.session stopRunning];
-    }
-}
-
 - (UIInterfaceOrientationMask)supportedInterfaceOrientations
 {
     return UIInterfaceOrientationMaskPortrait;
@@ -508,7 +525,7 @@
     if (_layoutOK) return;
     _layoutOK = YES;
     
-    self.toolView.frame = CGRectMake(0, kViewHeight-130-ZL_SafeAreaBottom, kViewWidth, 100);
+    self.toolView.frame = CGRectMake(0, kViewHeight-150-ZL_SafeAreaBottom(), kViewWidth, 100);
     self.previewLayer.frame = self.view.layer.bounds;
     self.toggleCameraBtn.frame = CGRectMake(kViewWidth-50, 20, 30, 30);
 }
@@ -528,7 +545,7 @@
     self.focusCursorImageView = [[UIImageView alloc] initWithImage:GetImageWithName(@"zl_focus")];
     self.focusCursorImageView.contentMode = UIViewContentModeScaleAspectFit;
     self.focusCursorImageView.clipsToBounds = YES;
-    self.focusCursorImageView.frame = CGRectMake(0, 0, 80, 80);
+    self.focusCursorImageView.frame = CGRectMake(0, 0, 70, 70);
     self.focusCursorImageView.alpha = 0;
     [self.view addSubview:self.focusCursorImageView];
     
@@ -537,8 +554,13 @@
     [self.toggleCameraBtn addTarget:self action:@selector(btnToggleCameraAction) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:self.toggleCameraBtn];
     
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(adjustFocusPoint:)];
+    tap.delegate = self;
+    [self.view addGestureRecognizer:tap];
+    
     if (self.allowRecordVideo) {
         UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(adjustCameraFocus:)];
+        pan.maximumNumberOfTouches = 1;
         [self.view addGestureRecognizer:pan];
     }
 }
@@ -574,6 +596,8 @@
     }
     
     self.movieFileOutPut = [[AVCaptureMovieFileOutput alloc] init];
+    // 解决视频录制超过10s没有声音的bug
+    self.movieFileOutPut.movieFragmentInterval = kCMTimeInvalid;
     
     //将视频及音频输入流添加到session
     if ([self.session canAddInput:self.videoInput]) {
@@ -593,7 +617,7 @@
     self.previewLayer = [[AVCaptureVideoPreviewLayer alloc] initWithSession:self.session];
     [self.view.layer setMasksToBounds:YES];
     
-    [self.previewLayer setVideoGravity:AVLayerVideoGravityResizeAspectFill];
+    [self.previewLayer setVideoGravity:AVLayerVideoGravityResizeAspect];
     [self.view.layer insertSublayer:self.previewLayer atIndex:0];
 }
 
@@ -625,15 +649,17 @@
     }
 }
 
-#pragma mark - 点击屏幕设置聚焦点
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+#pragma mark - 设置聚焦点
+- (void)adjustFocusPoint:(UITapGestureRecognizer *)tap
 {
     if (!self.session.isRunning) return;
     
-    CGPoint point = [touches.anyObject locationInView:self.view];
-    if (point.y > [UIScreen mainScreen].bounds.size.height-150-ZL_SafeAreaBottom) {
+    CGPoint point = [tap locationInView:self.view];
+    
+    if (point.y > CGRectGetMinY(self.toolView.frame)) {
         return;
     }
+    
     [self setFocusCursorWithPoint:point];
 }
 
@@ -642,7 +668,7 @@
 {
     self.focusCursorImageView.center = point;
     self.focusCursorImageView.alpha = 1;
-    self.focusCursorImageView.transform = CGAffineTransformMakeScale(1.1, 1.1);
+    self.focusCursorImageView.transform = CGAffineTransformMakeScale(1.2, 1.2);
     [UIView animateWithDuration:0.5 animations:^{
         self.focusCursorImageView.transform = CGAffineTransformIdentity;
     } completion:^(BOOL finished) {
@@ -685,7 +711,6 @@
 #pragma mark - 手势调整焦距
 - (void)adjustCameraFocus:(UIPanGestureRecognizer *)pan
 {
-    //TODO: 录像中，点击屏幕聚焦，暂时没有思路，1.若添加tap手势 无法解决pan和tap之间的冲突； 2.使用系统touchesBegan方法，触发pan手势后 touchesBegan 无效
     CGRect caremaViewRect = [self.toolView convertRect:self.toolView.bottomView.frame toView:self.view];
     CGPoint point = [pan locationInView:self.view];
     
@@ -719,6 +744,12 @@
     if (error) return;
     captureDevice.videoZoomFactor = zoomFactor;
     [captureDevice unlockForConfiguration];
+}
+
+#pragma mark - gesture delegate
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer
+{
+    return YES;
 }
 
 #pragma mark - 切换前后相机
@@ -829,7 +860,15 @@
 {
     [self.session startRunning];
     [self setFocusCursorWithPoint:self.view.center];
-    self.takedImageView.hidden = YES;
+    if (self.takedImage != nil) {
+        [UIView animateWithDuration:0.25 animations:^{
+            self.takedImageView.alpha = 0;
+        } completion:^(BOOL finished) {
+            self.takedImageView.hidden = YES;
+            self.takedImageView.alpha = 1;
+        }];
+    }
+    
     [self deleteVideo];
 }
 
@@ -858,6 +897,7 @@
         self.playerView = [[ZLPlayer alloc] initWithFrame:self.view.bounds];
         [self.view insertSubview:self.playerView belowSubview:self.toolView];
     }
+    self.playerView.hidden = NO;
     self.playerView.videoUrl = self.videoUrl;
     [self.playerView play];
 }
@@ -866,7 +906,12 @@
 {
     if (self.videoUrl) {
         [self.playerView reset];
-        self.playerView.alpha = 0;
+        [UIView animateWithDuration:0.25 animations:^{
+            self.playerView.alpha = 0;
+        } completion:^(BOOL finished) {
+            self.playerView.hidden = YES;
+            self.playerView.alpha = 1;
+        }];
         [[NSFileManager defaultManager] removeItemAtURL:self.videoUrl error:nil];
     }
 }

@@ -19,7 +19,8 @@ target 'RJCategoryTool' do
   
   pod 'Toast'
   
-  pod 'ZLPhotoBrowser'
+  #pod 'ZLPhotoBrowser'
+  pod 'ZLPhotoBrowser', '~> 3.0.6'
   
   pod 'RTRootNavigationController'
   

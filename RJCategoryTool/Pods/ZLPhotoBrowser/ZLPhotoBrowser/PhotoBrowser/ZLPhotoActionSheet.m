@@ -121,10 +121,6 @@ double const ScalePhotoWidth = 1000;
         self.collectionView.collectionViewLayout = layout;
         self.collectionView.backgroundColor = [UIColor whiteColor];
         [self.collectionView registerClass:NSClassFromString(@"ZLCollectionCell") forCellWithReuseIdentifier:@"ZLCollectionCell"];
-        if (![ZLPhotoManager havePhotoLibraryAuthority]) {
-            //注册实施监听相册变化
-            [[PHPhotoLibrary sharedPhotoLibrary] registerChangeObserver:self];
-        }
     }
     return self;
 }
@@ -132,6 +128,11 @@ double const ScalePhotoWidth = 1000;
 - (void)layoutSubviews
 {
     [super layoutSubviews];
+    
+    [self.btnCamera setTitleColor:self.configuration.previewTextColor forState:UIControlStateNormal];
+    [self.btnAblum setTitleColor:self.configuration.previewTextColor forState:UIControlStateNormal];
+    [self.btnCancel setTitleColor:self.configuration.previewTextColor forState:UIControlStateNormal];
+    
     if (!self.configuration.allowSelectImage && self.configuration.allowRecordVideo) {
         [self.btnCamera setTitle:GetLocalLanguageTextValue(ZLPhotoBrowserCameraRecordText) forState:UIControlStateNormal];
     } else {
@@ -180,6 +181,11 @@ double const ScalePhotoWidth = 1000;
 
 - (void)showPreview:(BOOL)preview animate:(BOOL)animate
 {
+    if (![ZLPhotoManager havePhotoLibraryAuthority]) {
+        //注册实施监听相册变化
+        [[PHPhotoLibrary sharedPhotoLibrary] registerChangeObserver:self];
+    }
+    
     NSAssert(self.sender != nil, @"sender 对象不能为空");
     
     self.animate = animate;
@@ -224,6 +230,11 @@ double const ScalePhotoWidth = 1000;
 
 - (void)previewSelectedPhotos:(NSArray<UIImage *> *)photos assets:(NSArray<PHAsset *> *)assets index:(NSInteger)index isOriginal:(BOOL)isOriginal
 {
+    if (![ZLPhotoManager havePhotoLibraryAuthority]) {
+        //注册实施监听相册变化
+        [[PHPhotoLibrary sharedPhotoLibrary] registerChangeObserver:self];
+    }
+    
     self.isSelectOriginalPhoto = isOriginal;
     //将assets转换为对应类型的model
     NSMutableArray<ZLPhotoModel *> *models = [NSMutableArray arrayWithCapacity:assets.count];
@@ -236,22 +247,22 @@ double const ScalePhotoWidth = 1000;
     [self.arrSelectedModels removeAllObjects];
     ZLShowBigImgViewController *svc = [self pushBigImageToPreview:photos models:models index:index];
     
-    zl_weakify(self);
+    @zl_weakify(self);
     __weak typeof(svc.navigationController) weakNav = svc.navigationController;
     svc.previewSelectedImageBlock = ^(NSArray<UIImage *> *arrP, NSArray<PHAsset *> *arrA) {
-        zl_strongify(weakSelf);
-        strongSelf.arrSelectedAssets = assets.mutableCopy;
+        @zl_strongify(self);
+        self.arrSelectedAssets = assets.mutableCopy;
         __strong typeof(weakNav) strongNav = weakNav;
-        if (strongSelf.selectImageBlock) {
-            strongSelf.selectImageBlock(arrP, arrA, NO);
+        if (self.selectImageBlock) {
+            self.selectImageBlock(arrP, arrA, NO);
         }
-        [strongSelf hide];
+        [self hide];
         [strongNav dismissViewControllerAnimated:YES completion:nil];
     };
     
     svc.cancelPreviewBlock = ^{
-        zl_strongify(weakSelf);
-        [strongSelf hide];
+        @zl_strongify(self);
+        [self hide];
     };
 }
 
@@ -289,18 +300,18 @@ double const ScalePhotoWidth = 1000;
     ZLShowBigImgViewController *svc = [self pushBigImageToPreview:photos models:models index:index];
     svc.hideToolBar = hideToolBar;
     
-    zl_weakify(self);
+    @zl_weakify(self);
     __weak typeof(svc.navigationController) weakNav = svc.navigationController;
     [svc setPreviewNetImageBlock:^(NSArray *photos) {
-        zl_strongify(weakSelf);
+        @zl_strongify(self);
         __strong typeof(weakNav) strongNav = weakNav;
         if (complete) complete(photos);
-        [strongSelf hide];
+        [self hide];
         [strongNav dismissViewControllerAnimated:YES completion:nil];
     }];
     svc.cancelPreviewBlock = ^{
-        zl_strongify(weakSelf);
-        [strongSelf hide];
+        @zl_strongify(self);
+        [self hide];
     };
 }
 
@@ -508,12 +519,12 @@ double const ScalePhotoWidth = 1000;
         camera.allowRecordVideo = self.configuration.allowSelectVideo && self.configuration.allowRecordVideo;
         camera.sessionPreset = self.configuration.sessionPreset;
         camera.videoType = self.configuration.exportVideoType;
-        camera.circleProgressColor = self.configuration.bottomBtnsNormalTitleColor;
+        camera.circleProgressColor = self.configuration.cameraProgressColor;
         camera.maxRecordDuration = self.configuration.maxRecordDuration;
-        zl_weakify(self);
+        @zl_weakify(self);
         camera.doneBlock = ^(UIImage *image, NSURL *videoUrl) {
-            zl_strongify(weakSelf);
-            [strongSelf saveImage:image videoUrl:videoUrl];
+            @zl_strongify(self);
+            [self saveImage:image videoUrl:videoUrl];
         };
         [self.sender showDetailViewController:camera sender:nil];
     }
@@ -544,18 +555,29 @@ double const ScalePhotoWidth = 1000;
 {
     if (self.arrSelectedModels.count > 0) {
         [self.btnCancel setTitle:[NSString stringWithFormat:@"%@(%ld)", GetLocalLanguageTextValue(ZLPhotoBrowserDoneText), self.arrSelectedModels.count] forState:UIControlStateNormal];
-        [self.btnCancel setTitleColor:self.configuration.bottomBtnsNormalTitleColor forState:UIControlStateNormal];
+        [self.btnCancel setTitleColor:self.configuration.bottomBtnsNormalBgColor forState:UIControlStateNormal];
     } else {
         [self.btnCancel setTitle:GetLocalLanguageTextValue(ZLPhotoBrowserCancelText) forState:UIControlStateNormal];
-        [self.btnCancel setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        [self.btnCancel setTitleColor:self.configuration.previewTextColor forState:UIControlStateNormal];
     }
 }
 
 #pragma mark - 请求所选择图片、回调
 - (void)requestSelPhotos:(UIViewController *)vc data:(NSArray<ZLPhotoModel *> *)data hideAfterCallBack:(BOOL)hide
 {
+    if (![self checkSelectVideoCount]) {
+        return;
+    }
+    
     ZLProgressHUD *hud = [[ZLProgressHUD alloc] init];
-    [hud show];
+    
+    __block BOOL isTimeOut = NO;
+    hud.timeoutBlock = ^{
+        ShowToast(@"%@", GetLocalLanguageTextValue(@"ZLPhotoBrowserRequestTimeout"));
+        isTimeOut = YES;
+    };
+    
+    [hud showWithTimeout:self.configuration.timeout];
     
     if (!self.configuration.shouldAnialysisAsset) {
         NSMutableArray *assets = [NSMutableArray arrayWithCapacity:data.count];
@@ -583,18 +605,20 @@ double const ScalePhotoWidth = 1000;
         [assets addObject:@""];
     }
     
-    zl_weakify(self);
+    @zl_weakify(self);
     __block NSInteger doneCount = 0;
     for (int i = 0; i < data.count; i++) {
         ZLPhotoModel *model = data[i];
         [ZLPhotoManager requestSelectedImageForAsset:model isOriginal:self.isSelectOriginalPhoto allowSelectGif:self.configuration.allowSelectGif completion:^(UIImage *image, NSDictionary *info) {
-            if ([[info objectForKey:PHImageResultIsDegradedKey] boolValue]) return;
+            @zl_strongify(self);
+            if (!self) return;
+            
+            if (isTimeOut || [[info objectForKey:PHImageResultIsDegradedKey] boolValue]) return;
             
             doneCount++;
-            zl_strongify(weakSelf);
             
             if (image) {
-                [photos replaceObjectAtIndex:i withObject:[ZLPhotoManager scaleImage:image original:strongSelf->_isSelectOriginalPhoto]];
+                [photos replaceObjectAtIndex:i withObject:[ZLPhotoManager scaleImage:image original:self->_isSelectOriginalPhoto]];
                 [assets replaceObjectAtIndex:i withObject:model.asset];
             } else {
                 [errorAssets addObject:model.asset];
@@ -614,20 +638,50 @@ double const ScalePhotoWidth = 1000;
             [assets removeObjectsAtIndexes:set];
             
             [hud hide];
-            if (strongSelf.selectImageBlock) {
-                strongSelf.selectImageBlock(photos, assets, strongSelf.isSelectOriginalPhoto);
-                [strongSelf.arrSelectedModels removeAllObjects];
+            if (self.selectImageBlock) {
+                self.selectImageBlock(photos, assets, self.isSelectOriginalPhoto);
+                [self.arrSelectedModels removeAllObjects];
             }
-            if (errorAssets.count > 0 && strongSelf.selectImageRequestErrorBlock) {
-                strongSelf.selectImageRequestErrorBlock(errorAssets, errorIndexs);
+            if (errorAssets.count > 0 && self.selectImageRequestErrorBlock) {
+                self.selectImageRequestErrorBlock(errorAssets, errorIndexs);
             }
             if (hide) {
-                [strongSelf.arrDataSources removeAllObjects];
-                [strongSelf hide];
+                [self.arrDataSources removeAllObjects];
+                [self hide];
                 [vc dismissViewControllerAnimated:YES completion:nil];
             }
         }];
     }
+}
+
+- (BOOL)checkSelectVideoCount
+{
+    if (!self.configuration.allowMixSelect) {
+        return YES;
+    }
+    
+    __block NSInteger videoCount = 0;
+    
+    [self.arrSelectedModels enumerateObjectsUsingBlock:^(ZLPhotoModel * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        if (obj.type == ZLAssetMediaTypeVideo) {
+            videoCount++;
+        }
+    }];
+    
+    NSInteger min = self.configuration.minVideoSelectCountInMix;
+    NSInteger max = self.configuration.maxVideoSelectCountInMix;
+    
+    if (videoCount < min) {
+        ShowToastLong(GetLocalLanguageTextValue(ZLPhotoBrowserMinVideoSelectCountInMix), min);
+        return NO;
+    }
+    
+    if (videoCount > max) {
+        ShowToastLong(GetLocalLanguageTextValue(ZLPhotoBrowserMaxVideoSelectCountInMix), max);
+        return NO;
+    }
+    
+    return YES;
 }
 
 #pragma mark - UICollectionDataSource
@@ -652,20 +706,20 @@ double const ScalePhotoWidth = 1000;
     
     ZLPhotoModel *model = self.arrDataSources[indexPath.row];
     
-    zl_weakify(self);
+    @zl_weakify(self);
     __weak typeof(cell) weakCell = cell;
     cell.selectedBlock = ^(BOOL selected) {
-        zl_strongify(weakSelf);
+        @zl_strongify(self);
         __strong typeof(weakCell) strongCell = weakCell;
         if (!selected) {
             //选中
-            if (strongSelf.arrSelectedModels.count >= strongSelf.configuration.maxSelectCount) {
-                ShowToastLong(GetLocalLanguageTextValue(ZLPhotoBrowserMaxSelectCountText), strongSelf.configuration.maxSelectCount);
+            if (self.arrSelectedModels.count >= self.configuration.maxSelectCount) {
+                ShowToastLong(GetLocalLanguageTextValue(ZLPhotoBrowserMaxSelectCountText), self.configuration.maxSelectCount);
                 return;
             }
-            if (strongSelf.arrSelectedModels.count > 0) {
-                ZLPhotoModel *sm = strongSelf.arrSelectedModels.firstObject;
-                if (!strongSelf.configuration.allowMixSelect &&
+            if (self.arrSelectedModels.count > 0) {
+                ZLPhotoModel *sm = self.arrSelectedModels.firstObject;
+                if (!self.configuration.allowMixSelect &&
                     ((model.type < ZLAssetMediaTypeVideo && sm.type == ZLAssetMediaTypeVideo) || (model.type == ZLAssetMediaTypeVideo && sm.type < ZLAssetMediaTypeVideo))) {
                     ShowToastLong(@"%@", GetLocalLanguageTextValue(ZLPhotoBrowserCannotSelectVideo));
                     return;
@@ -675,31 +729,33 @@ double const ScalePhotoWidth = 1000;
                 ShowToastLong(@"%@", GetLocalLanguageTextValue(ZLPhotoBrowseriCloudPhotoText));
                 return;
             }
-            if (model.type == ZLAssetMediaTypeVideo && GetDuration(model.duration) > strongSelf.configuration.maxVideoDuration) {
-                ShowToastLong(GetLocalLanguageTextValue(ZLPhotoBrowserMaxVideoDurationText), strongSelf.configuration.maxVideoDuration);
+            if (model.type == ZLAssetMediaTypeVideo && GetDuration(model.duration) > self.configuration.maxVideoDuration) {
+                ShowToastLong(GetLocalLanguageTextValue(ZLPhotoBrowserMaxVideoDurationText), self.configuration.maxVideoDuration);
                 return;
             }
             
-            if (![strongSelf shouldDirectEdit:model]) {
+            if (![self shouldDirectEdit:model]) {
                 model.selected = YES;
-                [strongSelf.arrSelectedModels addObject:model];
+                [self.arrSelectedModels addObject:model];
                 strongCell.btnSelect.selected = YES;
+                [self setCell:strongCell indexLabelShow:YES index:self.arrSelectedModels.count animate:YES];
             }
         } else {
             strongCell.btnSelect.selected = NO;
             model.selected = NO;
-            for (ZLPhotoModel *m in strongSelf.arrSelectedModels) {
+            for (ZLPhotoModel *m in self.arrSelectedModels) {
                 if ([m.asset.localIdentifier isEqualToString:model.asset.localIdentifier]) {
-                    [strongSelf.arrSelectedModels removeObject:m];
+                    [self.arrSelectedModels removeObject:m];
                     break;
                 }
             }
+            [self refreshCellIndex];
         }
         
-        if (strongSelf.configuration.showSelectedMask) {
-            strongCell.topView.hidden = !model.isSelected;
+        if (self.configuration.showSelectedMask) {
+            strongCell.maskView.hidden = !model.isSelected;
         }
-        [strongSelf changeCancelBtnTitle];
+        [self changeCancelBtnTitle];
     };
     
     cell.allSelectGif = self.configuration.allowSelectGif;
@@ -708,9 +764,57 @@ double const ScalePhotoWidth = 1000;
     cell.cornerRadio = self.configuration.cellCornerRadio;
     cell.showMask = self.configuration.showSelectedMask;
     cell.maskColor = self.configuration.selectedMaskColor;
+    cell.indexLabel.backgroundColor = self.configuration.indexLabelBgColor;
+    cell.showIndexLabel = NO;
+        if (self.configuration.showSelectedIndex) {
+            [self.arrSelectedModels enumerateObjectsUsingBlock:^(ZLPhotoModel * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+                if ([obj.asset.localIdentifier isEqualToString:model.asset.localIdentifier]) {
+                    [self setCell:cell indexLabelShow:YES index:idx+1 animate:NO];
+                    *stop = YES;
+                }
+            }];
+        }
     cell.model = model;
     
     return cell;
+}
+
+- (void)setCell:(ZLCollectionCell *)cell indexLabelShow:(BOOL)show index:(NSInteger)index animate:(BOOL)animate
+{
+    if (!self.configuration.showSelectedIndex) {
+        return;
+    }
+    cell.showIndexLabel = show;
+    cell.index = index;
+    if (animate) {
+        [cell.indexLabel.layer addAnimation:GetBtnStatusChangedAnimation() forKey:nil];
+    }
+}
+
+- (void)refreshCellIndex {
+    if (!self.configuration.showSelectedIndex) {
+        return;
+    }
+    
+    NSArray<NSIndexPath *> *visibleIndexPaths = self.collectionView.indexPathsForVisibleItems;
+    [visibleIndexPaths enumerateObjectsUsingBlock:^(NSIndexPath * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        if (obj.row >= self.arrDataSources.count) {
+            // 拍照按钮 return
+            return;
+        }
+        ZLCollectionCell *cell = (ZLCollectionCell *)[self.collectionView cellForItemAtIndexPath:obj];
+        ZLPhotoModel *m = self.arrDataSources[obj.row];
+        __block BOOL shouldShow = NO;
+        __block NSInteger index = 0;
+        [self.arrSelectedModels enumerateObjectsUsingBlock:^(ZLPhotoModel * _Nonnull obj1, NSUInteger idx1, BOOL * _Nonnull stop) {
+            if ([obj1.asset.localIdentifier isEqualToString:m.asset.localIdentifier]) {
+                index = idx1 + 1;
+                shouldShow = YES;
+                *stop = YES;
+            }
+        }];
+        [self setCell:cell indexLabelShow:shouldShow index:index animate:NO];
+    }];
 }
 
 #pragma mark - UICollectionViewDelegate
@@ -791,29 +895,29 @@ double const ScalePhotoWidth = 1000;
 - (ZLImageNavigationController *)getImageNavWithRootVC:(UIViewController *)rootVC
 {
     ZLImageNavigationController *nav = [[ZLImageNavigationController alloc] initWithRootViewController:rootVC];
-    zl_weakify(self);
+    @zl_weakify(self);
     __weak typeof(ZLImageNavigationController *) weakNav = nav;
     [nav setCallSelectImageBlock:^{
-        zl_strongify(weakSelf);
-        strongSelf.isSelectOriginalPhoto = weakNav.isSelectOriginalPhoto;
-        [strongSelf.arrSelectedModels removeAllObjects];
-        [strongSelf.arrSelectedModels addObjectsFromArray:weakNav.arrSelectedModels];
-        [strongSelf requestSelPhotos:weakNav data:strongSelf.arrSelectedModels hideAfterCallBack:YES];
+        @zl_strongify(self);
+        self.isSelectOriginalPhoto = weakNav.isSelectOriginalPhoto;
+        [self.arrSelectedModels removeAllObjects];
+        [self.arrSelectedModels addObjectsFromArray:weakNav.arrSelectedModels];
+        [self requestSelPhotos:weakNav data:self.arrSelectedModels hideAfterCallBack:YES];
     }];
     
     [nav setCallSelectClipImageBlock:^(UIImage *image, PHAsset *asset){
-        zl_strongify(weakSelf);
-        if (strongSelf.selectImageBlock) {
-            strongSelf.selectImageBlock(@[image], @[asset], NO);
+        @zl_strongify(self);
+        if (self.selectImageBlock) {
+            self.selectImageBlock(@[image], @[asset], NO);
         }
         [weakNav dismissViewControllerAnimated:YES completion:nil];
-        [strongSelf hide];
+        [self hide];
     }];
     
     [nav setCancelBlock:^{
-        zl_strongify(weakSelf);
-        if (strongSelf.cancleBlock) strongSelf.cancleBlock();
-        [strongSelf hide];
+        @zl_strongify(self);
+        if (self.cancleBlock) self.cancleBlock();
+        [self hide];
     }];
 
     nav.isSelectOriginalPhoto = self.isSelectOriginalPhoto;
@@ -843,15 +947,15 @@ double const ScalePhotoWidth = 1000;
     
     svc.models = models;
     svc.selectIndex = index;
-    zl_weakify(self);
+    @zl_weakify(self);
     [svc setBtnBackBlock:^(NSArray<ZLPhotoModel *> *selectedModels, BOOL isOriginal) {
-        zl_strongify(weakSelf);
-        [ZLPhotoManager markSelectModelInArr:strongSelf.arrDataSources selArr:selectedModels];
-        strongSelf.isSelectOriginalPhoto = isOriginal;
-        [strongSelf.arrSelectedModels removeAllObjects];
-        [strongSelf.arrSelectedModels addObjectsFromArray:selectedModels];
-        [strongSelf.collectionView reloadData];
-        [strongSelf changeCancelBtnTitle];
+        @zl_strongify(self);
+        [ZLPhotoManager markSelectModelInArr:self.arrDataSources selArr:selectedModels];
+        self.isSelectOriginalPhoto = isOriginal;
+        [self.arrSelectedModels removeAllObjects];
+        [self.arrSelectedModels addObjectsFromArray:selectedModels];
+        [self.collectionView reloadData];
+        [self changeCancelBtnTitle];
     }];
     
     [self.sender showDetailViewController:nav sender:nil];
@@ -907,14 +1011,14 @@ double const ScalePhotoWidth = 1000;
 {
     ZLProgressHUD *hud = [[ZLProgressHUD alloc] init];
     [hud show];
-    zl_weakify(self);
+    @zl_weakify(self);
     if (image) {
         [ZLPhotoManager saveImageToAblum:image completion:^(BOOL suc, PHAsset *asset) {
-            zl_strongify(weakSelf);
+            @zl_strongify(self);
             dispatch_async(dispatch_get_main_queue(), ^{
                 if (suc) {
                     ZLPhotoModel *model = [ZLPhotoModel modelWithAsset:asset type:ZLAssetMediaTypeImage duration:nil];
-                    [strongSelf handleDataArray:model];
+                    [self handleDataArray:model];
                 } else {
                     ShowToastLong(@"%@", GetLocalLanguageTextValue(ZLPhotoBrowserSaveImageErrorText));
                 }
@@ -923,12 +1027,12 @@ double const ScalePhotoWidth = 1000;
         }];
     } else if (videoUrl) {
         [ZLPhotoManager saveVideoToAblum:videoUrl completion:^(BOOL suc, PHAsset *asset) {
-            zl_strongify(weakSelf);
+            @zl_strongify(self);
             dispatch_async(dispatch_get_main_queue(), ^{
                 if (suc) {
                     ZLPhotoModel *model = [ZLPhotoModel modelWithAsset:asset type:ZLAssetMediaTypeVideo duration:nil];
                     model.duration = [ZLPhotoManager getDuration:asset];
-                    [strongSelf handleDataArray:model];
+                    [self handleDataArray:model];
                 } else {
                     ShowToastLong(@"%@", GetLocalLanguageTextValue(ZLPhotoBrowserSaveVideoFailed));
                 }
@@ -940,11 +1044,11 @@ double const ScalePhotoWidth = 1000;
 
 - (void)handleDataArray:(ZLPhotoModel *)model
 {
-    zl_weakify(self);
+    @zl_weakify(self);
     BOOL (^shouldSelect)(void) = ^BOOL() {
-        zl_strongify(weakSelf);
+        @zl_strongify(self);
         if (model.type == ZLAssetMediaTypeVideo) {
-            return (model.asset.duration <= strongSelf.configuration.maxVideoDuration);
+            return (model.asset.duration <= self.configuration.maxVideoDuration);
         }
         return YES;
     };

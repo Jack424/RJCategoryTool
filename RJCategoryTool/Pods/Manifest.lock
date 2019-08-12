@@ -30,14 +30,14 @@ PODS:
   - RTRootNavigationController/Core (0.7.1)
   - SDCycleScrollView (1.80):
     - SDWebImage (>= 5.0.0)
-  - SDWebImage (5.1.0):
-    - SDWebImage/Core (= 5.1.0)
-  - SDWebImage/Core (5.1.0)
+  - SDWebImage (5.0.6):
+    - SDWebImage/Core (= 5.0.6)
+  - SDWebImage/Core (5.0.6)
   - Toast (4.0.0)
   - "UITableView+FDTemplateLayoutCell (1.6)"
   - WechatOpenSDK (1.8.4)
-  - ZLPhotoBrowser (3.0.0):
-    - SDWebImage
+  - ZLPhotoBrowser (3.0.6):
+    - SDWebImage (~> 5.0.2)
 
 DEPENDENCIES:
   - AFNetworking
@@ -56,7 +56,7 @@ DEPENDENCIES:
   - Toast
   - "UITableView+FDTemplateLayoutCell"
   - WechatOpenSDK
-  - ZLPhotoBrowser
+  - ZLPhotoBrowser (~> 3.0.6)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -91,12 +91,12 @@ SPEC CHECKSUMS:
   ReactiveObjC: 011caa393aa0383245f2dcf9bf02e86b80b36040
   RTRootNavigationController: afa6913402be26f8326f7f37fc1550aa67baddcc
   SDCycleScrollView: b3c9a5ed840c771c4938978174c7c9d9feefeb96
-  SDWebImage: fb387001955223213dde14bc08c8b73f371f8d8f
+  SDWebImage: 920f1a2ff1ca8296ad34f6e0510a1ef1d70ac965
   Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
   "UITableView+FDTemplateLayoutCell": 5c949b4a5059c404b442926c0e80f81d10a2d66f
   WechatOpenSDK: 9b721089507c895d05f997408c30bb6e6f5f9b60
-  ZLPhotoBrowser: 0c70486b4c9b968fa983d5d96480996fd4fc12fd
+  ZLPhotoBrowser: 8975b83f53dbcec1399ef8d1badffc0e09aa9422
 
-PODFILE CHECKSUM: d349203013d97676ef06c86add589b2087ebfce1
+PODFILE CHECKSUM: b5ea9f034330c4f4dc00ea4a826ee58cb4eb7855
 
 COCOAPODS: 1.7.5

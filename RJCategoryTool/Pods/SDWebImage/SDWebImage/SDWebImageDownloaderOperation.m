@@ -47,6 +47,8 @@ typedef NSMutableDictionary<NSString *, id> SDCallbacksDictionary;
 
 @property (strong, nonatomic, readwrite, nullable) NSURLSessionTask *dataTask;
 
+@property (strong, nonatomic, nonnull) dispatch_semaphore_t callbacksLock; // a lock to keep the access to `callbackBlocks` thread-safe
+
 @property (strong, nonatomic, nonnull) dispatch_queue_t coderQueue; // the queue to do image decoding
 #if SD_UIKIT
 @property (assign, nonatomic) UIBackgroundTaskIdentifier backgroundTaskId;
@@ -80,6 +82,7 @@ typedef NSMutableDictionary<NSString *, id> SDCallbacksDictionary;
         _finished = NO;
         _expectedSize = 0;
         _unownedSession = session;
+        _callbacksLock = dispatch_semaphore_create(1);
         _coderQueue = dispatch_queue_create("com.hackemist.SDWebImageDownloaderOperationCoderQueue", DISPATCH_QUEUE_SERIAL);
 #if SD_UIKIT
         _backgroundTaskId = UIBackgroundTaskInvalid;
@@ -93,47 +96,31 @@ typedef NSMutableDictionary<NSString *, id> SDCallbacksDictionary;
     SDCallbacksDictionary *callbacks = [NSMutableDictionary new];
     if (progressBlock) callbacks[kProgressCallbackKey] = [progressBlock copy];
     if (completedBlock) callbacks[kCompletedCallbackKey] = [completedBlock copy];
-    @synchronized (self) {
-        [self.callbackBlocks addObject:callbacks];
-    }
+    SD_LOCK(self.callbacksLock);
+    [self.callbackBlocks addObject:callbacks];
+    SD_UNLOCK(self.callbacksLock);
     return callbacks;
 }
 
 - (nullable NSArray<id> *)callbacksForKey:(NSString *)key {
-    NSMutableArray<id> *callbacks;
-    @synchronized (self) {
-        callbacks = [[self.callbackBlocks valueForKey:key] mutableCopy];
-    }
+    SD_LOCK(self.callbacksLock);
+    NSMutableArray<id> *callbacks = [[self.callbackBlocks valueForKey:key] mutableCopy];
+    SD_UNLOCK(self.callbacksLock);
     // We need to remove [NSNull null] because there might not always be a progress block for each callback
     [callbacks removeObjectIdenticalTo:[NSNull null]];
     return [callbacks copy]; // strip mutability here
 }
 
 - (BOOL)cancel:(nullable id)token {
-    if (!token) return NO;
-    
     BOOL shouldCancel = NO;
-    @synchronized (self) {
-        NSMutableArray *tempCallbackBlocks = [self.callbackBlocks mutableCopy];
-        [tempCallbackBlocks removeObjectIdenticalTo:token];
-        if (tempCallbackBlocks.count == 0) {
-            shouldCancel = YES;
-        }
+    SD_LOCK(self.callbacksLock);
+    [self.callbackBlocks removeObjectIdenticalTo:token];
+    if (self.callbackBlocks.count == 0) {
+        shouldCancel = YES;
     }
+    SD_UNLOCK(self.callbacksLock);
     if (shouldCancel) {
-        // Cancel operation running and callback last token's completion block
         [self cancel];
-    } else {
-        // Only callback this token's completion block
-        @synchronized (self) {
-            [self.callbackBlocks removeObjectIdenticalTo:token];
-        }
-        SDWebImageDownloaderCompletedBlock completedBlock = [token valueForKey:kCompletedCallbackKey];
-        dispatch_main_async_safe(^{
-            if (completedBlock) {
-                completedBlock(nil, nil, [NSError errorWithDomain:SDWebImageErrorDomain code:SDWebImageErrorCancelled userInfo:nil], YES);
-            }
-        });
     }
     return shouldCancel;
 }
@@ -142,8 +129,6 @@ typedef NSMutableDictionary<NSString *, id> SDCallbacksDictionary;
     @synchronized (self) {
         if (self.isCancelled) {
             self.finished = YES;
-            // Operation cancelled by user before sending the request
-            [self callCompletionBlocksWithError:[NSError errorWithDomain:SDWebImageErrorDomain code:SDWebImageErrorCancelled userInfo:nil]];
             [self reset];
             return;
         }
@@ -196,11 +181,16 @@ typedef NSMutableDictionary<NSString *, id> SDCallbacksDictionary;
     }
 
     if (self.dataTask) {
-        if (self.options & SDWebImageDownloaderHighPriority) {
-            self.dataTask.priority = NSURLSessionTaskPriorityHigh;
-        } else if (self.options & SDWebImageDownloaderLowPriority) {
-            self.dataTask.priority = NSURLSessionTaskPriorityLow;
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wunguarded-availability"
+        if ([self.dataTask respondsToSelector:@selector(setPriority:)]) {
+            if (self.options & SDWebImageDownloaderHighPriority) {
+                self.dataTask.priority = NSURLSessionTaskPriorityHigh;
+            } else if (self.options & SDWebImageDownloaderLowPriority) {
+                self.dataTask.priority = NSURLSessionTaskPriorityLow;
+            }
         }
+#pragma clang diagnostic pop
         [self.dataTask resume];
         for (SDWebImageDownloaderProgressBlock progressBlock in [self callbacksForKey:kProgressCallbackKey]) {
             progressBlock(0, NSURLResponseUnknownLength, self.request.URL);
@@ -237,8 +227,6 @@ typedef NSMutableDictionary<NSString *, id> SDCallbacksDictionary;
         if (self.isExecuting) self.executing = NO;
         if (!self.isFinished) self.finished = YES;
     }
-    // Operation cancelled by user before sending the request
-    [self callCompletionBlocksWithError:[NSError errorWithDomain:SDWebImageErrorDomain code:SDWebImageErrorCancelled userInfo:nil]];
 
     [self reset];
 }
@@ -250,8 +238,11 @@ typedef NSMutableDictionary<NSString *, id> SDCallbacksDictionary;
 }
 
 - (void)reset {
+    SD_LOCK(self.callbacksLock);
+    [self.callbackBlocks removeAllObjects];
+    SD_UNLOCK(self.callbacksLock);
+    
     @synchronized (self) {
-        [self.callbackBlocks removeAllObjects];
         self.dataTask = nil;
         
         if (self.ownedSession) {
@@ -395,9 +386,6 @@ didReceiveResponse:(NSURLResponse *)response
 #pragma mark NSURLSessionTaskDelegate
 
 - (void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task didCompleteWithError:(NSError *)error {
-    // If we already cancel the operation or anything mark the operation finished, don't callback twice
-    if (self.isFinished) return;
-    
     @synchronized(self) {
         self.dataTask = nil;
         __block typeof(self) strongSelf = self;
@@ -492,7 +480,6 @@ didReceiveResponse:(NSURLResponse *)response
     if (downloadOptions & SDWebImageDownloaderDecodeFirstFrameOnly) options |= SDWebImageDecodeFirstFrameOnly;
     if (downloadOptions & SDWebImageDownloaderPreloadAllFrames) options |= SDWebImagePreloadAllFrames;
     if (downloadOptions & SDWebImageDownloaderAvoidDecodeImage) options |= SDWebImageAvoidDecodeImage;
-    if (downloadOptions & SDWebImageDownloaderMatchAnimatedImageClass) options |= SDWebImageMatchAnimatedImageClass;
     
     return options;
 }

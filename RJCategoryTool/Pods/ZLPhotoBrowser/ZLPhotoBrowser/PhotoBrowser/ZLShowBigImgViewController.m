@@ -19,6 +19,8 @@
 #import "ZLAnimateTransition.h"
 #import "ZLInteractiveTrasition.h"
 #import "ZLPullDownInteractiveTransition.h"
+#import <SDWebImage/SDImageCodersManager.h>
+#import <SDWebImage/SDImageGIFCoder.h>
 
 @interface ZLShowBigImgViewController () <UIScrollViewDelegate, UICollectionViewDataSource, UICollectionViewDelegate, UINavigationControllerDelegate, UIViewControllerTransitioningDelegate>
 {
@@ -27,6 +29,7 @@
     UIButton *_btnBack;
     UIButton *_navRightBtn;
     UILabel *_indexLabel;
+    UILabel *_titleLabel;
     
     //底部view
     UIView   *_bottomView;
@@ -95,6 +98,10 @@
     }
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(deviceOrientationChanged:) name:UIApplicationWillChangeStatusBarOrientationNotification object:nil];
+    
+    if (![[SDImageCodersManager sharedManager].coders containsObject:[SDImageGIFCoder sharedCoder]]) {
+        [[SDImageCodersManager sharedManager] addCoder:[SDImageGIFCoder sharedCoder]];
+    }
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -107,7 +114,7 @@
     if (!_isFirstAppear) {
         return;
     }
-    
+    [self resetIndexLabelState:NO];
     [_collectionView setContentOffset:CGPointMake((kViewWidth+kItemMargin)*_indexBeforeRotation, 0)];
 }
 
@@ -145,9 +152,9 @@
     _navView.frame = navFrame;
     
     _btnBack.frame = CGRectMake(inset.left, inset.top, 60, 44);
-    _indexLabel.frame = CGRectMake(kViewWidth/2-50, inset.top, 100, 44);
+    _titleLabel.frame = CGRectMake(kViewWidth/2-50, inset.top, 100, 44);
     _navRightBtn.frame = CGRectMake(kViewWidth-40-inset.right, inset.top+(44-25)/2, 25, 25);
-    
+    _indexLabel.frame = _navRightBtn.frame;
     //底部view
     CGRect frame = CGRectMake(0, kViewHeight-44-inset.bottom, kViewWidth, 44+inset.bottom);
     _bottomView.frame = frame;
@@ -196,6 +203,17 @@
 {
     if (!_popTrasition) {
         _popTrasition = [[ZLInteractiveTrasition alloc] init];
+        
+        @zl_weakify(self);
+        _popTrasition.beginTransitionBlock = ^{
+            @zl_strongify(self);
+            self->_navView.hidden = YES;
+        };
+        
+        _popTrasition.cancelTransitionBlock = ^{
+            @zl_strongify(self);
+            self->_navView.hidden = self->_hideNavBar;
+        };
     }
     return _popTrasition;
 }
@@ -214,12 +232,12 @@
     [_btnBack addTarget:self action:@selector(btnBack_Click) forControlEvents:UIControlEventTouchUpInside];
     [_navView addSubview:_btnBack];
     
-    _indexLabel = [[UILabel alloc] init];
-    _indexLabel.font = [UIFont systemFontOfSize:18];
-    _indexLabel.textColor = configuration.navTitleColor;
-    _indexLabel.textAlignment = NSTextAlignmentCenter;
-    _indexLabel.text = [NSString stringWithFormat:@"%ld/%ld", _currentPage, self.models.count];
-    [_navView addSubview:_indexLabel];
+    _titleLabel = [[UILabel alloc] init];
+    _titleLabel.font = [UIFont systemFontOfSize:18];
+    _titleLabel.textColor = configuration.navTitleColor;
+    _titleLabel.textAlignment = NSTextAlignmentCenter;
+    _titleLabel.text = [NSString stringWithFormat:@"%ld/%ld", _currentPage, self.models.count];
+    [_navView addSubview:_titleLabel];
     
     if (self.hideToolBar || (!configuration.showSelectBtn && !self.arrSelPhotos.count)) {
         return;
@@ -234,6 +252,17 @@
     [_navRightBtn setBackgroundImage:selImg forState:UIControlStateSelected];
     [_navRightBtn addTarget:self action:@selector(navRightBtn_Click:) forControlEvents:UIControlEventTouchUpInside];
     [_navView addSubview:_navRightBtn];
+    
+    // 图片选择index角标
+    _indexLabel = [[UILabel alloc] init];
+    _indexLabel.backgroundColor = configuration.indexLabelBgColor;
+    _indexLabel.font = [UIFont systemFontOfSize:14];
+    _indexLabel.textColor = [UIColor whiteColor];
+    _indexLabel.textAlignment = NSTextAlignmentCenter;
+    _indexLabel.layer.cornerRadius = 25.0 / 2;
+    _indexLabel.layer.masksToBounds = YES;
+    _indexLabel.hidden = YES;
+    [_navView addSubview:_indexLabel];
     
     if (self.models.count == 1) {
         _navRightBtn.selected = self.models.firstObject.isSelected;
@@ -274,7 +303,7 @@
         _btnOriginalPhoto.titleLabel.font = [UIFont systemFontOfSize:15];
         [_btnOriginalPhoto setTitleColor:configuration.bottomBtnsNormalTitleColor forState: UIControlStateNormal];
         UIImage *normalImg = GetImageWithName(@"zl_btn_original_circle");
-        UIImage *selImg = GetImageWithName(@"zl_btn_selected");
+        UIImage *selImg = GetImageWithName(@"zl_btn_original_selected");
         [_btnOriginalPhoto setImage:normalImg forState:UIControlStateNormal];
         [_btnOriginalPhoto setImage:selImg forState:UIControlStateSelected];
         [_btnOriginalPhoto setImageEdgeInsets:UIEdgeInsetsMake(0, -5, 0, 5)];
@@ -304,7 +333,7 @@
     _btnDone.layer.masksToBounds = YES;
     _btnDone.layer.cornerRadius = 3.0f;
     [_btnDone setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    [_btnDone setBackgroundColor:configuration.bottomBtnsNormalTitleColor];
+    [_btnDone setBackgroundColor:configuration.bottomBtnsNormalBgColor];
     _btnDone.frame = CGRectMake(kViewWidth - 82, 7, 70, 30);
     [_btnDone addTarget:self action:@selector(btnDone_Click:) forControlEvents:UIControlEventTouchUpInside];
     [_bottomView addSubview:_btnDone];
@@ -446,6 +475,7 @@
         
         model.selected = YES;
         [nav.arrSelectedModels addObject:model];
+        [self resetIndexLabelState:YES];
         if (self.arrSelPhotos) {
             [self.arrSelPhotos addObject:_arrSelPhotosBackup[_currentPage-1]];
             [_arrSelAssets addObject:_arrSelAssetsBackup[_currentPage-1]];
@@ -470,6 +500,8 @@
             }
             [self.arrSelPhotos removeObject:_arrSelPhotosBackup[_currentPage-1]];
         }
+        
+        [self resetIndexLabelState:NO];
     }
     
     btn.selected = !btn.selected;
@@ -512,7 +544,16 @@
         }
     } else if (pan.state == UIGestureRecognizerStateCancelled ||
                pan.state == UIGestureRecognizerStateEnded) {
-        if (!_shouldStartDismiss || !self.popTrasition.isStartTransition) return;
+        if (_shouldStartDismiss && !self.popTrasition.isStartTransition) {
+            // 快速拖动时候可能会走这里
+            [self.popTrasition cancelInteractiveTransition];
+            [self.popTrasition cancelAnimate];
+            self.popTrasition = nil;
+            self.interactive = NO;
+            return;
+        }
+        
+        if (_panCount == 0 || (!_shouldStartDismiss && !self.popTrasition.isStartTransition)) return;
         
         CGPoint vel = [pan velocityInView:self.view];
         
@@ -601,6 +642,38 @@
     }
 }
 
+- (void)resetIndexLabelState:(BOOL)animate
+{
+    ZLImageNavigationController *nav = (ZLImageNavigationController *)self.navigationController;
+    if (!nav.configuration.showSelectedIndex) {
+        return;
+    }
+    
+    ZLPhotoModel *m = [self getCurrentPageModel];
+    if (!m) {
+        return;
+    }
+    
+    __block BOOL shouldShowIndex = NO;
+    __block NSInteger index = 0;
+    [nav.arrSelectedModels enumerateObjectsUsingBlock:^(ZLPhotoModel * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        if ([obj.asset.localIdentifier isEqualToString:m.asset.localIdentifier] ||
+            (obj.image != nil && [obj.image isEqual:m.image]) ||
+            [obj.url.absoluteString isEqualToString:m.url.absoluteString]) {
+            shouldShowIndex = YES;
+            index = idx + 1;
+            *stop = YES;
+        }
+    }];
+    
+    _indexLabel.hidden = !shouldShowIndex;
+    _indexLabel.text = @(index).stringValue;
+    
+    if (animate) {
+        [_indexLabel.layer addAnimation:GetBtnStatusChangedAnimation() forKey:nil];
+    }
+}
+
 - (void)resetOriginalBtnState
 {
     ZLPhotoConfiguration *configuration = [(ZLImageNavigationController *)self.navigationController configuration];
@@ -627,10 +700,10 @@
     NSArray *arr = configuration.showSelectBtn?nav.arrSelectedModels:@[self.models[_currentPage-1]];
     
     if (arr.count) {
-        zl_weakify(self);
+        @zl_weakify(self);
         [ZLPhotoManager getPhotosBytesWithArray:arr completion:^(NSString *photosBytes) {
-            zl_strongify(weakSelf);
-            strongSelf.labPhotosBytes.text = [NSString stringWithFormat:@"(%@)", photosBytes];
+            @zl_strongify(self);
+            self.labPhotosBytes.text = [NSString stringWithFormat:@"(%@)", photosBytes];
         }];
     } else {
         self.labPhotosBytes.text = nil;
@@ -678,19 +751,19 @@
     cell.showGif = configuration.allowSelectGif;
     cell.showLivePhoto = configuration.allowSelectLivePhoto;
     cell.model = model;
-    zl_weakify(self);
+    @zl_weakify(self);
     cell.singleTapCallBack = ^() {
-        zl_strongify(weakSelf);
-        [strongSelf handlerSingleTap];
+        @zl_strongify(self);
+        [self handlerSingleTap];
     };
     __weak typeof(cell) weakCell = cell;
     cell.longPressCallBack = ^{
-        zl_strongify(weakSelf);
+        @zl_strongify(self);
         __strong typeof(weakCell) strongCell = weakCell;
         if (!strongCell.previewView.image) {
             return;
         }
-        [strongSelf showDownloadAlert];
+        [self showDownloadAlert];
     };
     
     return cell;
@@ -708,10 +781,11 @@
         
         _modelIdentifile = m.asset.localIdentifier;
         //改变导航标题
-        _indexLabel.text = [NSString stringWithFormat:@"%ld/%ld", _currentPage, self.models.count];
+        _titleLabel.text = [NSString stringWithFormat:@"%ld/%ld", _currentPage, self.models.count];
         
         _navRightBtn.selected = m.isSelected;
         
+        [self resetIndexLabelState:NO];
         [self resetOriginalBtnState];
         [self resetEditBtnState];
     }
@@ -730,6 +804,7 @@
 {
     ZLPhotoModel *m = [self getCurrentPageModel];
     if (m.type == ZLAssetMediaTypeGif ||
+        m.type == ZLAssetMediaTypeNetImage ||
         m.type == ZLAssetMediaTypeLivePhoto ||
         m.type == ZLAssetMediaTypeVideo) {
         ZLBigImageCell *cell = (ZLBigImageCell *)[_collectionView cellForItemAtIndexPath:[NSIndexPath indexPathForRow:_currentPage-1 inSection:0]];
@@ -742,7 +817,8 @@
     CGPoint offset = _collectionView.contentOffset;
 
     CGFloat page = offset.x/(kViewWidth+kItemMargin);
-    if (ceilf(page) >= self.models.count) {
+    if (ceilf(page) >= self.models.count ||
+        page < 0) {
         return nil;
     }
     NSString *str = [NSString stringWithFormat:@"%.0f", page];

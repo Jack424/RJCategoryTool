@@ -121,8 +121,8 @@
         inset = self.superview.safeAreaInsets;
     }
     
-    self.cancelBtn.frame = CGRectMake(15+inset.left, inset.top+5, GetMatchValue(GetLocalLanguageTextValue(ZLPhotoBrowserCancelText), 15, YES, 30), 30);
-    CGFloat doneBtnW = GetMatchValue(GetLocalLanguageTextValue(ZLPhotoBrowserDoneText), 15, YES, 30);
+    self.cancelBtn.frame = CGRectMake(15+inset.left, inset.top+5, GetMatchValue(GetLocalLanguageTextValue(ZLPhotoBrowserCancelText), 15, YES, 30)+20, 30);
+    CGFloat doneBtnW = GetMatchValue(GetLocalLanguageTextValue(ZLPhotoBrowserDoneText), 15, YES, 30)+30;
     self.doneBtn.frame = CGRectMake(kViewWidth-doneBtnW-inset.right-15, inset.top+5, doneBtnW, 30);
     
     [self setImageViewFrame:_layoutCount != 1];
@@ -239,6 +239,7 @@
     self.doneBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     [self.doneBtn setTitle:GetLocalLanguageTextValue(ZLPhotoBrowserDoneText) forState:UIControlStateNormal];
     [self.doneBtn setTitleColor:_configuration.bottomBtnsNormalTitleColor forState:UIControlStateNormal];
+    self.doneBtn.backgroundColor = _configuration.bottomBtnsNormalBgColor;
     self.doneBtn.titleLabel.font = [UIFont systemFontOfSize:15];
     self.doneBtn.layer.masksToBounds = YES;
     self.doneBtn.layer.cornerRadius = 3.0f;

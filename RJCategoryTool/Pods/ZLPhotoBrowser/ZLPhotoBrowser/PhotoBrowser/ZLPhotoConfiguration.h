@@ -36,6 +36,16 @@
 @property (nonatomic, assign) NSInteger maxSelectCount;
 
 /**
+ 混合选择时 视频最大数量，默认等同最大选择数 9
+ */
+@property (nonatomic, assign) NSInteger maxVideoSelectCountInMix;
+
+/**
+ 混合选择时 视频最小数量，默认为0
+ */
+@property (nonatomic, assign) NSInteger minVideoSelectCountInMix;
+
+/**
  预览图最大显示数 默认20张，该值为0时将不显示上方预览图，仅显示 '拍照、相册、取消' 按钮
  */
 @property (nonatomic, assign) NSInteger maxPreviewCount;
@@ -166,27 +176,42 @@
 @property (nonatomic, assign) BOOL showSelectBtn;
 
 /**
- 导航条颜色，默认 rgb(19, 153, 231)
+ 导航条颜色，默认 rgb(44, 45, 46)
  */
 @property (nonatomic, strong) UIColor *navBarColor;
 
 /**
- 导航标题颜色，默认 rgb(255, 255, 255)
+ 导航标题颜色，默认 white
  */
 @property (nonatomic, strong) UIColor *navTitleColor;
 
 /**
- 底部工具条底色，默认 rgb(255, 255, 255)
+ 预览选择模式下 拍照/相册/取消 的字体颜色 默认 blackColor
+ */
+@property (nonatomic, strong) UIColor *previewTextColor;
+
+/**
+ 底部工具条底色，默认 rgb(44, 45, 46)
  */
 @property (nonatomic, strong) UIColor *bottomViewBgColor;
 
 /**
- 底部工具栏按钮 可交互 状态标题颜色，底部 toolbar 按钮可交互状态title颜色均使用这个，确定按钮 可交互 的背景色为这个，默认rgb(80, 180, 234)
+ 底部工具栏按钮 可交互 状态标题颜色，默认 white
  */
 @property (nonatomic, strong) UIColor *bottomBtnsNormalTitleColor;
 
 /**
- 底部工具栏按钮 不可交互 状态标题颜色，底部 toolbar 按钮不可交互状态颜色均使用这个，确定按钮 不可交互 的背景色为这个，默认rgb(200, 200, 200)
+ 底部工具栏按钮 不可交互 状态标题颜色， rgb(168, 168, 168)
+ */
+@property (nonatomic, strong) UIColor *bottomBtnsDisableTitleColor;
+
+/**
+ 底部工具栏按钮 可交互 状态背景颜色，默认rgb(80, 169, 56)
+ */
+@property (nonatomic, strong) UIColor *bottomBtnsNormalBgColor;
+
+/**
+ 底部工具栏按钮 不可交互 状态背景颜色，默认rgb(39, 80, 32)
  */
 @property (nonatomic, strong) UIColor *bottomBtnsDisableBgColor;
 
@@ -196,9 +221,24 @@
 @property (nonatomic, assign) BOOL showSelectedMask;
 
 /**
- 遮罩层颜色，内部会默认调整颜色的透明度为0.2， 默认 blackColor
+ 遮罩层颜色， 默认 blackColor alpha 0.2
  */
 @property (nonatomic, strong) UIColor *selectedMaskColor;
+
+/**
+ 是否显示选中图片的index 默认YES
+ */
+@property (nonatomic, assign) BOOL showSelectedIndex;
+
+/**
+ 选中图片右上角index background color, 默认rgb(80, 169, 56)
+ */
+@property (nonatomic, strong) UIColor *indexLabelBgColor;
+
+/**
+ 长按拍照按钮进行录像时的progress color 默认rgb(80, 169, 56)
+ */
+@property (nonatomic, strong) UIColor *cameraProgressColor;
 
 /**
  支持开发者自定义图片，但是所自定义图片资源名称必须与被替换的bundle中的图片名称一致
@@ -212,6 +252,11 @@
  @discussion 如果选择了大量图片，框架一下解析大量图片会耗费一些内存，开发者此时可置为NO，拿到assets数组后使用 ZLPhotoManager 中提供的 "anialysisAssets:original:completion:" 方法进行逐个解析，以达到缓解内存瞬间暴涨的效果，该值为NO时，回调的图片数组为nil
  */
 @property (nonatomic, assign) BOOL shouldAnialysisAsset;
+
+/**
+ 解析图片超时时间，默认20s
+ */
+@property (nonatomic, assign) NSTimeInterval timeout;
 
 /**
  框架语言，默认 ZLLanguageSystem (跟随系统语言)

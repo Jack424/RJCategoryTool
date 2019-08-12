@@ -28,7 +28,7 @@ Pod::Spec.new do |s|
 
   s.dependency 'Toast'
 
-  s.dependency 'ZLPhotoBrowser'
+  s.dependency 'ZLPhotoBrowser', '~> 3.0.6'
 
   s.dependency 'RTRootNavigationController'
 

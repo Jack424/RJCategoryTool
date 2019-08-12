@@ -14,16 +14,6 @@
 #import <QuartzCore/QuartzCore.h>
 #endif
 
-#if SD_UIKIT
-#if __IPHONE_13_0 || __TVOS_13_0 || __MAC_10_15
-// Xcode 11
-#else
-// Supports Xcode 10 users, for those users, define these enum
-static NSInteger UIActivityIndicatorViewStyleMedium = 100;
-static NSInteger UIActivityIndicatorViewStyleLarge = 101;
-#endif
-#endif
-
 #pragma mark - Activity Indicator
 
 @interface SDWebImageActivityIndicator ()
@@ -93,8 +83,6 @@ static NSInteger UIActivityIndicatorViewStyleLarge = 101;
 #else
     indicator.indicatorView.color = [UIColor colorWithWhite:0 alpha:0.45]; // Color from `UIActivityIndicatorViewStyleGray`
 #endif
-#else
-    indicator.indicatorView.appearance = [NSAppearance appearanceNamed:NSAppearanceNameAqua]; // Disable dark mode support
 #endif
     return indicator;
 }
@@ -106,7 +94,6 @@ static NSInteger UIActivityIndicatorViewStyleLarge = 101;
     indicator.indicatorView.activityIndicatorViewStyle = UIActivityIndicatorViewStyleWhiteLarge;
     indicator.indicatorView.color = grayColor;
 #else
-    indicator.indicatorView.appearance = [NSAppearance appearanceNamed:NSAppearanceNameAqua]; // Disable dark mode support
     indicator.indicatorView.controlSize = NSControlSizeRegular;
 #endif
     [indicator.indicatorView sizeToFit];
@@ -118,7 +105,6 @@ static NSInteger UIActivityIndicatorViewStyleLarge = 101;
 #if SD_UIKIT
     indicator.indicatorView.activityIndicatorViewStyle = UIActivityIndicatorViewStyleWhite;
 #else
-    indicator.indicatorView.appearance = [NSAppearance appearanceNamed:NSAppearanceNameAqua]; // Disable dark mode support
     CIFilter *lighten = [CIFilter filterWithName:@"CIColorControls"];
     [lighten setDefaults];
     [lighten setValue:@(1) forKey:kCIInputBrightnessKey];
@@ -132,38 +118,7 @@ static NSInteger UIActivityIndicatorViewStyleLarge = 101;
 #if SD_UIKIT
     indicator.indicatorView.activityIndicatorViewStyle = UIActivityIndicatorViewStyleWhiteLarge;
 #else
-    indicator.indicatorView.appearance = [NSAppearance appearanceNamed:NSAppearanceNameAqua]; // Disable dark mode support
     indicator.indicatorView.controlSize = NSControlSizeRegular;
-    [indicator.indicatorView sizeToFit];
-#endif
-    return indicator;
-}
-
-+ (SDWebImageActivityIndicator *)largeIndicator {
-    SDWebImageActivityIndicator *indicator = [SDWebImageActivityIndicator new];
-#if SD_UIKIT
-    if (@available(iOS 13.0, tvOS 13.0, *)) {
-        indicator.indicatorView.activityIndicatorViewStyle = UIActivityIndicatorViewStyleLarge;
-    } else {
-        indicator.indicatorView.activityIndicatorViewStyle = UIActivityIndicatorViewStyleWhiteLarge;
-    }
-#else
-    indicator.indicatorView.controlSize = NSControlSizeRegular;
-    [indicator.indicatorView sizeToFit];
-#endif
-    return indicator;
-}
-
-+ (SDWebImageActivityIndicator *)mediumIndicator {
-    SDWebImageActivityIndicator *indicator = [SDWebImageActivityIndicator new];
-#if SD_UIKIT
-    if (@available(iOS 13.0, tvOS 13.0, *)) {
-        indicator.indicatorView.activityIndicatorViewStyle = UIActivityIndicatorViewStyleMedium;
-    } else {
-        indicator.indicatorView.activityIndicatorViewStyle = UIActivityIndicatorViewStyleWhite;
-    }
-#else
-    indicator.indicatorView.controlSize = NSControlSizeSmall;
     [indicator.indicatorView sizeToFit];
 #endif
     return indicator;
