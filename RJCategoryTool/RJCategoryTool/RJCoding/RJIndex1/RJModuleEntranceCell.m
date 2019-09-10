@@ -14,6 +14,7 @@
 #import "RJEmptyListViewController.h"
 #import "RJVideoEditViewController.h"
 #import "RJLabelFontAndNameViewController.h"
+#import "RJArraysortingViewController.h"
 
 @interface RJModuleEntranceCell() <UICollectionViewDelegate, UICollectionViewDataSource>
 
@@ -29,7 +30,7 @@
                        @{@"image":@"rj_flower_icon",@"title":@"缺省页"},
                        @{@"image":@"rj_flower_icon",@"title":@"视频"},
                        @{@"image":@"rj_flower_icon",@"title":@"字体"},
-                       @{@"image":@"rj_flower_icon",@"title":@"模块"},
+                       @{@"image":@"rj_flower_icon",@"title":@"数组排序"},
                        @{@"image":@"rj_flower_icon",@"title":@"模块"},
                        @{@"image":@"rj_flower_icon",@"title":@"模块"},
                        @{@"image":@"rj_flower_icon",@"title":@"模块"},
@@ -81,6 +82,10 @@
     }//
     if ([self.dataArray[indexPath.row][@"title"] isEqualToString:@"字体"]) {
         RJLabelFontAndNameViewController *subvc = [[RJLabelFontAndNameViewController alloc]init];
+        [[RJInitViewTool rj_getNavigationControllerFromView:self] pushViewController:subvc animated:YES];
+    }
+    if ([self.dataArray[indexPath.row][@"title"] isEqualToString:@"数组排序"]) {
+        RJArraysortingViewController *subvc = [[RJArraysortingViewController alloc]init];
         [[RJInitViewTool rj_getNavigationControllerFromView:self] pushViewController:subvc animated:YES];
     }
 }

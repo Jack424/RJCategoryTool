@@ -88,6 +88,8 @@
 		18E83FE822D894000002F75F /* RJNewFeatureCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E83FE122D893FF0002F75F /* RJNewFeatureCollectionViewCell.m */; };
 		18E83FEB22D894000002F75F /* RJNewFeatureCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E83FE522D893FF0002F75F /* RJNewFeatureCollectionViewController.m */; };
 		63134546874C166B0C9B9C81 /* libPods-RJCategoryTool.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E32702ACF951655504BD178 /* libPods-RJCategoryTool.a */; };
+		7673B7C923169C4F0087097C /* RJArraysortingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7673B7C823169C4F0087097C /* RJArraysortingViewController.m */; };
+		7673B7CC23169CEE0087097C /* RJArraysortingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7673B7CB23169CEE0087097C /* RJArraysortingModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -327,6 +329,10 @@
 		1E1DFC456BBA19C8D75558A3 /* Pods-RJCategoryTool.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RJCategoryTool.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RJCategoryTool/Pods-RJCategoryTool.debug.xcconfig"; sourceTree = "<group>"; };
 		3E32702ACF951655504BD178 /* libPods-RJCategoryTool.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RJCategoryTool.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D7B62306A8F5880B82563DA /* Pods-RJCategoryTool.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RJCategoryTool.release.xcconfig"; path = "Pods/Target Support Files/Pods-RJCategoryTool/Pods-RJCategoryTool.release.xcconfig"; sourceTree = "<group>"; };
+		7673B7C723169C4F0087097C /* RJArraysortingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RJArraysortingViewController.h; sourceTree = "<group>"; };
+		7673B7C823169C4F0087097C /* RJArraysortingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RJArraysortingViewController.m; sourceTree = "<group>"; };
+		7673B7CA23169CEE0087097C /* RJArraysortingModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RJArraysortingModel.h; sourceTree = "<group>"; };
+		7673B7CB23169CEE0087097C /* RJArraysortingModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RJArraysortingModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -710,6 +716,7 @@
 		187D914C22D7158400DB8C72 /* RJIndex1 */ = {
 			isa = PBXGroup;
 			children = (
+				7673B7C623169C390087097C /* Arraysorting */,
 				18AD862722DEC748008A8D37 /* LabelFont */,
 				185B14DF22DC6CE5008EE9DC /* RJVideo */,
 				185B14CA22DC1738008EE9DC /* EmptyView */,
@@ -839,6 +846,17 @@
 				6D7B62306A8F5880B82563DA /* Pods-RJCategoryTool.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		7673B7C623169C390087097C /* Arraysorting */ = {
+			isa = PBXGroup;
+			children = (
+				7673B7C723169C4F0087097C /* RJArraysortingViewController.h */,
+				7673B7C823169C4F0087097C /* RJArraysortingViewController.m */,
+				7673B7CA23169CEE0087097C /* RJArraysortingModel.h */,
+				7673B7CB23169CEE0087097C /* RJArraysortingModel.m */,
+			);
+			path = Arraysorting;
 			sourceTree = "<group>";
 		};
 		EF29463CE6B446E50AB06934 /* Frameworks */ = {
@@ -992,6 +1010,7 @@
 				187D914222D7127200DB8C72 /* RTRootNavigationController+RTRootSetting.m in Sources */,
 				187D916222D818C900DB8C72 /* HUDManager.m in Sources */,
 				187D917722D8633500DB8C72 /* RJPayViewController.m in Sources */,
+				7673B7C923169C4F0087097C /* RJArraysortingViewController.m in Sources */,
 				18953DE3221BD91D00D83ED1 /* UIAlertController+GRJAlert.m in Sources */,
 				187D914122D7127200DB8C72 /* UIViewController+RTRootNav.m in Sources */,
 				187D914B22D7157600DB8C72 /* RJBaseTableViewController.m in Sources */,
@@ -1001,6 +1020,7 @@
 				18953DDD221BD91D00D83ED1 /* NSObject+RJCheck.m in Sources */,
 				181192822226626700F4AC10 /* APOrderInfo.m in Sources */,
 				184FEBCF2217A90200B9CBE1 /* GRJDatePickerView.m in Sources */,
+				7673B7CC23169CEE0087097C /* RJArraysortingModel.m in Sources */,
 				187D916E22D8514700DB8C72 /* RJModuleEntranceCollectionViewCell.m in Sources */,
 				18953DDB221BD91D00D83ED1 /* NSDate+GRJDate.m in Sources */,
 				184FEBD12217A90200B9CBE1 /* RJScrollView.m in Sources */,

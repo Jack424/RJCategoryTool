@@ -11,7 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface RJBaseModel : NSObject
-
+@property (strong ,nonatomic) NSString *_id;
 @end
 
 NS_ASSUME_NONNULL_END
