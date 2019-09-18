@@ -10,7 +10,7 @@
 #import "RJModuleEntranceCell.h"
 #import "RJBroadcastCell.h"
 #import "RJDisplayTableViewCell.h"
-@interface RJIndex1TableViewController()
+@interface RJIndex1TableViewController()<SDCycleScrollViewDelegate>
 @property (strong ,nonatomic) UIView *alphaView;
 @property (strong ,nonatomic) UIView *moveView;
 @property (assign ,nonatomic) double beginY;
@@ -21,13 +21,17 @@
     [super viewWillAppear:animated];
     [RJFontStylePostScriptDownload rj_downLoadFont:rj_kFontName];
 }
+-(void)cycleScrollView:(SDCycleScrollView *)cycleScrollView didSelectItemAtIndex:(NSInteger)index{
+    
+}
 -(void)viewDidLoad{
     [super viewDidLoad];
     self.navigationItem.title = @"首页";
     
     SDCycleScrollView *cycleScrollView = [[SDCycleScrollView alloc]init];
+    cycleScrollView.delegate = self;
     //cycleScrollView.imageURLStringsGroup = @[];
-    cycleScrollView.localizationImageNamesGroup = @[@"rj_flower",@"rj_flower",@"rj_flower",@"rj_flower",@"rj_flower"];
+    cycleScrollView.localizationImageNamesGroup = @[[RJPrivateTool rjp_randomImageName],[RJPrivateTool rjp_randomImageName],[RJPrivateTool rjp_randomImageName],[RJPrivateTool rjp_randomImageName],[RJPrivateTool rjp_randomImageName],[RJPrivateTool rjp_randomImageName]];
     cycleScrollView.placeholderImage = rj_IMAGE_NAMED(@"rj_flower");
     cycleScrollView.bannerImageViewContentMode = UIViewContentModeScaleAspectFill;
     cycleScrollView.frame = CGRectMake(0, 0, 0, 180);
@@ -90,6 +94,7 @@
         cell = subcell;
     }else if(indexPath.section==2){
         RJDisplayTableViewCell *subcell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([RJDisplayTableViewCell class])];
+        subcell.imageV.image = [RJPrivateTool rjp_randomImage];
         cell = subcell;
     }
     return cell;

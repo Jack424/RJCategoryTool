@@ -26,8 +26,8 @@
     self.backgroundColor = [UIColor clearColor];
     [self addSubview:self.noticeScrollView];
     [self.noticeScrollView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self).offset(10);
-        make.right.equalTo(self).offset(-15);
+        make.left.equalTo(self).offset(30);
+        make.right.equalTo(self).offset(-30);
         make.top.bottom.equalTo(self);
     }];
 }

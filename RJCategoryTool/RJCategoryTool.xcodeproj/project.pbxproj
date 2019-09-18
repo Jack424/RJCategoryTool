@@ -88,6 +88,7 @@
 		18E83FE822D894000002F75F /* RJNewFeatureCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E83FE122D893FF0002F75F /* RJNewFeatureCollectionViewCell.m */; };
 		18E83FEB22D894000002F75F /* RJNewFeatureCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E83FE522D893FF0002F75F /* RJNewFeatureCollectionViewController.m */; };
 		63134546874C166B0C9B9C81 /* libPods-RJCategoryTool.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E32702ACF951655504BD178 /* libPods-RJCategoryTool.a */; };
+		76055B642330CCBE008F7625 /* RJPrivateTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 76055B632330CCBE008F7625 /* RJPrivateTool.m */; };
 		7673B7C923169C4F0087097C /* RJArraysortingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7673B7C823169C4F0087097C /* RJArraysortingViewController.m */; };
 		7673B7CC23169CEE0087097C /* RJArraysortingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7673B7CB23169CEE0087097C /* RJArraysortingModel.m */; };
 /* End PBXBuildFile section */
@@ -329,6 +330,8 @@
 		1E1DFC456BBA19C8D75558A3 /* Pods-RJCategoryTool.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RJCategoryTool.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RJCategoryTool/Pods-RJCategoryTool.debug.xcconfig"; sourceTree = "<group>"; };
 		3E32702ACF951655504BD178 /* libPods-RJCategoryTool.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RJCategoryTool.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D7B62306A8F5880B82563DA /* Pods-RJCategoryTool.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RJCategoryTool.release.xcconfig"; path = "Pods/Target Support Files/Pods-RJCategoryTool/Pods-RJCategoryTool.release.xcconfig"; sourceTree = "<group>"; };
+		76055B622330CCBE008F7625 /* RJPrivateTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RJPrivateTool.h; sourceTree = "<group>"; };
+		76055B632330CCBE008F7625 /* RJPrivateTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RJPrivateTool.m; sourceTree = "<group>"; };
 		7673B7C723169C4F0087097C /* RJArraysortingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RJArraysortingViewController.h; sourceTree = "<group>"; };
 		7673B7C823169C4F0087097C /* RJArraysortingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RJArraysortingViewController.m; sourceTree = "<group>"; };
 		7673B7CA23169CEE0087097C /* RJArraysortingModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RJArraysortingModel.h; sourceTree = "<group>"; };
@@ -742,6 +745,8 @@
 			children = (
 				185B14DA22DC30BD008EE9DC /* RJBroadcast */,
 				187D915722D7307700DB8C72 /* RJRefresh */,
+				76055B622330CCBE008F7625 /* RJPrivateTool.h */,
+				76055B632330CCBE008F7625 /* RJPrivateTool.m */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -992,6 +997,7 @@
 				18953DDE221BD91D00D83ED1 /* UIBarButtonItem+GRJBarButtonItem.m in Sources */,
 				185B14D022DC2197008EE9DC /* RJEmptyListViewController.m in Sources */,
 				18953DDC221BD91D00D83ED1 /* NSString+RJString.m in Sources */,
+				76055B642330CCBE008F7625 /* RJPrivateTool.m in Sources */,
 				18953DDF221BD91D00D83ED1 /* UIView+GRJFrame.m in Sources */,
 				184FEBCE2217A90200B9CBE1 /* GRJAdressPickerView.m in Sources */,
 				18AD866522E03820008A8D37 /* UITextField+CHTHealper.m in Sources */,

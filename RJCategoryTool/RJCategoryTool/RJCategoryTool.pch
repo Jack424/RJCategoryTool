@@ -27,5 +27,5 @@
 #import "HttpRequestURL.h"
 #import "HUDManager.h"
 #import "HttpRequest.h"
-
+#import "RJPrivateTool.h"
 #endif /* RJCategoryTool_pch */

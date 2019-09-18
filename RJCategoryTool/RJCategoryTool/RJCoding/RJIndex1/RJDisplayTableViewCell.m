@@ -14,9 +14,10 @@
     [super rj_setTableViewCell];
     
     UIImageView *imageV = [RJInitViewTool rj_initImageViewWithSuperView:self];
-    imageV.image = kRJPlaceholderImage;
+    _imageV = imageV;
     imageV.layer.cornerRadius = 10;
     imageV.clipsToBounds = YES;
+    imageV.contentMode = UIViewContentModeScaleAspectFill;
     [imageV mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self).offset(10);
         make.left.equalTo(self).offset(15);

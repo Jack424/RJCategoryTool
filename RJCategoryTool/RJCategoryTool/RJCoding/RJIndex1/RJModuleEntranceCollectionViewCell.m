@@ -29,6 +29,7 @@
         [self addSubview:imageView];
         imageView.layer.cornerRadius = 20;
         imageView.clipsToBounds = YES;
+        imageView.contentMode = UIViewContentModeScaleAspectFill;
         [imageView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.centerX.equalTo(self);
             make.top.equalTo(self).offset(8);
