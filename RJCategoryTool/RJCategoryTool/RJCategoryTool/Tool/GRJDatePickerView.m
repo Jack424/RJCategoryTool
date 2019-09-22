@@ -61,8 +61,8 @@ typedef void(^doneBlock)(NSDate *);
 -(instancetype)initWithDateStyle:(GRJDateStyle)datePickerStyle CompleteBlock:(void(^)(NSDate *))completeBlock {
     self = [super init];
     if (self) {
-        self = [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([self class]) owner:self options:nil] lastObject];
-        
+        //self = [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([self class]) owner:self options:nil] lastObject];
+        self = [[[NSBundle bundleForClass:[GRJDatePickerView class]] loadNibNamed:NSStringFromClass([GRJDatePickerView class]) owner:self options:nil] lastObject];
         
         self.datePickerStyle = datePickerStyle;
         switch (datePickerStyle) {

@@ -10,9 +10,9 @@
 
 @implementation RJPrivateTool
 +(UIImage *)rjp_randomImage{
-    return [UIImage imageNamed:[NSString stringWithFormat:@"JangNaRa_%d",arc4random() % 28 + 1]];
+    return [UIImage imageNamed:[NSString stringWithFormat:@"rj_theme_picture_%d",arc4random() % 29 + 1]];
 }
 +(NSString *)rjp_randomImageName{
-    return [NSString stringWithFormat:@"JangNaRa_%d",arc4random() % 28 + 1];
+    return [NSString stringWithFormat:@"rj_theme_picture_%d",arc4random() % 29 + 1];
 }
 @end
