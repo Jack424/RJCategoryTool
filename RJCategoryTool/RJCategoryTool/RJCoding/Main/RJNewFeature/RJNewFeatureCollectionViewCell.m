@@ -21,6 +21,7 @@
     if (_imageV == nil) {
         UIImageView *imageV = [[UIImageView alloc] init];
         imageV.frame = self.bounds;
+        imageV.contentMode = UIViewContentModeScaleAspectFill;
         [self.contentView addSubview:imageV];
         _imageV = imageV;
     }

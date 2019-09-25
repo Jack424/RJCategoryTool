@@ -88,6 +88,7 @@
 		18E83FE822D894000002F75F /* RJNewFeatureCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E83FE122D893FF0002F75F /* RJNewFeatureCollectionViewCell.m */; };
 		18E83FEB22D894000002F75F /* RJNewFeatureCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E83FE522D893FF0002F75F /* RJNewFeatureCollectionViewController.m */; };
 		63134546874C166B0C9B9C81 /* libPods-RJCategoryTool.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E32702ACF951655504BD178 /* libPods-RJCategoryTool.a */; };
+		7603AB7D233B777E000EA0CF /* RJCoreTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 7603AB7C233B777E000EA0CF /* RJCoreTool.m */; };
 		76055B642330CCBE008F7625 /* RJPrivateTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 76055B632330CCBE008F7625 /* RJPrivateTool.m */; };
 		7673B7C923169C4F0087097C /* RJArraysortingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7673B7C823169C4F0087097C /* RJArraysortingViewController.m */; };
 		7673B7CC23169CEE0087097C /* RJArraysortingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7673B7CB23169CEE0087097C /* RJArraysortingModel.m */; };
@@ -330,6 +331,8 @@
 		1E1DFC456BBA19C8D75558A3 /* Pods-RJCategoryTool.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RJCategoryTool.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RJCategoryTool/Pods-RJCategoryTool.debug.xcconfig"; sourceTree = "<group>"; };
 		3E32702ACF951655504BD178 /* libPods-RJCategoryTool.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RJCategoryTool.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D7B62306A8F5880B82563DA /* Pods-RJCategoryTool.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RJCategoryTool.release.xcconfig"; path = "Pods/Target Support Files/Pods-RJCategoryTool/Pods-RJCategoryTool.release.xcconfig"; sourceTree = "<group>"; };
+		7603AB7B233B777E000EA0CF /* RJCoreTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RJCoreTool.h; sourceTree = "<group>"; };
+		7603AB7C233B777E000EA0CF /* RJCoreTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RJCoreTool.m; sourceTree = "<group>"; };
 		76055B622330CCBE008F7625 /* RJPrivateTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RJPrivateTool.h; sourceTree = "<group>"; };
 		76055B632330CCBE008F7625 /* RJPrivateTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RJPrivateTool.m; sourceTree = "<group>"; };
 		7673B7C723169C4F0087097C /* RJArraysortingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RJArraysortingViewController.h; sourceTree = "<group>"; };
@@ -743,6 +746,8 @@
 		187D915622D7306A00DB8C72 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				7603AB7B233B777E000EA0CF /* RJCoreTool.h */,
+				7603AB7C233B777E000EA0CF /* RJCoreTool.m */,
 				185B14DA22DC30BD008EE9DC /* RJBroadcast */,
 				187D915722D7307700DB8C72 /* RJRefresh */,
 				76055B622330CCBE008F7625 /* RJPrivateTool.h */,
@@ -1049,6 +1054,7 @@
 				185B14D622DC2827008EE9DC /* RJBroadcastView.m in Sources */,
 				184FEBC62217A90200B9CBE1 /* RJCornerBorderBgButton.m in Sources */,
 				187D917D22D889C500DB8C72 /* RJAlipayAppPay.m in Sources */,
+				7603AB7D233B777E000EA0CF /* RJCoreTool.m in Sources */,
 				18AD862622DEC1A8008A8D37 /* RJDisplayTableViewCell.m in Sources */,
 				18AD866822E03867008A8D37 /* RJTextLVTool.m in Sources */,
 				184FEBC92217A90200B9CBE1 /* GRJAdressPickerViewModel.m in Sources */,
@@ -1200,7 +1206,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = NO;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9GQ4RZLTW7;
+				DEVELOPMENT_TEAM = 3A8JA4R64T;
 				GCC_PREFIX_HEADER = RJCategoryTool/RJCategoryTool.pch;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1247,7 +1253,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = NO;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9GQ4RZLTW7;
+				DEVELOPMENT_TEAM = 3A8JA4R64T;
 				GCC_PREFIX_HEADER = RJCategoryTool/RJCategoryTool.pch;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
