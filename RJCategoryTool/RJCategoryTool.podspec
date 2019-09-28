@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "RJCategoryTool"
-  s.version      = "0.5.5"
+  s.version      = "0.5.6"
   s.summary      = "A iOS Fast integration of custom classifications, macro definitions and tool classes"
   s.homepage     = "https://github.com/Jack424/RJCategoryTool.git"
   s.license      = "MIT"
@@ -40,7 +40,7 @@ Pod::Spec.new do |s|
 
   s.dependency 'LYEmptyView'
 
-  s.dependency 'UITableView+FDTemplateLayoutCell'
+  # s.dependency 'UITableView+FDTemplateLayoutCell'
 
   # GRJDatePickerView.xib  city.json
   # s.resources    = 'PhotoBrowser/resource/*.{png,xib,nib,bundle}'

@@ -553,15 +553,12 @@ static const unsigned componentFlags = (NSCalendarUnitYear| NSCalendarUnitMonth 
     return [NSDate dateStringWithTimeInterval:timeInterval DateFormat:format];
 }
 +(NSString *)dateStringWithTimeInterval:(NSString *)timeInterval DateFormat:(NSString *)dateFormat{
-    if (timeInterval.length<10) {
-        return @"";
+    if ([NSString rj_stringIsEmpty:timeInterval]) {
+        timeInterval = @"0";
+    }else{
+        timeInterval = [NSString stringWithFormat:@"%ld",timeInterval.integerValue/1000];
     }
-    if (timeInterval.length==12) {
-        timeInterval = [@"0" stringByAppendingString:timeInterval];
-    }
-    NSMutableString  *mutabletimeInterval=[[NSMutableString alloc]initWithString:timeInterval];
-    [mutabletimeInterval insertString:@"." atIndex:10];
-    NSTimeInterval timeInter = mutabletimeInterval.doubleValue;
+    NSTimeInterval timeInter = timeInterval.doubleValue;
     
     NSDate *confromTimesp = [NSDate dateWithTimeIntervalSince1970:timeInter];
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
@@ -572,17 +569,11 @@ static const unsigned componentFlags = (NSCalendarUnitYear| NSCalendarUnitMonth 
 + (NSString *)dateWeekWithDateString:(NSString *)dateString
 {
     if ([NSString rj_stringIsEmpty:dateString]) {
-        return @"";
+        dateString = @"0";
+    }else{
+        dateString = [NSString stringWithFormat:@"%ld",dateString.integerValue/1000];
     }
-    if (dateString.length<10) {
-        return @"";
-    }
-    if (dateString.length==12) {
-        dateString = [@"0" stringByAppendingString:dateString];
-    }
-    NSMutableString  *mutabletimeInterval=[[NSMutableString alloc]initWithString:dateString];
-    [mutabletimeInterval insertString:@"." atIndex:10];
-    NSTimeInterval time=[mutabletimeInterval doubleValue];
+    NSTimeInterval time = dateString.doubleValue;
     NSDate *date=[NSDate dateWithTimeIntervalSince1970:time];
     NSCalendar *gregorian = [[NSCalendar alloc]
                              initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
@@ -644,15 +635,13 @@ static const unsigned componentFlags = (NSCalendarUnitYear| NSCalendarUnitMonth 
 }
 // 评论显示时间默认的方法
 + (NSString *)dateStyleCommentTimeIntervalToDateString:(NSString *)timeInterval{
-    if (timeInterval.length<10) {
-        return @"";
+    
+    if ([NSString rj_stringIsEmpty:timeInterval]) {
+        timeInterval = @"0";
+    }else{
+        timeInterval = [NSString stringWithFormat:@"%ld",timeInterval.integerValue/1000];
     }
-    if (timeInterval.length==12) {
-        timeInterval = [@"0" stringByAppendingString:timeInterval];
-    }
-    NSMutableString  *mutabletimeInterval=[[NSMutableString alloc]initWithString:timeInterval];
-    [mutabletimeInterval insertString:@"." atIndex:10];
-    NSTimeInterval timeInter = mutabletimeInterval.doubleValue;
+    NSTimeInterval timeInter = timeInterval.doubleValue;
     
     NSDate *createDate = [NSDate dateWithTimeIntervalSince1970:timeInter];
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
@@ -682,15 +671,12 @@ static const unsigned componentFlags = (NSCalendarUnitYear| NSCalendarUnitMonth 
 
 // 评论显示时间产品经理默认的方法
 + (NSString *)dateStyleCommentProductManagerTimeIntervalToDateString:(NSString *)timeInterval{
-    if (timeInterval.length<10) {
-        return @"";
+    if ([NSString rj_stringIsEmpty:timeInterval]) {
+        timeInterval = @"0";
+    }else{
+        timeInterval = [NSString stringWithFormat:@"%ld",timeInterval.integerValue/1000];
     }
-    if (timeInterval.length==12) {
-        timeInterval = [@"0" stringByAppendingString:timeInterval];
-    }
-    NSMutableString  *mutabletimeInterval=[[NSMutableString alloc]initWithString:timeInterval];
-    [mutabletimeInterval insertString:@"." atIndex:10];
-    NSTimeInterval timeInter = mutabletimeInterval.doubleValue;
+    NSTimeInterval timeInter = timeInterval.doubleValue;
     
     NSTimeInterval timeNowInter = [NSDate getNowTimeSecondTimestamp].doubleValue;
     NSTimeInterval timeDvalue = timeNowInter-timeInter;
