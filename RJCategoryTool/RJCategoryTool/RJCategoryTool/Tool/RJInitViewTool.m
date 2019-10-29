@@ -100,6 +100,11 @@
             tempView = subview;
             break;
         }
+        // iOS  13
+        if ([[subview.classForCoder description] isEqualToString:@"UITransitionView"]) {
+            tempView = subview;
+            break;
+        }
     }
     if (!tempView) {
         tempView = [window.subviews lastObject];
