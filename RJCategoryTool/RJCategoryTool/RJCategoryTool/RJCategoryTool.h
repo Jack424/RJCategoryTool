@@ -36,7 +36,7 @@
 #import "RJHorizontalImageNameLineButton.h"
 #import "RJ3DESEncrypt.h"
 
-
+#import "RJGTool.h"
 //#import "GRJQRCodeTool.h"
 //#import "GRJPhotoManager.h"
 
