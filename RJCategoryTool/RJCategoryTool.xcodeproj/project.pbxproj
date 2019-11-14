@@ -1246,6 +1246,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/RJCategoryTool/ThirdPay/alipay",
 				);
+				MARKETING_VERSION = 0.6.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.grj.RJCategoryTool;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1293,6 +1294,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/RJCategoryTool/ThirdPay/alipay",
 				);
+				MARKETING_VERSION = 0.6.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.grj.RJCategoryTool;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";

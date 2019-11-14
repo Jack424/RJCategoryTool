@@ -119,7 +119,14 @@
         }
         nextResponder = [tempView nextResponder];
     }
-    return  (UIViewController *)nextResponder;
+    
+    UIViewController *vc = (UIViewController *)nextResponder;
+    if (vc.presentedViewController) {
+        return  vc.presentedViewController;
+    }else{
+        return  (UIViewController *)nextResponder;
+    }
+    
 }
 
 @end
