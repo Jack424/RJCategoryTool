@@ -10,8 +10,7 @@
 ----------------------------------------
 
 ### 运行Demo
-下载完Demo请执行`carthage update --platform iOS`
-如果Demo报 `Duplicate interface definition for class''`  请到`Build Phases -> Headers`中，把`Public`中的头文件拖到`Protect`中即可
+下载完Demo请执行`carthage update --platform iOS` （运行时候请选择 `Example` target）
 
 ### 框架整体介绍
 * [功能介绍](#功能介绍)
@@ -22,7 +21,7 @@
 * [效果图](#效果图)
 
 ### <a id="功能介绍"></a>功能介绍
-- [x] 支持横竖屏 (已适配iPhone X)
+- [x] 支持横竖屏
 - [x] 预览快速选择、可设置预览最大数 (支持拖拽选择)
 - [x] 直接进入相册选择 （支持滑动多选）
 - [x] 编辑图片 (可自定义裁剪比例)
@@ -35,6 +34,7 @@
 - [x] 多语言国际化 (中文简/繁、英文、日文，可设置跟随系统和自行切换，可自定义多语言提示)
 - [x] 相册内拍照按钮实时显示镜头捕捉画面
 - [x] 已选择图片遮罩层标记
+- [x] 已选择图片index
 - [x] 预览已选择照片
 - [x] 预览网络及本地 图片/视频 (图片支持长按保存至相册)
 - [x] 相册内图片自定义圆角弧度
@@ -50,6 +50,7 @@
 ### 更新日志
 > [更多更新日志](https://github.com/longitachi/ZLPhotoBrowser/blob/master/UPDATELOG.md)
 ```
+● 3.0.7: 网络视频播放添加进度条; SDWebImage依赖升级5.1.0以上版本; 已知bug修复;
 ● 3.0.6: 添加选中图片显示index功能; 新增(及修改)部分颜色api，方便修改框架内部颜色; 修改框架默认风格为微信的风格; 压缩图片资源;
 ● 3.0.5: 预览快速选择界面文字颜色支持自定义; 编辑界面按钮增大; 解决录制视频超过10s没有声音的bug;
 ● 3.0.4: 添加视频选择最大最小个数限制; 解决网络gif图片无法播放的bug; fix已知bug;
@@ -65,7 +66,6 @@
 ● 2.6.9: 重构编辑图片功能，添加滤镜;
 ● 2.6.7: 优化视频编辑界面，极大减少进入时的等待时间;
 ● 2.6.6: Fix #216; 新增隐藏裁剪图片界面比例工具条功能;
-● 2.6.5: 新增隐藏"已隐藏"照片及相册的功能; Fix #221, 优化预览网络图片/视频时根据url后缀判断的类型方式;
 ```
 
 ### 框架支持
@@ -240,10 +240,6 @@ Privacy - Microphone Usage Description
 - 编辑图片预览图
 
 ![image](https://github.com/longitachi/ImageFolder/blob/master/ZLPhotoBrowser/edit.gif)
-
-- 滤镜
-
-![image](https://github.com/longitachi/ImageFolder/blob/master/ZLPhotoBrowser/filter.png)
 
 - 自定义相机效果图及介绍
 
