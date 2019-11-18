@@ -67,7 +67,9 @@
     
     request.sign      = [weixinPayXml objectForKey:@"sign"];
     
-    [WXApi sendReq:request];
+    [WXApi sendReq:request completion:^(BOOL success) {
+        
+    }];
 }
 -(void)alipayServerPay{
     NSDictionary *responseObject = [NSDictionary dictionary];

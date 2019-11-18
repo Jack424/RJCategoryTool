@@ -107,7 +107,9 @@ NSString * const getPrePayIdUrl = @"https://api.mch.weixin.qq.com/pay/unifiedord
         //添加签名
         request.sign = sign;
         
-        [WXApi sendReq:request];
+        [WXApi sendReq:request completion:^(BOOL success) {
+            
+        }];
         
         
     } else{
