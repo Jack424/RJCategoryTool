@@ -8,6 +8,7 @@
 
 #import "RJGTool.h"
 #import "NSString+RJString.h"
+#import <objc/message.h>
 @implementation RJGTool
 
 /*************************   ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓  字数限制   ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓   *****************************/

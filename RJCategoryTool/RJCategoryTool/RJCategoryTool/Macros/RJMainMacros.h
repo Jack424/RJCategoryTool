@@ -53,10 +53,8 @@
 // 统一日志输出
 #ifdef DEBUG  // 调试阶段
 #define rj_Log(...) NSLog(__VA_ARGS__)
-#define NSLog(...) NSLog(__VA_ARGS__)
 #else // 发布阶段
 #define rj_Log(...)
-#define NSLog(...)
 #endif
 
 // 识别真机和模拟器
