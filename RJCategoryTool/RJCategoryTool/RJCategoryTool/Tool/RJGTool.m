@@ -7,7 +7,7 @@
 //
 
 #import "RJGTool.h"
-
+#import "NSString+RJString.h"
 @implementation RJGTool
 
 /*************************   ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓  字数限制   ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓   *****************************/
@@ -268,7 +268,7 @@
 +(CABasicAnimation *)rjg_randomTransform{
     NSArray *selArray = @[@"rjg_transformScale",@"rjg_transformRotationZ",@"rjg_transformTranslationY",@"rjg_transformScaleState"];
     SEL selector = NSSelectorFromString(selArray[arc4random()%selArray.count]);
-    return ((CABasicAnimation* (*)(id,SEL))objc_msgSend)([RJCoreTool class],selector);
+    return ((CABasicAnimation* (*)(id,SEL))objc_msgSend)([RJGTool class],selector);
 };
 
 +(NSAttributedString *)rjg_changeLabelLineSpace:(NSString *)string withLineSpace:(CGFloat)lineSpace withFirstLineHeadIndent:(CGFloat)firstLine{
