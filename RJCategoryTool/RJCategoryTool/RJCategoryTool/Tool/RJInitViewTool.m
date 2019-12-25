@@ -89,7 +89,39 @@
 
 //获取当前屏幕显示的viewcontroller
 + (UIViewController *)rj_getCurrentVC {
-    
+    UIViewController *result = nil;
+        
+    UIWindow * window = [[UIApplication sharedApplication] keyWindow];
+    //寻找当前显示的window    （若项目只有一个window  可省略）
+    if (window.windowLevel != UIWindowLevelNormal)  {
+        NSArray *windows = [[UIApplication sharedApplication] windows];
+        for(UIWindow * tmpWin in windows)  {
+            
+            if (tmpWin.windowLevel == UIWindowLevelNormal)  {
+                window = tmpWin;
+                break;
+            }
+        }
+    }
+    UIViewController *root = window.rootViewController;
+    while (root) {
+        if ([root isKindOfClass:[UITabBarController class]]) {
+            UITabBarController *tab = (UITabBarController *)root;
+            root = tab.selectedViewController;
+        }
+        else if([root isKindOfClass:[UINavigationController class]]) {
+            root = root.childViewControllers.lastObject;
+        }
+        else if (root.presentedViewController){
+            root = root.presentedViewController;
+        }
+        else{
+            result = root;
+            root = nil;
+        }
+    }
+    return result;
+    /*
     UIWindow *window = [[UIApplication sharedApplication].windows firstObject];
     if (!window) {
         return nil;
@@ -126,6 +158,7 @@
     }else{
         return  (UIViewController *)nextResponder;
     }
+     */
     
 }
 
