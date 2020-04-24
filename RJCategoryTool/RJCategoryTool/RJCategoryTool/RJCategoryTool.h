@@ -22,6 +22,7 @@
 #import "NSObject+RJCheck.h"
 #import "UIBarButtonItem+GRJBarButtonItem.h"
 #import "UIImage+GRJImage.h"
+#import "UITextField+MaxLenght.h"
 
 #import "GRJAdressPickerView.h"
 #import "GRJAdressPickerViewModel.h"

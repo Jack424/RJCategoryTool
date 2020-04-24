@@ -93,6 +93,7 @@
 		7673B7C923169C4F0087097C /* RJArraysortingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7673B7C823169C4F0087097C /* RJArraysortingViewController.m */; };
 		7673B7CC23169CEE0087097C /* RJArraysortingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7673B7CB23169CEE0087097C /* RJArraysortingModel.m */; };
 		767F7A56237A9DA300F82603 /* RJGTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 767F7A55237A9DA300F82603 /* RJGTool.m */; };
+		76878BB42452D3700009141F /* UITextField+MaxLenght.m in Sources */ = {isa = PBXBuildFile; fileRef = 76878BB32452D3700009141F /* UITextField+MaxLenght.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -342,6 +343,8 @@
 		7673B7CB23169CEE0087097C /* RJArraysortingModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RJArraysortingModel.m; sourceTree = "<group>"; };
 		767F7A54237A9DA300F82603 /* RJGTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RJGTool.h; sourceTree = "<group>"; };
 		767F7A55237A9DA300F82603 /* RJGTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RJGTool.m; sourceTree = "<group>"; };
+		76878BB22452D3700009141F /* UITextField+MaxLenght.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+MaxLenght.h"; sourceTree = "<group>"; };
+		76878BB32452D3700009141F /* UITextField+MaxLenght.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+MaxLenght.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -578,6 +581,8 @@
 		18544DAF2215506D00B254B1 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				76878BB22452D3700009141F /* UITextField+MaxLenght.h */,
+				76878BB32452D3700009141F /* UITextField+MaxLenght.m */,
 				18953DC8221BD91A00D83ED1 /* NSDate+GRJDate.h */,
 				18953DCB221BD91B00D83ED1 /* NSDate+GRJDate.m */,
 				18953DD3221BD91C00D83ED1 /* NSObject+RJCheck.h */,
@@ -1001,6 +1006,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76878BB42452D3700009141F /* UITextField+MaxLenght.m in Sources */,
 				18AD866C22E03B69008A8D37 /* RJStarEvaluationView.m in Sources */,
 				185B14D322DC244A008EE9DC /* RJEmptyTestViewController.m in Sources */,
 				187D917A22D8897400DB8C72 /* RJWechatAppPay.m in Sources */,
@@ -1246,7 +1252,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/RJCategoryTool/ThirdPay/alipay",
 				);
-				MARKETING_VERSION = 0.6.3;
+				MARKETING_VERSION = 0.6.5;
 				PRODUCT_BUNDLE_IDENTIFIER = com.grj.RJCategoryTool;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1294,7 +1300,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/RJCategoryTool/ThirdPay/alipay",
 				);
-				MARKETING_VERSION = 0.6.3;
+				MARKETING_VERSION = 0.6.5;
 				PRODUCT_BUNDLE_IDENTIFIER = com.grj.RJCategoryTool;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
