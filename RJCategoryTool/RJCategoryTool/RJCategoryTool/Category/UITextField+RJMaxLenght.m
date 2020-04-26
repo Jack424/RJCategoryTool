@@ -1,16 +1,18 @@
 //
-//  UITextField+MaxLenght.m
-//  BMLG
+//  UITextField+RJMaxLenght.m
+//  RJCategoryTool
 //
-//  Created by JinTian on 2020/1/13.
-//  Copyright © 2020 JinTian. All rights reserved.
+//  Created by JinTian on 2020/4/26.
+//  Copyright © 2020 Global Barter. All rights reserved.
 //
 
-#import "UITextField+MaxLenght.h"
+#import "UITextField+RJMaxLenght.h"
+
+#import <AppKit/AppKit.h>
 
 //要关联的对象的键值，一般设置成静态的，用于获取关联对象的值
 static char kMaxLengthKey;
-@implementation UITextField (MaxLenght)
+@implementation UITextField (RJMaxLenght)
 + (void)load {
     //使用Xib，StoryBoard创建的UITextField
     Method  method1 = class_getInstanceMethod([self class], @selector(initWithCoder:));
