@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "RJCategoryTool"
-  s.version      = "0.6.8"
+  s.version      = "0.6.9"
   s.summary      = "A iOS Fast integration of custom classifications, macro definitions and tool classes"
   s.homepage     = "https://github.com/Jack424/RJCategoryTool.git"
   s.license      = "MIT"
@@ -13,32 +13,32 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   s.dependency 'Masonry'
-
-  s.dependency 'AFNetworking'
-
-  s.dependency 'SDWebImage'
-
-  s.dependency 'MJExtension'
-
-  s.dependency 'MJRefresh'
-
-  s.dependency 'SDCycleScrollView'
-
-  s.dependency 'MBProgressHUD'
-
-  s.dependency 'Toast'
-
-  s.dependency 'ZLPhotoBrowser', '~> 3.0.6'
-
-  s.dependency 'RTRootNavigationController'
-
-  s.dependency 'ReactiveObjC'
-
-  s.dependency 'FMDB'
-
+  
   s.dependency 'GTMBase64'
 
-  s.dependency 'LYEmptyView'
+  # s.dependency 'AFNetworking'
+
+  # s.dependency 'SDWebImage'
+
+  # s.dependency 'MJExtension'
+
+  # s.dependency 'MJRefresh'
+
+  # s.dependency 'SDCycleScrollView'
+
+  # s.dependency 'MBProgressHUD'
+
+  # s.dependency 'Toast'
+
+  # s.dependency 'ZLPhotoBrowser', '~> 3.0.6'
+
+  # s.dependency 'RTRootNavigationController'
+
+  # s.dependency 'ReactiveObjC'
+
+  # s.dependency 'FMDB'
+
+  # s.dependency 'LYEmptyView'
 
   # s.dependency 'UITableView+FDTemplateLayoutCell'
 

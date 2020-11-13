@@ -4,39 +4,39 @@ source 'https://github.com/CocoaPods/Specs.git'
 target 'RJCategoryTool' do
   
   pod 'Masonry'
-
-  pod 'AFNetworking'
-  
-  pod 'SDWebImage'
-  
-  pod 'MJExtension'
-  
-  pod 'MJRefresh'
-  
-  pod 'SDCycleScrollView'
-  
-  pod 'MBProgressHUD'
-  
-  pod 'Toast'
-  
-  #pod 'ZLPhotoBrowser'
-  pod 'ZLPhotoBrowser', '~> 3.0.6'
-  
-  pod 'RTRootNavigationController'
-  
-  pod 'ReactiveObjC'
-  
-  pod 'FMDB'
   
   pod 'GTMBase64'
   
-  pod 'WechatOpenSDK'
-  
-  pod 'AlipaySDK-iOS'
-  
-  pod 'LYEmptyView'
-  
-  pod 'UITableView+FDTemplateLayoutCell'
-  
-  #pod 'GPUImage'
+  #  pod 'AFNetworking'
+  #
+  #  pod 'SDWebImage'
+  #
+  #  pod 'MJExtension'
+  #
+  #  pod 'MJRefresh'
+  #
+  #  pod 'SDCycleScrollView'
+  #
+  #  pod 'MBProgressHUD'
+  #
+  #  pod 'Toast'
+  #
+  #  #pod 'ZLPhotoBrowser'
+  #  pod 'ZLPhotoBrowser', '~> 3.0.6'
+  #
+  #  pod 'RTRootNavigationController'
+  #
+  #  pod 'ReactiveObjC'
+  #
+  #  pod 'FMDB'
+  #
+  #  pod 'WechatOpenSDK'
+  #
+  #  pod 'AlipaySDK-iOS'
+  #
+  #  pod 'LYEmptyView'
+  #
+  #  pod 'UITableView+FDTemplateLayoutCell'
+  #
+  #  #pod 'GPUImage'
 end

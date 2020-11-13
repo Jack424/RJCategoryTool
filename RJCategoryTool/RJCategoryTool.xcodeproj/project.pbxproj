@@ -3,19 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		181191012224DF2C00F4AC10 /* RJResource.plist in Resources */ = {isa = PBXBuildFile; fileRef = 181191002224DF2C00F4AC10 /* RJResource.plist */; };
-		181192732226625500F4AC10 /* CommonUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 181192702226625500F4AC10 /* CommonUtil.m */; };
-		181192742226625500F4AC10 /* GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 181192712226625500F4AC10 /* GDataXMLNode.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		181192812226626700F4AC10 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 181192762226626700F4AC10 /* libcrypto.a */; };
-		181192822226626700F4AC10 /* APOrderInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 181192772226626700F4AC10 /* APOrderInfo.m */; };
-		181192832226626700F4AC10 /* APAuthInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 181192782226626700F4AC10 /* APAuthInfo.m */; };
-		181192842226626700F4AC10 /* openssl_wrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1811927A2226626700F4AC10 /* openssl_wrapper.m */; };
-		181192852226626700F4AC10 /* APRSASigner.m in Sources */ = {isa = PBXBuildFile; fileRef = 1811927D2226626700F4AC10 /* APRSASigner.m */; };
-		181192862226626700F4AC10 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1811927F2226626700F4AC10 /* libssl.a */; };
 		181192D42226635400F4AC10 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 181192D32226635400F4AC10 /* libxml2.tbd */; };
 		184FEBC52217A90200B9CBE1 /* RJCountNameLineButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 184FEBAE2217A90000B9CBE1 /* RJCountNameLineButton.m */; };
 		184FEBC62217A90200B9CBE1 /* RJCornerBorderBgButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 184FEBAF2217A90000B9CBE1 /* RJCornerBorderBgButton.m */; };
@@ -31,33 +23,8 @@
 		18544D992215505400B254B1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18544D982215505400B254B1 /* AppDelegate.m */; };
 		18544DA42215505500B254B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18544DA22215505500B254B1 /* LaunchScreen.storyboard */; };
 		18544DA72215505500B254B1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18544DA62215505500B254B1 /* main.m */; };
-		185B14CD22DC1C69008EE9DC /* RJBaseListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 185B14CC22DC1C69008EE9DC /* RJBaseListTableViewController.m */; };
-		185B14D022DC2197008EE9DC /* RJEmptyListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 185B14CF22DC2197008EE9DC /* RJEmptyListViewController.m */; };
-		185B14D322DC244A008EE9DC /* RJEmptyTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 185B14D222DC244A008EE9DC /* RJEmptyTestViewController.m */; };
-		185B14D622DC2827008EE9DC /* RJBroadcastView.m in Sources */ = {isa = PBXBuildFile; fileRef = 185B14D522DC2827008EE9DC /* RJBroadcastView.m */; };
-		185B14D922DC2FC3008EE9DC /* RJBroadcastModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 185B14D822DC2FC3008EE9DC /* RJBroadcastModel.m */; };
-		185B14DD22DC44FC008EE9DC /* RJBroadcastCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 185B14DC22DC44FC008EE9DC /* RJBroadcastCell.m */; };
-		185B14E222DC6D11008EE9DC /* RJVideoEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 185B14E122DC6D11008EE9DC /* RJVideoEditViewController.m */; };
 		187D913C22D70D4E00DB8C72 /* RJTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 187D913B22D70D4E00DB8C72 /* RJTabBarViewController.m */; };
-		187D914122D7127200DB8C72 /* UIViewController+RTRootNav.m in Sources */ = {isa = PBXBuildFile; fileRef = 187D913F22D7127200DB8C72 /* UIViewController+RTRootNav.m */; };
-		187D914222D7127200DB8C72 /* RTRootNavigationController+RTRootSetting.m in Sources */ = {isa = PBXBuildFile; fileRef = 187D914022D7127200DB8C72 /* RTRootNavigationController+RTRootSetting.m */; };
-		187D914522D7143500DB8C72 /* RJBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 187D914422D7143500DB8C72 /* RJBaseModel.m */; };
-		187D914822D7145500DB8C72 /* RJBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 187D914722D7145500DB8C72 /* RJBaseViewController.m */; };
-		187D914B22D7157600DB8C72 /* RJBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 187D914A22D7157600DB8C72 /* RJBaseTableViewController.m */; };
 		187D914F22D715B300DB8C72 /* RJIndex1TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 187D914E22D715B300DB8C72 /* RJIndex1TableViewController.m */; };
-		187D915222D7222400DB8C72 /* RJBaseTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 187D915122D7222400DB8C72 /* RJBaseTableView.m */; };
-		187D915522D7290200DB8C72 /* RJEmptyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 187D915422D7290200DB8C72 /* RJEmptyView.m */; };
-		187D915A22D7314500DB8C72 /* RJRefreshHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 187D915922D7314500DB8C72 /* RJRefreshHeader.m */; };
-		187D915E22D816FF00DB8C72 /* HttpRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 187D915C22D816FE00DB8C72 /* HttpRequest.m */; };
-		187D916222D818C900DB8C72 /* HUDManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 187D916022D818C800DB8C72 /* HUDManager.m */; };
-		187D916522D8308100DB8C72 /* RJBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 187D916422D8308100DB8C72 /* RJBaseView.m */; };
-		187D916822D8318000DB8C72 /* RJModuleEntranceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 187D916722D8318000DB8C72 /* RJModuleEntranceCell.m */; };
-		187D916B22D831C500DB8C72 /* RJBaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 187D916A22D831C500DB8C72 /* RJBaseTableViewCell.m */; };
-		187D916E22D8514700DB8C72 /* RJModuleEntranceCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 187D916D22D8514700DB8C72 /* RJModuleEntranceCollectionViewCell.m */; };
-		187D917122D8518E00DB8C72 /* RJModuleEntranceCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 187D917022D8518E00DB8C72 /* RJModuleEntranceCollectionViewLayout.m */; };
-		187D917722D8633500DB8C72 /* RJPayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 187D917622D8633400DB8C72 /* RJPayViewController.m */; };
-		187D917A22D8897400DB8C72 /* RJWechatAppPay.m in Sources */ = {isa = PBXBuildFile; fileRef = 187D917922D8897300DB8C72 /* RJWechatAppPay.m */; };
-		187D917D22D889C500DB8C72 /* RJAlipayAppPay.m in Sources */ = {isa = PBXBuildFile; fileRef = 187D917C22D889C500DB8C72 /* RJAlipayAppPay.m */; };
 		18953DDA221BD91D00D83ED1 /* UIImage+GRJImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 18953DCA221BD91B00D83ED1 /* UIImage+GRJImage.m */; };
 		18953DDB221BD91D00D83ED1 /* NSDate+GRJDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18953DCB221BD91B00D83ED1 /* NSDate+GRJDate.m */; };
 		18953DDC221BD91D00D83ED1 /* NSString+RJString.m in Sources */ = {isa = PBXBuildFile; fileRef = 18953DCD221BD91B00D83ED1 /* NSString+RJString.m */; };
@@ -69,124 +36,15 @@
 		18953DE2221BD91D00D83ED1 /* UIButton+Badge.m in Sources */ = {isa = PBXBuildFile; fileRef = 18953DD8221BD91D00D83ED1 /* UIButton+Badge.m */; };
 		18953DE3221BD91D00D83ED1 /* UIAlertController+GRJAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 18953DD9221BD91D00D83ED1 /* UIAlertController+GRJAlert.m */; };
 		18953DEC221BECE800D83ED1 /* RJ3DESEncrypt.m in Sources */ = {isa = PBXBuildFile; fileRef = 18953DEB221BECE800D83ED1 /* RJ3DESEncrypt.m */; };
-		18AD862622DEC1A8008A8D37 /* RJDisplayTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18AD862522DEC1A8008A8D37 /* RJDisplayTableViewCell.m */; };
-		18AD862A22DEC777008A8D37 /* RJLabelFontAndNameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18AD862922DEC777008A8D37 /* RJLabelFontAndNameViewController.m */; };
-		18AD862D22DF1C2D008A8D37 /* RJHUDMangerLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18AD862C22DF1C2D008A8D37 /* RJHUDMangerLoadingView.m */; };
-		18AD863022E00E4C008A8D37 /* RJFontStylePostScriptDownload.m in Sources */ = {isa = PBXBuildFile; fileRef = 18AD862F22E00E4B008A8D37 /* RJFontStylePostScriptDownload.m */; };
-		18AD865622E022F1008A8D37 /* RJBaseScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18AD865522E022F1008A8D37 /* RJBaseScrollView.m */; };
-		18AD865822E02335008A8D37 /* EmptyAndHUD.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18AD865722E02335008A8D37 /* EmptyAndHUD.xcassets */; };
 		18AD865A22E023A8008A8D37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18AD865922E023A8008A8D37 /* Assets.xcassets */; };
-		18AD865C22E0240D008A8D37 /* NavAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18AD865B22E0240D008A8D37 /* NavAssets.xcassets */; };
 		18AD865E22E02453008A8D37 /* TabBarAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18AD865D22E02453008A8D37 /* TabBarAssets.xcassets */; };
-		18AD866422E03820008A8D37 /* UITextField+GRJTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 18AD866222E0381F008A8D37 /* UITextField+GRJTextField.m */; };
-		18AD866522E03820008A8D37 /* UITextField+CHTHealper.m in Sources */ = {isa = PBXBuildFile; fileRef = 18AD866322E03820008A8D37 /* UITextField+CHTHealper.m */; };
-		18AD866822E03867008A8D37 /* RJTextLVTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 18AD866722E03867008A8D37 /* RJTextLVTool.m */; };
-		18AD866C22E03B69008A8D37 /* RJStarEvaluationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18AD866A22E03B69008A8D37 /* RJStarEvaluationView.m */; };
-		18AD866F22E03C3F008A8D37 /* RJBaseModalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18AD866E22E03C3F008A8D37 /* RJBaseModalViewController.m */; };
-		18AD867122E03D45008A8D37 /* StarEvaluation.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18AD867022E03D44008A8D37 /* StarEvaluation.xcassets */; };
-		18E83FE722D894000002F75F /* RJRootVCTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E83FDE22D893FF0002F75F /* RJRootVCTool.m */; };
-		18E83FE822D894000002F75F /* RJNewFeatureCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E83FE122D893FF0002F75F /* RJNewFeatureCollectionViewCell.m */; };
-		18E83FEB22D894000002F75F /* RJNewFeatureCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E83FE522D893FF0002F75F /* RJNewFeatureCollectionViewController.m */; };
 		63134546874C166B0C9B9C81 /* libPods-RJCategoryTool.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E32702ACF951655504BD178 /* libPods-RJCategoryTool.a */; };
-		7603AB7D233B777E000EA0CF /* RJCoreTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 7603AB7C233B777E000EA0CF /* RJCoreTool.m */; };
-		76055B642330CCBE008F7625 /* RJPrivateTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 76055B632330CCBE008F7625 /* RJPrivateTool.m */; };
 		7645324024556AFA00076D8E /* UITextField+RJMaxLenght.m in Sources */ = {isa = PBXBuildFile; fileRef = 7645323F24556AFA00076D8E /* UITextField+RJMaxLenght.m */; };
-		7673B7C923169C4F0087097C /* RJArraysortingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7673B7C823169C4F0087097C /* RJArraysortingViewController.m */; };
-		7673B7CC23169CEE0087097C /* RJArraysortingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7673B7CB23169CEE0087097C /* RJArraysortingModel.m */; };
 		767F7A56237A9DA300F82603 /* RJGTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 767F7A55237A9DA300F82603 /* RJGTool.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		181191002224DF2C00F4AC10 /* RJResource.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = RJResource.plist; sourceTree = "<group>"; };
-		1811926F2226625500F4AC10 /* GDataXMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDataXMLNode.h; sourceTree = "<group>"; };
-		181192702226625500F4AC10 /* CommonUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonUtil.m; sourceTree = "<group>"; };
-		181192712226625500F4AC10 /* GDataXMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDataXMLNode.m; sourceTree = "<group>"; };
-		181192722226625500F4AC10 /* CommonUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonUtil.h; sourceTree = "<group>"; };
-		181192762226626700F4AC10 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libcrypto.a; sourceTree = "<group>"; };
-		181192772226626700F4AC10 /* APOrderInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APOrderInfo.m; sourceTree = "<group>"; };
-		181192782226626700F4AC10 /* APAuthInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APAuthInfo.m; sourceTree = "<group>"; };
-		1811927A2226626700F4AC10 /* openssl_wrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = openssl_wrapper.m; sourceTree = "<group>"; };
-		1811927B2226626700F4AC10 /* APRSASigner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APRSASigner.h; sourceTree = "<group>"; };
-		1811927C2226626700F4AC10 /* openssl_wrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = openssl_wrapper.h; sourceTree = "<group>"; };
-		1811927D2226626700F4AC10 /* APRSASigner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APRSASigner.m; sourceTree = "<group>"; };
-		1811927E2226626700F4AC10 /* APOrderInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APOrderInfo.h; sourceTree = "<group>"; };
-		1811927F2226626700F4AC10 /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libssl.a; sourceTree = "<group>"; };
-		181192802226626700F4AC10 /* APAuthInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APAuthInfo.h; sourceTree = "<group>"; };
-		18119288222662C800F4AC10 /* pem2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pem2.h; sourceTree = "<group>"; };
-		18119289222662C800F4AC10 /* pem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pem.h; sourceTree = "<group>"; };
-		1811928A222662C800F4AC10 /* ssl3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ssl3.h; sourceTree = "<group>"; };
-		1811928B222662C800F4AC10 /* ossl_typ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ossl_typ.h; sourceTree = "<group>"; };
-		1811928C222662C800F4AC10 /* dtls1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dtls1.h; sourceTree = "<group>"; };
-		1811928D222662C800F4AC10 /* err.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = err.h; sourceTree = "<group>"; };
-		1811928E222662C800F4AC10 /* bn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bn.h; sourceTree = "<group>"; };
-		1811928F222662C800F4AC10 /* blowfish.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = blowfish.h; sourceTree = "<group>"; };
-		18119290222662C800F4AC10 /* cms.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cms.h; sourceTree = "<group>"; };
-		18119291222662C800F4AC10 /* engine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = engine.h; sourceTree = "<group>"; };
-		18119292222662C800F4AC10 /* conf_api.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = conf_api.h; sourceTree = "<group>"; };
-		18119293222662C800F4AC10 /* x509.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = x509.h; sourceTree = "<group>"; };
-		18119294222662C800F4AC10 /* asn1_mac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = asn1_mac.h; sourceTree = "<group>"; };
-		18119295222662C800F4AC10 /* ui.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ui.h; sourceTree = "<group>"; };
-		18119296222662C800F4AC10 /* kssl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = kssl.h; sourceTree = "<group>"; };
-		18119297222662C800F4AC10 /* sha.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sha.h; sourceTree = "<group>"; };
-		18119298222662C800F4AC10 /* symhacks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = symhacks.h; sourceTree = "<group>"; };
-		18119299222662C800F4AC10 /* asn1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = asn1.h; sourceTree = "<group>"; };
-		1811929A222662C800F4AC10 /* opensslconf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = opensslconf.h; sourceTree = "<group>"; };
-		1811929B222662C800F4AC10 /* bio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bio.h; sourceTree = "<group>"; };
-		1811929C222662C800F4AC10 /* rc2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rc2.h; sourceTree = "<group>"; };
-		1811929D222662C800F4AC10 /* dh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dh.h; sourceTree = "<group>"; };
-		1811929E222662C800F4AC10 /* ui_compat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ui_compat.h; sourceTree = "<group>"; };
-		1811929F222662C800F4AC10 /* x509v3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = x509v3.h; sourceTree = "<group>"; };
-		181192A0222662C800F4AC10 /* ssl23.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ssl23.h; sourceTree = "<group>"; };
-		181192A1222662C800F4AC10 /* conf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = conf.h; sourceTree = "<group>"; };
-		181192A2222662C800F4AC10 /* md5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = md5.h; sourceTree = "<group>"; };
-		181192A3222662C800F4AC10 /* x509_vfy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = x509_vfy.h; sourceTree = "<group>"; };
-		181192A4222662C800F4AC10 /* txt_db.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = txt_db.h; sourceTree = "<group>"; };
-		181192A5222662C800F4AC10 /* safestack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = safestack.h; sourceTree = "<group>"; };
-		181192A6222662C800F4AC10 /* ecdsa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ecdsa.h; sourceTree = "<group>"; };
-		181192A7222662C800F4AC10 /* objects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = objects.h; sourceTree = "<group>"; };
-		181192A8222662C800F4AC10 /* pkcs12.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pkcs12.h; sourceTree = "<group>"; };
-		181192A9222662C800F4AC10 /* crypto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypto.h; sourceTree = "<group>"; };
-		181192AA222662C800F4AC10 /* opensslv.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = opensslv.h; sourceTree = "<group>"; };
-		181192AB222662C800F4AC10 /* pkcs7.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pkcs7.h; sourceTree = "<group>"; };
-		181192AC222662C800F4AC10 /* obj_mac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = obj_mac.h; sourceTree = "<group>"; };
-		181192AD222662C800F4AC10 /* buffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = buffer.h; sourceTree = "<group>"; };
-		181192AE222662C800F4AC10 /* ssl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ssl.h; sourceTree = "<group>"; };
-		181192AF222662C800F4AC10 /* srp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = srp.h; sourceTree = "<group>"; };
-		181192B0222662C800F4AC10 /* camellia.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = camellia.h; sourceTree = "<group>"; };
-		181192B1222662C800F4AC10 /* evp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = evp.h; sourceTree = "<group>"; };
-		181192B2222662C800F4AC10 /* e_os2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = e_os2.h; sourceTree = "<group>"; };
-		181192B3222662C800F4AC10 /* md4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = md4.h; sourceTree = "<group>"; };
-		181192B4222662C800F4AC10 /* hmac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hmac.h; sourceTree = "<group>"; };
-		181192B5222662C800F4AC10 /* aes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aes.h; sourceTree = "<group>"; };
-		181192B6222662C800F4AC10 /* comp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = comp.h; sourceTree = "<group>"; };
-		181192B7222662C800F4AC10 /* cast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cast.h; sourceTree = "<group>"; };
-		181192B8222662C800F4AC10 /* rc4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rc4.h; sourceTree = "<group>"; };
-		181192B9222662C800F4AC10 /* stack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stack.h; sourceTree = "<group>"; };
-		181192BA222662C800F4AC10 /* des.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = des.h; sourceTree = "<group>"; };
-		181192BB222662C800F4AC10 /* ocsp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ocsp.h; sourceTree = "<group>"; };
-		181192BC222662C800F4AC10 /* ec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ec.h; sourceTree = "<group>"; };
-		181192BD222662C800F4AC10 /* ecdh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ecdh.h; sourceTree = "<group>"; };
-		181192BE222662C800F4AC10 /* rand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rand.h; sourceTree = "<group>"; };
-		181192BF222662C800F4AC10 /* ts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ts.h; sourceTree = "<group>"; };
-		181192C0222662C800F4AC10 /* pqueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pqueue.h; sourceTree = "<group>"; };
-		181192C1222662C800F4AC10 /* dso.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dso.h; sourceTree = "<group>"; };
-		181192C2222662C800F4AC10 /* seed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = seed.h; sourceTree = "<group>"; };
-		181192C3222662C800F4AC10 /* modes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = modes.h; sourceTree = "<group>"; };
-		181192C4222662C800F4AC10 /* ssl2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ssl2.h; sourceTree = "<group>"; };
-		181192C5222662C800F4AC10 /* rsa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rsa.h; sourceTree = "<group>"; };
-		181192C6222662C800F4AC10 /* krb5_asn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = krb5_asn.h; sourceTree = "<group>"; };
-		181192C7222662C800F4AC10 /* des_old.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = des_old.h; sourceTree = "<group>"; };
-		181192C8222662C800F4AC10 /* ripemd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ripemd.h; sourceTree = "<group>"; };
-		181192C9222662C800F4AC10 /* whrlpool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = whrlpool.h; sourceTree = "<group>"; };
-		181192CA222662C800F4AC10 /* tls1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tls1.h; sourceTree = "<group>"; };
-		181192CB222662C800F4AC10 /* mdc2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mdc2.h; sourceTree = "<group>"; };
-		181192CC222662C800F4AC10 /* dsa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dsa.h; sourceTree = "<group>"; };
-		181192CD222662C800F4AC10 /* srtp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = srtp.h; sourceTree = "<group>"; };
-		181192CE222662C800F4AC10 /* asn1t.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = asn1t.h; sourceTree = "<group>"; };
-		181192CF222662C800F4AC10 /* cmac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cmac.h; sourceTree = "<group>"; };
-		181192D0222662C800F4AC10 /* ebcdic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ebcdic.h; sourceTree = "<group>"; };
-		181192D1222662C800F4AC10 /* idea.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = idea.h; sourceTree = "<group>"; };
-		181192D2222662C800F4AC10 /* lhash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lhash.h; sourceTree = "<group>"; };
 		181192D32226635400F4AC10 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
 		181192D522266ECC00F4AC10 /* RJCategoryTool.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RJCategoryTool.pch; sourceTree = "<group>"; };
 		184FEBAC2217A8FF00B9CBE1 /* RJInitViewTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RJInitViewTool.h; sourceTree = "<group>"; };
@@ -222,61 +80,10 @@
 		18544DAE2215506D00B254B1 /* RJCategoryTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RJCategoryTool.h; sourceTree = "<group>"; };
 		18544DC52215506D00B254B1 /* RJColorAndFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RJColorAndFont.h; sourceTree = "<group>"; };
 		18544DC62215506D00B254B1 /* RJMainMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RJMainMacros.h; sourceTree = "<group>"; };
-		185B14CB22DC1C69008EE9DC /* RJBaseListTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RJBaseListTableViewController.h; sourceTree = "<group>"; };
-		185B14CC22DC1C69008EE9DC /* RJBaseListTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RJBaseListTableViewController.m; sourceTree = "<group>"; };
-		185B14CE22DC2197008EE9DC /* RJEmptyListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RJEmptyListViewController.h; sourceTree = "<group>"; };
-		185B14CF22DC2197008EE9DC /* RJEmptyListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RJEmptyListViewController.m; sourceTree = "<group>"; };
-		185B14D122DC244A008EE9DC /* RJEmptyTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RJEmptyTestViewController.h; sourceTree = "<group>"; };
-		185B14D222DC244A008EE9DC /* RJEmptyTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RJEmptyTestViewController.m; sourceTree = "<group>"; };
-		185B14D422DC2827008EE9DC /* RJBroadcastView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RJBroadcastView.h; sourceTree = "<group>"; };
-		185B14D522DC2827008EE9DC /* RJBroadcastView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RJBroadcastView.m; sourceTree = "<group>"; };
-		185B14D722DC2FC3008EE9DC /* RJBroadcastModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RJBroadcastModel.h; sourceTree = "<group>"; };
-		185B14D822DC2FC3008EE9DC /* RJBroadcastModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RJBroadcastModel.m; sourceTree = "<group>"; };
-		185B14DB22DC44FC008EE9DC /* RJBroadcastCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RJBroadcastCell.h; sourceTree = "<group>"; };
-		185B14DC22DC44FC008EE9DC /* RJBroadcastCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RJBroadcastCell.m; sourceTree = "<group>"; };
-		185B14E022DC6D11008EE9DC /* RJVideoEditViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RJVideoEditViewController.h; sourceTree = "<group>"; };
-		185B14E122DC6D11008EE9DC /* RJVideoEditViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RJVideoEditViewController.m; sourceTree = "<group>"; };
 		187D913A22D70D4E00DB8C72 /* RJTabBarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RJTabBarViewController.h; sourceTree = "<group>"; };
 		187D913B22D70D4E00DB8C72 /* RJTabBarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RJTabBarViewController.m; sourceTree = "<group>"; };
-		187D913D22D7127200DB8C72 /* UIViewController+RTRootNav.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+RTRootNav.h"; sourceTree = "<group>"; };
-		187D913E22D7127200DB8C72 /* RTRootNavigationController+RTRootSetting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RTRootNavigationController+RTRootSetting.h"; sourceTree = "<group>"; };
-		187D913F22D7127200DB8C72 /* UIViewController+RTRootNav.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+RTRootNav.m"; sourceTree = "<group>"; };
-		187D914022D7127200DB8C72 /* RTRootNavigationController+RTRootSetting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RTRootNavigationController+RTRootSetting.m"; sourceTree = "<group>"; };
-		187D914322D7143500DB8C72 /* RJBaseModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RJBaseModel.h; sourceTree = "<group>"; };
-		187D914422D7143500DB8C72 /* RJBaseModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RJBaseModel.m; sourceTree = "<group>"; };
-		187D914622D7145500DB8C72 /* RJBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RJBaseViewController.h; sourceTree = "<group>"; };
-		187D914722D7145500DB8C72 /* RJBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RJBaseViewController.m; sourceTree = "<group>"; };
-		187D914922D7157600DB8C72 /* RJBaseTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RJBaseTableViewController.h; sourceTree = "<group>"; };
-		187D914A22D7157600DB8C72 /* RJBaseTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RJBaseTableViewController.m; sourceTree = "<group>"; };
 		187D914D22D715B300DB8C72 /* RJIndex1TableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RJIndex1TableViewController.h; sourceTree = "<group>"; };
 		187D914E22D715B300DB8C72 /* RJIndex1TableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RJIndex1TableViewController.m; sourceTree = "<group>"; };
-		187D915022D7222400DB8C72 /* RJBaseTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RJBaseTableView.h; sourceTree = "<group>"; };
-		187D915122D7222400DB8C72 /* RJBaseTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RJBaseTableView.m; sourceTree = "<group>"; };
-		187D915322D7290200DB8C72 /* RJEmptyView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RJEmptyView.h; sourceTree = "<group>"; };
-		187D915422D7290200DB8C72 /* RJEmptyView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RJEmptyView.m; sourceTree = "<group>"; };
-		187D915822D7314500DB8C72 /* RJRefreshHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RJRefreshHeader.h; sourceTree = "<group>"; };
-		187D915922D7314500DB8C72 /* RJRefreshHeader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RJRefreshHeader.m; sourceTree = "<group>"; };
-		187D915C22D816FE00DB8C72 /* HttpRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpRequest.m; sourceTree = "<group>"; };
-		187D915D22D816FF00DB8C72 /* HttpRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpRequest.h; sourceTree = "<group>"; };
-		187D915F22D8178700DB8C72 /* HttpRequestURL.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HttpRequestURL.h; sourceTree = "<group>"; };
-		187D916022D818C800DB8C72 /* HUDManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HUDManager.m; sourceTree = "<group>"; };
-		187D916122D818C800DB8C72 /* HUDManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HUDManager.h; sourceTree = "<group>"; };
-		187D916322D8308100DB8C72 /* RJBaseView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RJBaseView.h; sourceTree = "<group>"; };
-		187D916422D8308100DB8C72 /* RJBaseView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RJBaseView.m; sourceTree = "<group>"; };
-		187D916622D8318000DB8C72 /* RJModuleEntranceCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RJModuleEntranceCell.h; sourceTree = "<group>"; };
-		187D916722D8318000DB8C72 /* RJModuleEntranceCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RJModuleEntranceCell.m; sourceTree = "<group>"; };
-		187D916922D831C500DB8C72 /* RJBaseTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RJBaseTableViewCell.h; sourceTree = "<group>"; };
-		187D916A22D831C500DB8C72 /* RJBaseTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RJBaseTableViewCell.m; sourceTree = "<group>"; };
-		187D916C22D8514600DB8C72 /* RJModuleEntranceCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RJModuleEntranceCollectionViewCell.h; sourceTree = "<group>"; };
-		187D916D22D8514700DB8C72 /* RJModuleEntranceCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RJModuleEntranceCollectionViewCell.m; sourceTree = "<group>"; };
-		187D916F22D8518E00DB8C72 /* RJModuleEntranceCollectionViewLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RJModuleEntranceCollectionViewLayout.h; sourceTree = "<group>"; };
-		187D917022D8518E00DB8C72 /* RJModuleEntranceCollectionViewLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RJModuleEntranceCollectionViewLayout.m; sourceTree = "<group>"; };
-		187D917522D8633400DB8C72 /* RJPayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RJPayViewController.h; sourceTree = "<group>"; };
-		187D917622D8633400DB8C72 /* RJPayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RJPayViewController.m; sourceTree = "<group>"; };
-		187D917822D8897300DB8C72 /* RJWechatAppPay.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RJWechatAppPay.h; sourceTree = "<group>"; };
-		187D917922D8897300DB8C72 /* RJWechatAppPay.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RJWechatAppPay.m; sourceTree = "<group>"; };
-		187D917B22D889C500DB8C72 /* RJAlipayAppPay.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RJAlipayAppPay.h; sourceTree = "<group>"; };
-		187D917C22D889C500DB8C72 /* RJAlipayAppPay.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RJAlipayAppPay.m; sourceTree = "<group>"; };
 		18953DC6221BD91A00D83ED1 /* UIButton+Badge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Badge.h"; sourceTree = "<group>"; };
 		18953DC7221BD91A00D83ED1 /* UIImage+GRJImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+GRJImage.h"; sourceTree = "<group>"; };
 		18953DC8221BD91A00D83ED1 /* NSDate+GRJDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+GRJDate.h"; sourceTree = "<group>"; };
@@ -299,50 +106,13 @@
 		18953DD9221BD91D00D83ED1 /* UIAlertController+GRJAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+GRJAlert.m"; sourceTree = "<group>"; };
 		18953DEA221BECE800D83ED1 /* RJ3DESEncrypt.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RJ3DESEncrypt.h; sourceTree = "<group>"; };
 		18953DEB221BECE800D83ED1 /* RJ3DESEncrypt.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RJ3DESEncrypt.m; sourceTree = "<group>"; };
-		18AD862422DEC1A8008A8D37 /* RJDisplayTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RJDisplayTableViewCell.h; sourceTree = "<group>"; };
-		18AD862522DEC1A8008A8D37 /* RJDisplayTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RJDisplayTableViewCell.m; sourceTree = "<group>"; };
-		18AD862822DEC777008A8D37 /* RJLabelFontAndNameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RJLabelFontAndNameViewController.h; sourceTree = "<group>"; };
-		18AD862922DEC777008A8D37 /* RJLabelFontAndNameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RJLabelFontAndNameViewController.m; sourceTree = "<group>"; };
-		18AD862B22DF1C2D008A8D37 /* RJHUDMangerLoadingView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RJHUDMangerLoadingView.h; sourceTree = "<group>"; };
-		18AD862C22DF1C2D008A8D37 /* RJHUDMangerLoadingView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RJHUDMangerLoadingView.m; sourceTree = "<group>"; };
-		18AD862E22E00E4B008A8D37 /* RJFontStylePostScriptDownload.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RJFontStylePostScriptDownload.h; sourceTree = "<group>"; };
-		18AD862F22E00E4B008A8D37 /* RJFontStylePostScriptDownload.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RJFontStylePostScriptDownload.m; sourceTree = "<group>"; };
-		18AD865422E022F1008A8D37 /* RJBaseScrollView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RJBaseScrollView.h; sourceTree = "<group>"; };
-		18AD865522E022F1008A8D37 /* RJBaseScrollView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RJBaseScrollView.m; sourceTree = "<group>"; };
-		18AD865722E02335008A8D37 /* EmptyAndHUD.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = EmptyAndHUD.xcassets; sourceTree = "<group>"; };
 		18AD865922E023A8008A8D37 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		18AD865B22E0240D008A8D37 /* NavAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = NavAssets.xcassets; sourceTree = "<group>"; };
 		18AD865D22E02453008A8D37 /* TabBarAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = TabBarAssets.xcassets; sourceTree = "<group>"; };
-		18AD866022E0381F008A8D37 /* UITextField+CHTHealper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+CHTHealper.h"; sourceTree = "<group>"; };
-		18AD866122E0381F008A8D37 /* UITextField+GRJTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+GRJTextField.h"; sourceTree = "<group>"; };
-		18AD866222E0381F008A8D37 /* UITextField+GRJTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+GRJTextField.m"; sourceTree = "<group>"; };
-		18AD866322E03820008A8D37 /* UITextField+CHTHealper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+CHTHealper.m"; sourceTree = "<group>"; };
-		18AD866622E03867008A8D37 /* RJTextLVTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RJTextLVTool.h; sourceTree = "<group>"; };
-		18AD866722E03867008A8D37 /* RJTextLVTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RJTextLVTool.m; sourceTree = "<group>"; };
-		18AD866A22E03B69008A8D37 /* RJStarEvaluationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RJStarEvaluationView.m; sourceTree = "<group>"; };
-		18AD866B22E03B69008A8D37 /* RJStarEvaluationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RJStarEvaluationView.h; sourceTree = "<group>"; };
-		18AD866D22E03C3F008A8D37 /* RJBaseModalViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RJBaseModalViewController.h; sourceTree = "<group>"; };
-		18AD866E22E03C3F008A8D37 /* RJBaseModalViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RJBaseModalViewController.m; sourceTree = "<group>"; };
-		18AD867022E03D44008A8D37 /* StarEvaluation.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = StarEvaluation.xcassets; sourceTree = "<group>"; };
-		18E83FDE22D893FF0002F75F /* RJRootVCTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RJRootVCTool.m; sourceTree = "<group>"; };
-		18E83FDF22D893FF0002F75F /* RJNewFeatureCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RJNewFeatureCollectionViewCell.h; sourceTree = "<group>"; };
-		18E83FE022D893FF0002F75F /* RJNewFeatureCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RJNewFeatureCollectionViewController.h; sourceTree = "<group>"; };
-		18E83FE122D893FF0002F75F /* RJNewFeatureCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RJNewFeatureCollectionViewCell.m; sourceTree = "<group>"; };
-		18E83FE222D893FF0002F75F /* RJRootVCTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RJRootVCTool.h; sourceTree = "<group>"; };
-		18E83FE522D893FF0002F75F /* RJNewFeatureCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RJNewFeatureCollectionViewController.m; sourceTree = "<group>"; };
 		1E1DFC456BBA19C8D75558A3 /* Pods-RJCategoryTool.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RJCategoryTool.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RJCategoryTool/Pods-RJCategoryTool.debug.xcconfig"; sourceTree = "<group>"; };
 		3E32702ACF951655504BD178 /* libPods-RJCategoryTool.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RJCategoryTool.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D7B62306A8F5880B82563DA /* Pods-RJCategoryTool.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RJCategoryTool.release.xcconfig"; path = "Pods/Target Support Files/Pods-RJCategoryTool/Pods-RJCategoryTool.release.xcconfig"; sourceTree = "<group>"; };
-		7603AB7B233B777E000EA0CF /* RJCoreTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RJCoreTool.h; sourceTree = "<group>"; };
-		7603AB7C233B777E000EA0CF /* RJCoreTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RJCoreTool.m; sourceTree = "<group>"; };
-		76055B622330CCBE008F7625 /* RJPrivateTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RJPrivateTool.h; sourceTree = "<group>"; };
-		76055B632330CCBE008F7625 /* RJPrivateTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RJPrivateTool.m; sourceTree = "<group>"; };
 		7645323E24556AFA00076D8E /* UITextField+RJMaxLenght.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITextField+RJMaxLenght.h"; sourceTree = "<group>"; };
 		7645323F24556AFA00076D8E /* UITextField+RJMaxLenght.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITextField+RJMaxLenght.m"; sourceTree = "<group>"; };
-		7673B7C723169C4F0087097C /* RJArraysortingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RJArraysortingViewController.h; sourceTree = "<group>"; };
-		7673B7C823169C4F0087097C /* RJArraysortingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RJArraysortingViewController.m; sourceTree = "<group>"; };
-		7673B7CA23169CEE0087097C /* RJArraysortingModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RJArraysortingModel.h; sourceTree = "<group>"; };
-		7673B7CB23169CEE0087097C /* RJArraysortingModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RJArraysortingModel.m; sourceTree = "<group>"; };
 		767F7A54237A9DA300F82603 /* RJGTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RJGTool.h; sourceTree = "<group>"; };
 		767F7A55237A9DA300F82603 /* RJGTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RJGTool.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -353,143 +123,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				181192D42226635400F4AC10 /* libxml2.tbd in Frameworks */,
-				181192812226626700F4AC10 /* libcrypto.a in Frameworks */,
 				63134546874C166B0C9B9C81 /* libPods-RJCategoryTool.a in Frameworks */,
-				181192862226626700F4AC10 /* libssl.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1811926D2226623200F4AC10 /* ThirdPay */ = {
-			isa = PBXGroup;
-			children = (
-				181192752226626700F4AC10 /* alipay */,
-				1811926E2226625500F4AC10 /* WeChat */,
-			);
-			path = ThirdPay;
-			sourceTree = "<group>";
-		};
-		1811926E2226625500F4AC10 /* WeChat */ = {
-			isa = PBXGroup;
-			children = (
-				181192722226625500F4AC10 /* CommonUtil.h */,
-				181192702226625500F4AC10 /* CommonUtil.m */,
-				1811926F2226625500F4AC10 /* GDataXMLNode.h */,
-				181192712226625500F4AC10 /* GDataXMLNode.m */,
-			);
-			path = WeChat;
-			sourceTree = "<group>";
-		};
-		181192752226626700F4AC10 /* alipay */ = {
-			isa = PBXGroup;
-			children = (
-				181192802226626700F4AC10 /* APAuthInfo.h */,
-				181192782226626700F4AC10 /* APAuthInfo.m */,
-				1811927E2226626700F4AC10 /* APOrderInfo.h */,
-				181192772226626700F4AC10 /* APOrderInfo.m */,
-				181192762226626700F4AC10 /* libcrypto.a */,
-				1811927F2226626700F4AC10 /* libssl.a */,
-				18119287222662C800F4AC10 /* openssl */,
-				181192792226626700F4AC10 /* Utils */,
-			);
-			path = alipay;
-			sourceTree = "<group>";
-		};
-		181192792226626700F4AC10 /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-				1811927A2226626700F4AC10 /* openssl_wrapper.m */,
-				1811927B2226626700F4AC10 /* APRSASigner.h */,
-				1811927C2226626700F4AC10 /* openssl_wrapper.h */,
-				1811927D2226626700F4AC10 /* APRSASigner.m */,
-			);
-			path = Utils;
-			sourceTree = "<group>";
-		};
-		18119287222662C800F4AC10 /* openssl */ = {
-			isa = PBXGroup;
-			children = (
-				181192B5222662C800F4AC10 /* aes.h */,
-				18119294222662C800F4AC10 /* asn1_mac.h */,
-				18119299222662C800F4AC10 /* asn1.h */,
-				181192CE222662C800F4AC10 /* asn1t.h */,
-				1811929B222662C800F4AC10 /* bio.h */,
-				1811928F222662C800F4AC10 /* blowfish.h */,
-				1811928E222662C800F4AC10 /* bn.h */,
-				181192AD222662C800F4AC10 /* buffer.h */,
-				181192B0222662C800F4AC10 /* camellia.h */,
-				181192B7222662C800F4AC10 /* cast.h */,
-				181192CF222662C800F4AC10 /* cmac.h */,
-				18119290222662C800F4AC10 /* cms.h */,
-				181192B6222662C800F4AC10 /* comp.h */,
-				18119292222662C800F4AC10 /* conf_api.h */,
-				181192A1222662C800F4AC10 /* conf.h */,
-				181192A9222662C800F4AC10 /* crypto.h */,
-				181192C7222662C800F4AC10 /* des_old.h */,
-				181192BA222662C800F4AC10 /* des.h */,
-				1811929D222662C800F4AC10 /* dh.h */,
-				181192CC222662C800F4AC10 /* dsa.h */,
-				181192C1222662C800F4AC10 /* dso.h */,
-				1811928C222662C800F4AC10 /* dtls1.h */,
-				181192B2222662C800F4AC10 /* e_os2.h */,
-				181192D0222662C800F4AC10 /* ebcdic.h */,
-				181192BC222662C800F4AC10 /* ec.h */,
-				181192BD222662C800F4AC10 /* ecdh.h */,
-				181192A6222662C800F4AC10 /* ecdsa.h */,
-				18119291222662C800F4AC10 /* engine.h */,
-				1811928D222662C800F4AC10 /* err.h */,
-				181192B1222662C800F4AC10 /* evp.h */,
-				181192B4222662C800F4AC10 /* hmac.h */,
-				181192D1222662C800F4AC10 /* idea.h */,
-				181192C6222662C800F4AC10 /* krb5_asn.h */,
-				18119296222662C800F4AC10 /* kssl.h */,
-				181192D2222662C800F4AC10 /* lhash.h */,
-				181192B3222662C800F4AC10 /* md4.h */,
-				181192A2222662C800F4AC10 /* md5.h */,
-				181192CB222662C800F4AC10 /* mdc2.h */,
-				181192C3222662C800F4AC10 /* modes.h */,
-				181192AC222662C800F4AC10 /* obj_mac.h */,
-				181192A7222662C800F4AC10 /* objects.h */,
-				181192BB222662C800F4AC10 /* ocsp.h */,
-				1811929A222662C800F4AC10 /* opensslconf.h */,
-				181192AA222662C800F4AC10 /* opensslv.h */,
-				1811928B222662C800F4AC10 /* ossl_typ.h */,
-				18119289222662C800F4AC10 /* pem.h */,
-				18119288222662C800F4AC10 /* pem2.h */,
-				181192AB222662C800F4AC10 /* pkcs7.h */,
-				181192A8222662C800F4AC10 /* pkcs12.h */,
-				181192C0222662C800F4AC10 /* pqueue.h */,
-				181192BE222662C800F4AC10 /* rand.h */,
-				1811929C222662C800F4AC10 /* rc2.h */,
-				181192B8222662C800F4AC10 /* rc4.h */,
-				181192C8222662C800F4AC10 /* ripemd.h */,
-				181192C5222662C800F4AC10 /* rsa.h */,
-				181192A5222662C800F4AC10 /* safestack.h */,
-				181192C2222662C800F4AC10 /* seed.h */,
-				18119297222662C800F4AC10 /* sha.h */,
-				181192AF222662C800F4AC10 /* srp.h */,
-				181192CD222662C800F4AC10 /* srtp.h */,
-				181192AE222662C800F4AC10 /* ssl.h */,
-				181192C4222662C800F4AC10 /* ssl2.h */,
-				1811928A222662C800F4AC10 /* ssl3.h */,
-				181192A0222662C800F4AC10 /* ssl23.h */,
-				181192B9222662C800F4AC10 /* stack.h */,
-				18119298222662C800F4AC10 /* symhacks.h */,
-				181192CA222662C800F4AC10 /* tls1.h */,
-				181192BF222662C800F4AC10 /* ts.h */,
-				181192A4222662C800F4AC10 /* txt_db.h */,
-				1811929E222662C800F4AC10 /* ui_compat.h */,
-				18119295222662C800F4AC10 /* ui.h */,
-				181192C9222662C800F4AC10 /* whrlpool.h */,
-				181192A3222662C800F4AC10 /* x509_vfy.h */,
-				18119293222662C800F4AC10 /* x509.h */,
-				1811929F222662C800F4AC10 /* x509v3.h */,
-			);
-			path = openssl;
-			sourceTree = "<group>";
-		};
 		184FEBA62217A78900B9CBE1 /* Tool */ = {
 			isa = PBXGroup;
 			children = (
@@ -556,7 +196,6 @@
 			children = (
 				18544DAD2215506D00B254B1 /* RJCategoryTool */,
 				187D913422D6D90B00DB8C72 /* RJCoding */,
-				1811926D2226623200F4AC10 /* ThirdPay */,
 				181192D522266ECC00F4AC10 /* RJCategoryTool.pch */,
 				18AD865922E023A8008A8D37 /* Assets.xcassets */,
 				18544DA52215505500B254B1 /* Info.plist */,
@@ -616,41 +255,9 @@
 			path = Macros;
 			sourceTree = "<group>";
 		};
-		185B14CA22DC1738008EE9DC /* EmptyView */ = {
-			isa = PBXGroup;
-			children = (
-				185B14CE22DC2197008EE9DC /* RJEmptyListViewController.h */,
-				185B14CF22DC2197008EE9DC /* RJEmptyListViewController.m */,
-				185B14D122DC244A008EE9DC /* RJEmptyTestViewController.h */,
-				185B14D222DC244A008EE9DC /* RJEmptyTestViewController.m */,
-			);
-			path = EmptyView;
-			sourceTree = "<group>";
-		};
-		185B14DA22DC30BD008EE9DC /* RJBroadcast */ = {
-			isa = PBXGroup;
-			children = (
-				185B14D422DC2827008EE9DC /* RJBroadcastView.h */,
-				185B14D522DC2827008EE9DC /* RJBroadcastView.m */,
-				185B14D722DC2FC3008EE9DC /* RJBroadcastModel.h */,
-				185B14D822DC2FC3008EE9DC /* RJBroadcastModel.m */,
-			);
-			path = RJBroadcast;
-			sourceTree = "<group>";
-		};
-		185B14DF22DC6CE5008EE9DC /* RJVideo */ = {
-			isa = PBXGroup;
-			children = (
-				185B14E022DC6D11008EE9DC /* RJVideoEditViewController.h */,
-				185B14E122DC6D11008EE9DC /* RJVideoEditViewController.m */,
-			);
-			path = RJVideo;
-			sourceTree = "<group>";
-		};
 		187D913422D6D90B00DB8C72 /* RJCoding */ = {
 			isa = PBXGroup;
 			children = (
-				187D914C22D7158400DB8C72 /* RJIndex1 */,
 				187D913522D6D91D00DB8C72 /* Main */,
 			);
 			path = RJCoding;
@@ -659,204 +266,15 @@
 		187D913522D6D91D00DB8C72 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				18AD866922E039DB008A8D37 /* StarEvaluation */,
-				18AD865F22E037F7008A8D37 /* TextFieldAndText */,
-				18AD865322E0211D008A8D37 /* EmptyAndHUD */,
-				18E83FDD22D893FF0002F75F /* RJNewFeature */,
-				187D915B22D816A900DB8C72 /* HttpRequest */,
-				187D915622D7306A00DB8C72 /* Tools */,
-				187D913922D70CDF00DB8C72 /* BaseVC */,
-				187D913822D70CD600DB8C72 /* Nav */,
-				187D913722D70CC200DB8C72 /* TabBar */,
-				187D913622D70CAE00DB8C72 /* AppDelegate */,
-			);
-			path = Main;
-			sourceTree = "<group>";
-		};
-		187D913622D70CAE00DB8C72 /* AppDelegate */ = {
-			isa = PBXGroup;
-			children = (
-				18544D972215505400B254B1 /* AppDelegate.h */,
-				18544D982215505400B254B1 /* AppDelegate.m */,
-			);
-			path = AppDelegate;
-			sourceTree = "<group>";
-		};
-		187D913722D70CC200DB8C72 /* TabBar */ = {
-			isa = PBXGroup;
-			children = (
+				187D914D22D715B300DB8C72 /* RJIndex1TableViewController.h */,
+				187D914E22D715B300DB8C72 /* RJIndex1TableViewController.m */,
 				187D913A22D70D4E00DB8C72 /* RJTabBarViewController.h */,
 				187D913B22D70D4E00DB8C72 /* RJTabBarViewController.m */,
 				18AD865D22E02453008A8D37 /* TabBarAssets.xcassets */,
+				18544D972215505400B254B1 /* AppDelegate.h */,
+				18544D982215505400B254B1 /* AppDelegate.m */,
 			);
-			path = TabBar;
-			sourceTree = "<group>";
-		};
-		187D913822D70CD600DB8C72 /* Nav */ = {
-			isa = PBXGroup;
-			children = (
-				187D913E22D7127200DB8C72 /* RTRootNavigationController+RTRootSetting.h */,
-				187D914022D7127200DB8C72 /* RTRootNavigationController+RTRootSetting.m */,
-				187D913D22D7127200DB8C72 /* UIViewController+RTRootNav.h */,
-				187D913F22D7127200DB8C72 /* UIViewController+RTRootNav.m */,
-				18AD865B22E0240D008A8D37 /* NavAssets.xcassets */,
-			);
-			path = Nav;
-			sourceTree = "<group>";
-		};
-		187D913922D70CDF00DB8C72 /* BaseVC */ = {
-			isa = PBXGroup;
-			children = (
-				187D914322D7143500DB8C72 /* RJBaseModel.h */,
-				187D914422D7143500DB8C72 /* RJBaseModel.m */,
-				187D916322D8308100DB8C72 /* RJBaseView.h */,
-				187D916422D8308100DB8C72 /* RJBaseView.m */,
-				187D914622D7145500DB8C72 /* RJBaseViewController.h */,
-				187D914722D7145500DB8C72 /* RJBaseViewController.m */,
-				187D914922D7157600DB8C72 /* RJBaseTableViewController.h */,
-				187D914A22D7157600DB8C72 /* RJBaseTableViewController.m */,
-				185B14CB22DC1C69008EE9DC /* RJBaseListTableViewController.h */,
-				185B14CC22DC1C69008EE9DC /* RJBaseListTableViewController.m */,
-				187D915022D7222400DB8C72 /* RJBaseTableView.h */,
-				187D915122D7222400DB8C72 /* RJBaseTableView.m */,
-				187D916922D831C500DB8C72 /* RJBaseTableViewCell.h */,
-				187D916A22D831C500DB8C72 /* RJBaseTableViewCell.m */,
-				18AD865422E022F1008A8D37 /* RJBaseScrollView.h */,
-				18AD865522E022F1008A8D37 /* RJBaseScrollView.m */,
-				18AD866D22E03C3F008A8D37 /* RJBaseModalViewController.h */,
-				18AD866E22E03C3F008A8D37 /* RJBaseModalViewController.m */,
-			);
-			path = BaseVC;
-			sourceTree = "<group>";
-		};
-		187D914C22D7158400DB8C72 /* RJIndex1 */ = {
-			isa = PBXGroup;
-			children = (
-				7673B7C623169C390087097C /* Arraysorting */,
-				18AD862722DEC748008A8D37 /* LabelFont */,
-				185B14DF22DC6CE5008EE9DC /* RJVideo */,
-				185B14CA22DC1738008EE9DC /* EmptyView */,
-				187D917422D8620800DB8C72 /* WechatAndAliPay */,
-				187D914D22D715B300DB8C72 /* RJIndex1TableViewController.h */,
-				187D914E22D715B300DB8C72 /* RJIndex1TableViewController.m */,
-				187D916622D8318000DB8C72 /* RJModuleEntranceCell.h */,
-				187D916722D8318000DB8C72 /* RJModuleEntranceCell.m */,
-				185B14DB22DC44FC008EE9DC /* RJBroadcastCell.h */,
-				185B14DC22DC44FC008EE9DC /* RJBroadcastCell.m */,
-				187D916C22D8514600DB8C72 /* RJModuleEntranceCollectionViewCell.h */,
-				187D916D22D8514700DB8C72 /* RJModuleEntranceCollectionViewCell.m */,
-				187D916F22D8518E00DB8C72 /* RJModuleEntranceCollectionViewLayout.h */,
-				187D917022D8518E00DB8C72 /* RJModuleEntranceCollectionViewLayout.m */,
-				18AD862422DEC1A8008A8D37 /* RJDisplayTableViewCell.h */,
-				18AD862522DEC1A8008A8D37 /* RJDisplayTableViewCell.m */,
-			);
-			path = RJIndex1;
-			sourceTree = "<group>";
-		};
-		187D915622D7306A00DB8C72 /* Tools */ = {
-			isa = PBXGroup;
-			children = (
-				7603AB7B233B777E000EA0CF /* RJCoreTool.h */,
-				7603AB7C233B777E000EA0CF /* RJCoreTool.m */,
-				185B14DA22DC30BD008EE9DC /* RJBroadcast */,
-				187D915722D7307700DB8C72 /* RJRefresh */,
-				76055B622330CCBE008F7625 /* RJPrivateTool.h */,
-				76055B632330CCBE008F7625 /* RJPrivateTool.m */,
-			);
-			path = Tools;
-			sourceTree = "<group>";
-		};
-		187D915722D7307700DB8C72 /* RJRefresh */ = {
-			isa = PBXGroup;
-			children = (
-				187D915822D7314500DB8C72 /* RJRefreshHeader.h */,
-				187D915922D7314500DB8C72 /* RJRefreshHeader.m */,
-			);
-			path = RJRefresh;
-			sourceTree = "<group>";
-		};
-		187D915B22D816A900DB8C72 /* HttpRequest */ = {
-			isa = PBXGroup;
-			children = (
-				187D915F22D8178700DB8C72 /* HttpRequestURL.h */,
-				187D915D22D816FF00DB8C72 /* HttpRequest.h */,
-				187D915C22D816FE00DB8C72 /* HttpRequest.m */,
-			);
-			path = HttpRequest;
-			sourceTree = "<group>";
-		};
-		187D917422D8620800DB8C72 /* WechatAndAliPay */ = {
-			isa = PBXGroup;
-			children = (
-				187D917522D8633400DB8C72 /* RJPayViewController.h */,
-				187D917622D8633400DB8C72 /* RJPayViewController.m */,
-				187D917822D8897300DB8C72 /* RJWechatAppPay.h */,
-				187D917922D8897300DB8C72 /* RJWechatAppPay.m */,
-				187D917B22D889C500DB8C72 /* RJAlipayAppPay.h */,
-				187D917C22D889C500DB8C72 /* RJAlipayAppPay.m */,
-			);
-			path = WechatAndAliPay;
-			sourceTree = "<group>";
-		};
-		18AD862722DEC748008A8D37 /* LabelFont */ = {
-			isa = PBXGroup;
-			children = (
-				18AD862822DEC777008A8D37 /* RJLabelFontAndNameViewController.h */,
-				18AD862922DEC777008A8D37 /* RJLabelFontAndNameViewController.m */,
-				18AD862E22E00E4B008A8D37 /* RJFontStylePostScriptDownload.h */,
-				18AD862F22E00E4B008A8D37 /* RJFontStylePostScriptDownload.m */,
-			);
-			path = LabelFont;
-			sourceTree = "<group>";
-		};
-		18AD865322E0211D008A8D37 /* EmptyAndHUD */ = {
-			isa = PBXGroup;
-			children = (
-				187D916122D818C800DB8C72 /* HUDManager.h */,
-				187D916022D818C800DB8C72 /* HUDManager.m */,
-				18AD862B22DF1C2D008A8D37 /* RJHUDMangerLoadingView.h */,
-				18AD862C22DF1C2D008A8D37 /* RJHUDMangerLoadingView.m */,
-				187D915322D7290200DB8C72 /* RJEmptyView.h */,
-				187D915422D7290200DB8C72 /* RJEmptyView.m */,
-				18AD865722E02335008A8D37 /* EmptyAndHUD.xcassets */,
-			);
-			path = EmptyAndHUD;
-			sourceTree = "<group>";
-		};
-		18AD865F22E037F7008A8D37 /* TextFieldAndText */ = {
-			isa = PBXGroup;
-			children = (
-				18AD866022E0381F008A8D37 /* UITextField+CHTHealper.h */,
-				18AD866322E03820008A8D37 /* UITextField+CHTHealper.m */,
-				18AD866122E0381F008A8D37 /* UITextField+GRJTextField.h */,
-				18AD866222E0381F008A8D37 /* UITextField+GRJTextField.m */,
-				18AD866622E03867008A8D37 /* RJTextLVTool.h */,
-				18AD866722E03867008A8D37 /* RJTextLVTool.m */,
-			);
-			path = TextFieldAndText;
-			sourceTree = "<group>";
-		};
-		18AD866922E039DB008A8D37 /* StarEvaluation */ = {
-			isa = PBXGroup;
-			children = (
-				18AD866B22E03B69008A8D37 /* RJStarEvaluationView.h */,
-				18AD866A22E03B69008A8D37 /* RJStarEvaluationView.m */,
-				18AD867022E03D44008A8D37 /* StarEvaluation.xcassets */,
-			);
-			path = StarEvaluation;
-			sourceTree = "<group>";
-		};
-		18E83FDD22D893FF0002F75F /* RJNewFeature */ = {
-			isa = PBXGroup;
-			children = (
-				18E83FDF22D893FF0002F75F /* RJNewFeatureCollectionViewCell.h */,
-				18E83FE122D893FF0002F75F /* RJNewFeatureCollectionViewCell.m */,
-				18E83FE022D893FF0002F75F /* RJNewFeatureCollectionViewController.h */,
-				18E83FE522D893FF0002F75F /* RJNewFeatureCollectionViewController.m */,
-				18E83FE222D893FF0002F75F /* RJRootVCTool.h */,
-				18E83FDE22D893FF0002F75F /* RJRootVCTool.m */,
-			);
-			path = RJNewFeature;
+			path = Main;
 			sourceTree = "<group>";
 		};
 		2DABB21C6CD62B9DFA50BEDC /* Pods */ = {
@@ -866,17 +284,6 @@
 				6D7B62306A8F5880B82563DA /* Pods-RJCategoryTool.release.xcconfig */,
 			);
 			name = Pods;
-			sourceTree = "<group>";
-		};
-		7673B7C623169C390087097C /* Arraysorting */ = {
-			isa = PBXGroup;
-			children = (
-				7673B7C723169C4F0087097C /* RJArraysortingViewController.h */,
-				7673B7C823169C4F0087097C /* RJArraysortingViewController.m */,
-				7673B7CA23169CEE0087097C /* RJArraysortingModel.h */,
-				7673B7CB23169CEE0087097C /* RJArraysortingModel.m */,
-			);
-			path = Arraysorting;
 			sourceTree = "<group>";
 		};
 		EF29463CE6B446E50AB06934 /* Frameworks */ = {
@@ -899,7 +306,6 @@
 				18544D902215505400B254B1 /* Sources */,
 				18544D912215505400B254B1 /* Frameworks */,
 				18544D922215505400B254B1 /* Resources */,
-				9C2AD88EC4C305BBEFC1559A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -949,11 +355,8 @@
 			files = (
 				18AD865E22E02453008A8D37 /* TabBarAssets.xcassets in Resources */,
 				18544DA42215505500B254B1 /* LaunchScreen.storyboard in Resources */,
-				18AD867122E03D45008A8D37 /* StarEvaluation.xcassets in Resources */,
-				18AD865C22E0240D008A8D37 /* NavAssets.xcassets in Resources */,
 				181191012224DF2C00F4AC10 /* RJResource.plist in Resources */,
 				18AD865A22E023A8008A8D37 /* Assets.xcassets in Resources */,
-				18AD865822E02335008A8D37 /* EmptyAndHUD.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -982,23 +385,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		9C2AD88EC4C305BBEFC1559A /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-RJCategoryTool/Pods-RJCategoryTool-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-RJCategoryTool/Pods-RJCategoryTool-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RJCategoryTool/Pods-RJCategoryTool-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -1007,81 +393,33 @@
 			buildActionMask = 2147483647;
 			files = (
 				7645324024556AFA00076D8E /* UITextField+RJMaxLenght.m in Sources */,
-				18AD866C22E03B69008A8D37 /* RJStarEvaluationView.m in Sources */,
-				185B14D322DC244A008EE9DC /* RJEmptyTestViewController.m in Sources */,
-				187D917A22D8897400DB8C72 /* RJWechatAppPay.m in Sources */,
 				18953DDE221BD91D00D83ED1 /* UIBarButtonItem+GRJBarButtonItem.m in Sources */,
-				185B14D022DC2197008EE9DC /* RJEmptyListViewController.m in Sources */,
 				18953DDC221BD91D00D83ED1 /* NSString+RJString.m in Sources */,
-				76055B642330CCBE008F7625 /* RJPrivateTool.m in Sources */,
 				18953DDF221BD91D00D83ED1 /* UIView+GRJFrame.m in Sources */,
 				184FEBCE2217A90200B9CBE1 /* GRJAdressPickerView.m in Sources */,
-				18AD866522E03820008A8D37 /* UITextField+CHTHealper.m in Sources */,
-				181192732226625500F4AC10 /* CommonUtil.m in Sources */,
-				18E83FEB22D894000002F75F /* RJNewFeatureCollectionViewController.m in Sources */,
-				187D916822D8318000DB8C72 /* RJModuleEntranceCell.m in Sources */,
-				181192742226625500F4AC10 /* GDataXMLNode.m in Sources */,
-				187D915522D7290200DB8C72 /* RJEmptyView.m in Sources */,
-				187D917122D8518E00DB8C72 /* RJModuleEntranceCollectionViewLayout.m in Sources */,
 				184FEBC52217A90200B9CBE1 /* RJCountNameLineButton.m in Sources */,
-				187D915222D7222400DB8C72 /* RJBaseTableView.m in Sources */,
-				187D916522D8308100DB8C72 /* RJBaseView.m in Sources */,
 				184FEBCD2217A90200B9CBE1 /* RJSureButton.m in Sources */,
-				18AD866F22E03C3F008A8D37 /* RJBaseModalViewController.m in Sources */,
-				18AD863022E00E4C008A8D37 /* RJFontStylePostScriptDownload.m in Sources */,
-				187D914222D7127200DB8C72 /* RTRootNavigationController+RTRootSetting.m in Sources */,
-				187D916222D818C900DB8C72 /* HUDManager.m in Sources */,
-				187D917722D8633500DB8C72 /* RJPayViewController.m in Sources */,
-				7673B7C923169C4F0087097C /* RJArraysortingViewController.m in Sources */,
 				18953DE3221BD91D00D83ED1 /* UIAlertController+GRJAlert.m in Sources */,
-				187D914122D7127200DB8C72 /* UIViewController+RTRootNav.m in Sources */,
-				187D914B22D7157600DB8C72 /* RJBaseTableViewController.m in Sources */,
 				18953DE1221BD91D00D83ED1 /* UIButton+RJButton.m in Sources */,
 				187D914F22D715B300DB8C72 /* RJIndex1TableViewController.m in Sources */,
 				18953DDA221BD91D00D83ED1 /* UIImage+GRJImage.m in Sources */,
 				18953DDD221BD91D00D83ED1 /* NSObject+RJCheck.m in Sources */,
-				181192822226626700F4AC10 /* APOrderInfo.m in Sources */,
 				184FEBCF2217A90200B9CBE1 /* GRJDatePickerView.m in Sources */,
-				7673B7CC23169CEE0087097C /* RJArraysortingModel.m in Sources */,
-				187D916E22D8514700DB8C72 /* RJModuleEntranceCollectionViewCell.m in Sources */,
 				18953DDB221BD91D00D83ED1 /* NSDate+GRJDate.m in Sources */,
 				184FEBD12217A90200B9CBE1 /* RJScrollView.m in Sources */,
 				184FEBC82217A90200B9CBE1 /* RJImageTextActionView.m in Sources */,
-				185B14DD22DC44FC008EE9DC /* RJBroadcastCell.m in Sources */,
 				18544DA72215505500B254B1 /* main.m in Sources */,
-				187D915E22D816FF00DB8C72 /* HttpRequest.m in Sources */,
-				18E83FE822D894000002F75F /* RJNewFeatureCollectionViewCell.m in Sources */,
-				181192832226626700F4AC10 /* APAuthInfo.m in Sources */,
 				184FEBCC2217A90200B9CBE1 /* RJBaseMenuViewController.m in Sources */,
-				187D914822D7145500DB8C72 /* RJBaseViewController.m in Sources */,
 				18953DEC221BECE800D83ED1 /* RJ3DESEncrypt.m in Sources */,
 				18953DE0221BD91D00D83ED1 /* UIColor+GRJColor.m in Sources */,
-				187D916B22D831C500DB8C72 /* RJBaseTableViewCell.m in Sources */,
-				185B14CD22DC1C69008EE9DC /* RJBaseListTableViewController.m in Sources */,
-				18E83FE722D894000002F75F /* RJRootVCTool.m in Sources */,
-				18AD865622E022F1008A8D37 /* RJBaseScrollView.m in Sources */,
-				18AD866422E03820008A8D37 /* UITextField+GRJTextField.m in Sources */,
 				18544D992215505400B254B1 /* AppDelegate.m in Sources */,
-				185B14D622DC2827008EE9DC /* RJBroadcastView.m in Sources */,
 				184FEBC62217A90200B9CBE1 /* RJCornerBorderBgButton.m in Sources */,
-				187D917D22D889C500DB8C72 /* RJAlipayAppPay.m in Sources */,
-				7603AB7D233B777E000EA0CF /* RJCoreTool.m in Sources */,
 				767F7A56237A9DA300F82603 /* RJGTool.m in Sources */,
-				18AD862622DEC1A8008A8D37 /* RJDisplayTableViewCell.m in Sources */,
-				18AD866822E03867008A8D37 /* RJTextLVTool.m in Sources */,
 				184FEBC92217A90200B9CBE1 /* GRJAdressPickerViewModel.m in Sources */,
-				187D915A22D7314500DB8C72 /* RJRefreshHeader.m in Sources */,
 				187D913C22D70D4E00DB8C72 /* RJTabBarViewController.m in Sources */,
-				187D914522D7143500DB8C72 /* RJBaseModel.m in Sources */,
-				181192842226626700F4AC10 /* openssl_wrapper.m in Sources */,
 				184FEBCB2217A90200B9CBE1 /* RJInitViewTool.m in Sources */,
 				18953DE2221BD91D00D83ED1 /* UIButton+Badge.m in Sources */,
-				185B14D922DC2FC3008EE9DC /* RJBroadcastModel.m in Sources */,
-				18AD862D22DF1C2D008A8D37 /* RJHUDMangerLoadingView.m in Sources */,
 				184FEBD02217A90200B9CBE1 /* RJHorizontalImageNameLineButton.m in Sources */,
-				18AD862A22DEC777008A8D37 /* RJLabelFontAndNameViewController.m in Sources */,
-				185B14E222DC6D11008EE9DC /* RJVideoEditViewController.m in Sources */,
-				181192852226626700F4AC10 /* APRSASigner.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1252,7 +590,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/RJCategoryTool/ThirdPay/alipay",
 				);
-				MARKETING_VERSION = 0.6.8;
+				MARKETING_VERSION = 0.6.9;
 				PRODUCT_BUNDLE_IDENTIFIER = com.grj.RJCategoryTool;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1300,7 +638,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/RJCategoryTool/ThirdPay/alipay",
 				);
-				MARKETING_VERSION = 0.6.8;
+				MARKETING_VERSION = 0.6.9;
 				PRODUCT_BUNDLE_IDENTIFIER = com.grj.RJCategoryTool;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";

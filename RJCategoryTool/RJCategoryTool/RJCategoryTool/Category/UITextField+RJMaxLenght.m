@@ -7,6 +7,7 @@
 //
 
 #import "UITextField+RJMaxLenght.h"
+#import <objc/runtime.h>
 
 //#import <AppKit/AppKit.h>
 

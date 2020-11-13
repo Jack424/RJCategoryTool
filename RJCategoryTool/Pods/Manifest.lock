@@ -1,102 +1,20 @@
 PODS:
-  - AFNetworking (4.0.1):
-    - AFNetworking/NSURLSession (= 4.0.1)
-    - AFNetworking/Reachability (= 4.0.1)
-    - AFNetworking/Security (= 4.0.1)
-    - AFNetworking/Serialization (= 4.0.1)
-    - AFNetworking/UIKit (= 4.0.1)
-  - AFNetworking/NSURLSession (4.0.1):
-    - AFNetworking/Reachability
-    - AFNetworking/Security
-    - AFNetworking/Serialization
-  - AFNetworking/Reachability (4.0.1)
-  - AFNetworking/Security (4.0.1)
-  - AFNetworking/Serialization (4.0.1)
-  - AFNetworking/UIKit (4.0.1):
-    - AFNetworking/NSURLSession
-  - AlipaySDK-iOS (15.7.4)
-  - FMDB (2.7.5):
-    - FMDB/standard (= 2.7.5)
-  - FMDB/standard (2.7.5)
   - GTMBase64 (1.0.1)
-  - LYEmptyView (1.3.1)
   - Masonry (1.1.0)
-  - MBProgressHUD (1.2.0)
-  - MJExtension (3.2.1)
-  - MJRefresh (3.4.1)
-  - ReactiveObjC (3.1.1)
-  - RTRootNavigationController (0.7.2):
-    - RTRootNavigationController/Core (= 0.7.2)
-  - RTRootNavigationController/Core (0.7.2)
-  - SDCycleScrollView (1.80):
-    - SDWebImage (>= 5.0.0)
-  - SDWebImage (5.1.1):
-    - SDWebImage/Core (= 5.1.1)
-  - SDWebImage/Core (5.1.1)
-  - Toast (4.0.0)
-  - "UITableView+FDTemplateLayoutCell (1.6)"
-  - WechatOpenSDK (1.8.7.1)
-  - ZLPhotoBrowser (3.0.7):
-    - SDWebImage (~> 5.1.0)
 
 DEPENDENCIES:
-  - AFNetworking
-  - AlipaySDK-iOS
-  - FMDB
   - GTMBase64
-  - LYEmptyView
   - Masonry
-  - MBProgressHUD
-  - MJExtension
-  - MJRefresh
-  - ReactiveObjC
-  - RTRootNavigationController
-  - SDCycleScrollView
-  - SDWebImage
-  - Toast
-  - "UITableView+FDTemplateLayoutCell"
-  - WechatOpenSDK
-  - ZLPhotoBrowser (~> 3.0.6)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
-    - AFNetworking
-    - AlipaySDK-iOS
-    - FMDB
     - GTMBase64
-    - LYEmptyView
     - Masonry
-    - MBProgressHUD
-    - MJExtension
-    - MJRefresh
-    - ReactiveObjC
-    - RTRootNavigationController
-    - SDCycleScrollView
-    - SDWebImage
-    - Toast
-    - "UITableView+FDTemplateLayoutCell"
-    - WechatOpenSDK
-    - ZLPhotoBrowser
 
 SPEC CHECKSUMS:
-  AFNetworking: 7864c38297c79aaca1500c33288e429c3451fdce
-  AlipaySDK-iOS: 8659cdb4403de7e5f26ad8b699864a9cbe53384c
-  FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
   GTMBase64: f0f91be06a7a20b84c8e4fee30c0430395091d82
-  LYEmptyView: b6d418cfa38b78df0cf243f9a9c25ccbdc399922
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
-  MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
-  MJExtension: 635f2c663dcb1bf76fa4b715b2570a5710aec545
-  MJRefresh: 3153c59a363159092c08b2177ec3a7d09f90bfaf
-  ReactiveObjC: 011caa393aa0383245f2dcf9bf02e86b80b36040
-  RTRootNavigationController: 8344c2352d6d40fa370d0366efae2c84a945213f
-  SDCycleScrollView: b3c9a5ed840c771c4938978174c7c9d9feefeb96
-  SDWebImage: 96d7f03415ccb28d299d765f93557ff8a617abd8
-  Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
-  "UITableView+FDTemplateLayoutCell": 5c949b4a5059c404b442926c0e80f81d10a2d66f
-  WechatOpenSDK: 6a4d1436c15b3b5fe2a0bd383f3046010186da44
-  ZLPhotoBrowser: 55d631fb86eb4456230c5f8f6fd83933b9a53d21
 
-PODFILE CHECKSUM: 853a8374e1aefd350df36982e443cf48082bc9db
+PODFILE CHECKSUM: 9e9f4ed1a7fc9b25cfeddb7ed44cf144bf397701
 
-COCOAPODS: 1.9.1
+COCOAPODS: 1.9.3

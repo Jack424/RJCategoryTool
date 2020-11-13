@@ -43,23 +43,56 @@
 
 
 #import <Masonry/Masonry.h>
-#import <AFNetworking/AFNetworking.h>
-#import <SDWebImage/UIImageView+WebCache.h>
-#import <ZLPhotoBrowser/ZLPhotoBrowser.h>
-#import <RTRootNavigationController/RTRootNavigationController.h>
-#import <fmdb/FMDB.h>
-#import <ReactiveObjC/ReactiveObjC.h>
-#import <MJExtension/MJExtension.h>
-#import <MJRefresh/MJRefresh.h>
-#import <SDCycleScrollView/SDCycleScrollView.h>
-#import <MBProgressHUD/MBProgressHUD.h>
-#import <Toast/Toast.h>
+//#import <AFNetworking/AFNetworking.h>
+//#import <SDWebImage/UIImageView+WebCache.h>
+//#import <ZLPhotoBrowser/ZLPhotoBrowser.h>
+//#import <RTRootNavigationController/RTRootNavigationController.h>
+//#import <fmdb/FMDB.h>
+//#import <ReactiveObjC/ReactiveObjC.h>
+//#import <MJExtension/MJExtension.h>
+//#import <MJRefresh/MJRefresh.h>
+//#import <SDCycleScrollView/SDCycleScrollView.h>
+//#import <MBProgressHUD/MBProgressHUD.h>
+//#import <Toast/Toast.h>
 #import <GTMBase64/GTMBase64.h>
-#import <LYEmptyView/LYEmptyView.h>
+//#import <LYEmptyView/LYEmptyView.h>
 //#import <UITableView+FDTemplateLayoutCell/UITableView+FDTemplateLayoutCell.h>
 #endif /* RJCategoryTool_h */
 
-
+/*
+ #  pod 'AFNetworking'
+ #
+ #  pod 'SDWebImage'
+ #
+ #  pod 'MJExtension'
+ #
+ #  pod 'MJRefresh'
+ #
+ #  pod 'SDCycleScrollView'
+ #
+ #  pod 'MBProgressHUD'
+ #
+ #  pod 'Toast'
+ #
+ #  #pod 'ZLPhotoBrowser'
+ #  pod 'ZLPhotoBrowser', '~> 3.0.6'
+ #
+ #  pod 'RTRootNavigationController'
+ #
+ #  pod 'ReactiveObjC'
+ #
+ #  pod 'FMDB'
+ #
+ #  pod 'WechatOpenSDK'
+ #
+ #  pod 'AlipaySDK-iOS'
+ #
+ #  pod 'LYEmptyView'
+ #
+ #  pod 'UITableView+FDTemplateLayoutCell'
+ #
+ #  #pod 'GPUImage'
+ */
 
 
 /*

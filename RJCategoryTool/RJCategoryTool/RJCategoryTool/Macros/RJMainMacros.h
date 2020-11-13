@@ -24,21 +24,6 @@
 #define rj_DEVICE @"iphone"
 
 
-//获取系统版本
-#define rj_IOS6 ([[[UIDevice currentDevice] systemVersion] floatValue] < 7.0) ? YES : NO
-#define rj_IOS7_OR_LATER  ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0) ? YES : NO
-#define rj_IOS8_OR_LATER  [[[UIDevice currentDevice] systemVersion] compare:@"8.0"] != NSOrderedAscending
-
-//判断是否是Iphone5
-//#define iPhone5 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 1136), [[UIScreen mainScreen] currentMode].size) : NO)
-
-#define rj_iPhone6P (kScreenHeight== 736)
-#define rj_iPhone6 (kScreenHeight == 667)
-#define rj_iPhone5 (kScreenHeight == 568)
-#define rj_iPhone4 (kScreenHeight == 480)
-
-
-
 /* 系统控件的默认高度 */
 #define rj_StatusBarHeight   (20.f)
 #define rj_NavBarHeight      (64.f)
@@ -75,11 +60,6 @@
 #define rj_NotificationCenter [NSNotificationCenter defaultCenter]
 
 
-// 判断是否为物流商
-#define rj_LOGISTICSLEVEL  ((NSString *) [[NSUserDefaults standardUserDefaults] objectForKey:IS_LOGISTICSLEVEL])
-
-
-
 //版本
 #define rj_SYSTEM_VERSION [[UIDevice currentDevice].systemVersion doubleValue]
 #define rj_SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(v)  ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedAscending)
@@ -113,8 +93,25 @@
 
 #define rj_CHANNEL_NUMBER @"after2appstore"//渠道号 用于检测版本更新
 
+#define rjg_IS_IPHONE (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
+#define rjg_IS_IOS_11  ([[[UIDevice currentDevice] systemVersion] floatValue] >= 11.f)
+#define rjg_IS_IPHONE_X (rjg_IS_IOS_11 && rjg_IS_IPHONE && (MIN([UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height) >= 375 && MAX([UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height) >= 812))
+#define rjg_BOTTOM_MARGIN (rjg_IS_IPHONE_X ? 34.f : 0.f)
 
-#define iPhoneX [GBDeviceInfo deviceInfo].model == GBDeviceModeliPhoneX
+//获取系统版本
+#define rj_IOS6 ([[[UIDevice currentDevice] systemVersion] floatValue] < 7.0) ? YES : NO
+#define rj_IOS7_OR_LATER  ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0) ? YES : NO
+#define rj_IOS8_OR_LATER  [[[UIDevice currentDevice] systemVersion] compare:@"8.0"] != NSOrderedAscending
+
+//判断是否是Iphone5
+//#define iPhone5 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 1136), [[UIScreen mainScreen] currentMode].size) : NO)
+
+#define rj_iPhone6P (kScreenHeight== 736)
+#define rj_iPhone6 (kScreenHeight == 667)
+#define rj_iPhone5 (kScreenHeight == 568)
+#define rj_iPhone4 (kScreenHeight == 480)
+
+//#define iPhoneX [GBDeviceInfo deviceInfo].model == GBDeviceModeliPhoneX
 #define rj_kIsiPhoneX ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) : NO)
 
 //weakify && strongify
