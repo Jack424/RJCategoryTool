@@ -14,9 +14,9 @@
 
 -(void)rj_setTableViewCell{
     RJBroadcastView *view = [[RJBroadcastView alloc]init];
-    [self addSubview:view];
+    [self.contentView addSubview:view];
     [view mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.equalTo(self);
+        make.edges.equalTo(self.contentView);
     }];
 
     view.cellHight = 40;

@@ -62,9 +62,9 @@
     return _dataArray;
 }
 -(void)rj_setTableViewCell{
-    [self addSubview:self.collectionView];
+    [self.contentView addSubview:self.collectionView];
     [self.collectionView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.equalTo(self);
+        make.edges.equalTo(self.contentView);
     }];
 }
 #pragma mark -- UICollectionViewDelegate

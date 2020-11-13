@@ -89,7 +89,7 @@ static dispatch_once_t predicate;
     switch (requestType) {
         case HttpRequestTypeGet:
         {
-            [[HttpRequest shareInstance].manager GET:urlStr parameters:parameter progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+            [[HttpRequest shareInstance].manager GET:urlStr parameters:parameter headers:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
                 [HttpRequest settingFailureDealWithResponseObject:responseObject hcHUDView:view success:success  ];
             } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
                 if (failure) {//请求失败  网络异常
@@ -101,7 +101,7 @@ static dispatch_once_t predicate;
             break;
         case HttpRequestTypePOST:
         {
-            [[HttpRequest shareInstance].manager POST:urlStr parameters:parameter progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+            [[HttpRequest shareInstance].manager POST:urlStr parameters:parameter headers:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
                 [HttpRequest settingFailureDealWithResponseObject:responseObject hcHUDView:view success:success  ];
             } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
                 if (failure) {//请求失败  网络异常
@@ -113,7 +113,7 @@ static dispatch_once_t predicate;
             break;
         case HttpRequestTypePUT:
         {
-            [[HttpRequest shareInstance].manager PUT:urlStr parameters:parameter success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+            [[HttpRequest shareInstance].manager PUT:urlStr parameters:parameter headers:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
                 [HttpRequest settingFailureDealWithResponseObject:responseObject hcHUDView:view success:success  ];
             } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
                 if (failure) {//请求失败  网络异常
@@ -125,7 +125,7 @@ static dispatch_once_t predicate;
             break;
         case HttpRequestTypeDELETE:
         {
-            [[HttpRequest shareInstance].manager DELETE:urlStr parameters:parameter success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+            [[HttpRequest shareInstance].manager DELETE:urlStr parameters:parameter headers:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
                 [HttpRequest settingFailureDealWithResponseObject:responseObject hcHUDView:view success:success  ];
             } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
                 if (failure) {//请求失败  网络异常

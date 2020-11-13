@@ -8,7 +8,7 @@
 
 #import "UITextField+RJMaxLenght.h"
 
-#import <AppKit/AppKit.h>
+//#import <AppKit/AppKit.h>
 
 //要关联的对象的键值，一般设置成静态的，用于获取关联对象的值
 static char kMaxLengthKey;
